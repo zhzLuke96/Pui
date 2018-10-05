@@ -1,0 +1,26 @@
+// ----------------------------------------------
+.h-full {
+  height: 100% !important;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+@for $counter from 1 through 20 {
+  .h\:#{ $counter } {
+    height: ($counter * 48px) !important;
+  }
+  .w\:#{ $counter } {
+    width: ($counter * 48px) !important;
+  }
+}
+
+@for $counter from 1 through 10 {
+  .h\:#{ $counter * 10 }\% {
+    height: ($counter * 10vh) !important;
+  }
+  .w\:#{ $counter * 10 }\% {
+    width: ($counter * 10vw) !important;
+  }
+}

@@ -59,3 +59,14 @@ typings/
 
 # next.js build output
 .next
+
+# dist folder
+dist/css/core/*
+!dist/css/core/.gitkeep
+dist/css/util/*
+!dist/css/util/.gitkeep
+dist/post/*
+!dist/post/.gitkeep
+
+# local test
+index.html

@@ -1,0 +1,29 @@
+// ----------------------------------------------
+
+$size-map: (
+    "xs": 1,
+    "sm": 2,
+    "md": 3,
+    "lg": 4,
+    "xl": 5,
+);
+.no-shadow,
+.shadow\:none {
+    box-shadow: none !important;
+};
+@each $name,$val in $size-map {
+    .shadow\:#{$name} {
+        box-shadow: 0 #{1px * $val} #{5px * $val} #{1px * $val} rgba(0, 0, 0, .15);
+    }
+};
+@each $pseudo,$attr in $Pseudo-dict {
+    .#{$pseudo}\:no-shadow:#{$attr},
+    .#{$pseudo}\:shadow\:none:#{$attr} {
+        box-shadow: none !important;
+    };
+    @each $name,$val in $size-map {
+        .#{$pseudo}\:shadow\:#{$name}:#{$attr} {
+            box-shadow: 0 #{1px * $val} #{5px * $val} #{1px * $val} rgba(0, 0, 0, .15);
+        }
+    };
+}

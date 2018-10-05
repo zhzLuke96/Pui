@@ -1,0 +1,11 @@
+@for $counter from 1 through 10{
+    .smoomth\:#{$counter}{
+        transition: all #{.1s * $counter} !important;
+    }
+}
+.smoomth{
+    transition: all .2s !important;
+}
+.box{
+    box-sizing: border-box !important;
+}

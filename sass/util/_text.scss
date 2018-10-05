@@ -1,0 +1,30 @@
+// text-align
+.t\:left {
+  text-align: left !important;
+}
+
+.t\:center {
+  text-align: center !important;
+}
+
+.t\:right {
+  text-align: right !important;
+}
+
+// text-overflow
+.t\:dot {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// transform
+.t\:upper {
+  text-transform: uppercase !important;
+}
+.t\:cap {
+  text-transform: capitalize !important;
+}
+.t\:lower {
+  text-transform: lowercase !important;
+}

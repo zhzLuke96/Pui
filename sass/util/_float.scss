@@ -1,0 +1,26 @@
+// ----------------------------------------------
+.pull\:left {
+  float: left !important;
+}
+
+.pull\:right {
+  float: right !important;
+}
+
+.float\:none {
+  float: none !important;
+}
+
+@each $pseudo,$attr in $Pseudo-dict {
+    .#{$pseudo}\:pull\:left:#{$attr} {
+      float: left !important;
+    }
+
+    .#{$pseudo}\:pull\:right:#{$attr} {
+      float: right !important;
+    }
+
+    .#{$pseudo}\:float\:none:#{$attr} {
+      float: none !important;
+    }
+}

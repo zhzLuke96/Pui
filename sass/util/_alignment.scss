@@ -1,0 +1,10 @@
+// vetical-align => baseline -> bl
+$attribute-map: baseline, sub,super,top,text-top,middle,bottom,text-bottom;
+@each $attr in $attribute-map{
+    .bl\:#{$attr}{
+        vertical-align: #{$attr} !important;
+    }
+}
+.bl\:center {
+  vertical-align: middle !important;
+}

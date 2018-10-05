@@ -1,0 +1,62 @@
+@for $counter from 0 through 10 {
+    .r\:#{$counter} {
+        border-radius: ($counter * .2rem) !important;
+    }
+
+    .r-tl\:#{$counter} {
+        border-top-left-radius: ($counter * .2rem) !important;
+    }
+
+    .r-tr\:#{$counter} {
+        border-top-right-radius: ($counter * .2rem) !important;
+    }
+
+    .r-br\:#{$counter} {
+        border-bottom-right-radius: ($counter * .2rem) !important;
+    }
+
+    .r-bl\:#{$counter} {
+        border-bottom-left-radius: ($counter * .2rem) !important;
+    }
+}
+@for $counter from 0 through 10 {
+    .r\:#{$counter * 10}\% {
+        border-radius: ($counter * 10%) !important;
+    }
+
+    .r-tl\:#{$counter * 10}\% {
+        border-top-left-radius: ($counter * 10%) !important;
+    }
+
+    .r-tr\:#{$counter * 10}\% {
+        border-top-right-radius: ($counter * 10%) !important;
+    }
+
+    .r-br\:#{$counter * 10}\% {
+        border-bottom-right-radius: ($counter * 10%) !important;
+    }
+
+    .r-bl\:#{$counter * 10}\% {
+        border-bottom-left-radius: ($counter * 10%) !important;
+    }
+}
+
+.r\:full {
+    border-radius: 100%;
+}
+
+.r-tl\:full {
+    border-top-left-radius: 100%;
+}
+
+.r-tr\:full {
+    border-top-right-radius: 100%;
+}
+
+.r-br\:full {
+    border-bottom-right-radius: 100%;
+}
+
+.r-bl\:full {
+    border-bottom-left-radius: 100%;
+}

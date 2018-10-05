@@ -1,0 +1,61 @@
+@each $name,$color in $color-dict {
+    .bg\:#{$name} {
+        background-color: $color;
+    }
+
+    .bg\:#{$name}-light {
+        background-color: lighten($color, 15%);
+    }
+
+    .bg\:#{$name}-lighter {
+        background-color: lighten($color, 25%);
+    }
+
+    .bg\:#{$name}-lightest {
+        background-color: lighten($color, 35%);
+    }
+
+    .bg\:#{$name}-dark {
+        background-color: darken($color, 15%);
+    }
+
+    .bg\:#{$name}-darker {
+        background-color: darken($color, 25%);
+    }
+
+    .bg\:#{$name}-darkest {
+        background-color: darken($color, 35%);
+    }
+}
+
+@each $pseudo,$attr in $Pseudo-dict{
+    @each $name,$color in $color-dict {
+        .#{$pseudo}\:bg\:#{$name}:#{$attr} {
+            background-color: $color;
+        }
+
+        .#{$pseudo}\:bg\:#{$name}-light:#{$attr} {
+            background-color: lighten($color, 15%);
+        }
+
+        .#{$pseudo}\:bg\:#{$name}-lighter:#{$attr} {
+            background-color: lighten($color, 25%);
+        }
+
+        .#{$pseudo}\:bg\:#{$name}-lightest:#{$attr} {
+            background-color: lighten($color, 35%);
+        }
+
+        .#{$pseudo}\:bg\:#{$name}-dark:#{$attr} {
+            background-color: darken($color, 15%);
+        }
+
+        .#{$pseudo}\:bg\:#{$name}-darker:#{$attr} {
+            background-color: darken($color, 25%);
+        }
+
+        .#{$pseudo}\:bg\:#{$name}-darkest:#{$attr} {
+            background-color: darken($color, 35%);
+        }
+    }
+}

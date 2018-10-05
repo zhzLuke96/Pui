@@ -1,0 +1,103 @@
+// ----------------------------------------------
+// Font Weight
+@for $counter from 1 through 9 {
+    .f-w\:#{$counter * 100} {
+        font-weight: ($counter * 100) !important;
+    }
+    @each $pseudo,$attr in $Pseudo-dict {
+        .#{$pseudo}\:f-w\:#{$counter * 100}:#{$attr} {
+            font-weight: ($counter * 100) !important;
+        }
+    }
+}
+// Font Size
+@for $counter from 1 through 20 {
+    .f-s\:#{$counter} {
+        font-size: ($counter * .25rem) !important;
+    }
+    @each $pseudo,$attr in $Pseudo-dict {
+        .#{$pseudo}\:f-s\:#{$counter}:#{$attr} {
+            font-size: ($counter * .25rem) !important;
+        }
+    }
+}
+
+.f-s\:0 {
+    font-size: 0 !important;
+}
+@each $pseudo,$attr in $Pseudo-dict {
+    .#{$pseudo}\:f-s\:0:#{$attr} {
+        font-size: 0 !important;
+    }
+}
+// Font-Family
+
+.f-f\:coder {
+    font-family: Menlo, Consolas, DejaVu Sans Mono, Microsoft YaHei, monospace;
+}
+@each $pseudo,$attr in $Pseudo-dict {
+    .#{$pseudo}\:f-f\:coder:#{$attr} {
+        font-family: Menlo, Consolas, DejaVu Sans Mono, Microsoft YaHei, monospace;
+    }
+}
+// Font-color
+@each $name,$color in $color-dict {
+    .f-c\:#{$name} {
+        color: $color;
+    }
+
+    .f-c\:#{$name}-light {
+        color: lighten($color, 15%);
+    }
+
+    .f-c\:#{$name}-lighter {
+        color: lighten($color, 25%);
+    }
+
+    .f-c\:#{$name}-lightest {
+        color: lighten($color, 35%);
+    }
+
+    .f-c\:#{$name}-dark {
+        color: darken($color, 15%);
+    }
+
+    .f-c\:#{$name}-darker {
+        color: darken($color, 25%);
+    }
+
+    .f-c\:#{$name}-darkest {
+        color: darken($color, 35%);
+    }
+}
+@each $pseudo,$attr in $Pseudo-dict {
+    @each $name,$color in $color-dict {
+        .#{$pseudo}\:f-c\:#{$name}:#{$attr} {
+            color: $color;
+        }
+
+        .#{$pseudo}\:f-c\:#{$name}-light:#{$attr} {
+            color: lighten($color, 15%);
+        }
+
+        .#{$pseudo}\:f-c\:#{$name}-lighter:#{$attr} {
+            color: lighten($color, 25%);
+        }
+
+        .#{$pseudo}\:f-c\:#{$name}-lightest:#{$attr} {
+            color: lighten($color, 35%);
+        }
+
+        .#{$pseudo}\:f-c\:#{$name}-dark:#{$attr} {
+            color: darken($color, 15%);
+        }
+
+        .#{$pseudo}\:f-c\:#{$name}-darker:#{$attr} {
+            color: darken($color, 25%);
+        }
+
+        .#{$pseudo}\:f-c\:#{$name}-darkest:#{$attr} {
+            color: darken($color, 35%);
+        }
+    }
+}

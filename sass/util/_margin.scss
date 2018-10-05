@@ -1,0 +1,56 @@
+$attr-map : (
+    "t":"top",
+    "r":"right",
+    "b":"bottom",
+    "l":"left"
+);
+@for $counter from 0 through 6 {
+    .m\:#{$counter * 5} {
+        margin: ($counter * .25rem) !important;
+    }
+    @each $attr,$name in $attr-map{
+        .m-#{$attr}\:#{$counter * 5} {
+            margin-#{$name}: ($counter * .25rem) !important;
+        }
+    }
+    @each $pseudo,$attr in $Pseudo-dict {
+        .#{$pseudo}\:m\:#{$counter * 5}:#{$attr} {
+            margin: ($counter * .25rem) !important;
+        }
+        @each $attr,$name in $attr-map{
+            .#{$pseudo}\:m-#{$attr}\:#{$counter * 5}:#{$attr} {
+                margin-#{$name}: ($counter * .25rem) !important;
+            }
+        }
+    }
+}
+// margin: -[0-6]
+@for $counter from 0 through 6 {
+    .m\:-#{$counter * 5} {
+        margin: ($counter * .25rem) !important;
+    }
+    @each $attr,$name in $attr-map{
+        .m-#{$attr}\:-#{$counter * 5} {
+            margin-top: ($counter * .25rem) !important;
+        }
+    }
+    @each $pseudo,$attr in $Pseudo-dict {
+        .#{$pseudo}\:m\:-#{$counter * 5}:#{$attr} {
+            margin: ($counter * .25rem) !important;
+        }
+        @each $attr,$name in $attr-map{
+            .#{$pseudo}\:m-#{$attr}\:-#{$counter * 5}:#{$attr} {
+                margin-top: ($counter * .25rem) !important;
+            }
+        }
+    }
+}
+
+.m-auto {
+  margin: 0 auto !important;
+}
+@each $pseudo,$attr in $Pseudo-dict {
+    .#{$pseudo}\:m-auto:#{$attr} {
+      margin: 0 auto !important;
+    }
+}
