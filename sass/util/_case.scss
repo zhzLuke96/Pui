@@ -1,3 +1,6 @@
+// ----------------------------------------------
+// transition,box-sizing
+// ----------------------------------------------
 @for $counter from 1 through 10{
     .smoomth\:#{$counter}{
         transition: all #{.1s * $counter} !important;
@@ -6,6 +9,9 @@
 .smoomth{
     transition: all .2s !important;
 }
-.box{
+.bbox{
     box-sizing: border-box !important;
+}
+.cbox{
+    box-sizing: content-box !important;
 }

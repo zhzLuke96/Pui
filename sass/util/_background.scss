@@ -1,3 +1,7 @@
+//----------------------------------------------
+// background
+// background-color: bg
+//----------------------------------------------
 @each $name,$color in $color-dict {
     .bg\:#{$name} {
         background-color: $color;

@@ -1,4 +1,10 @@
 // ----------------------------------------------
+// font,weight,size,color,Font-Family
+// Font Weight: f-w
+// Font Size: f-s
+// Font-Family: f-f [coder,github]
+// Font-color: f-c
+// ----------------------------------------------
 // Font Weight
 @for $counter from 1 through 9 {
     .f-w\:#{$counter * 100} {
@@ -35,10 +41,8 @@
 .f-f\:coder {
     font-family: Menlo, Consolas, DejaVu Sans Mono, Microsoft YaHei, monospace;
 }
-@each $pseudo,$attr in $Pseudo-dict {
-    .#{$pseudo}\:f-f\:coder:#{$attr} {
-        font-family: Menlo, Consolas, DejaVu Sans Mono, Microsoft YaHei, monospace;
-    }
+.f-f\:github{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";;
 }
 // Font-color
 @each $name,$color in $color-dict {

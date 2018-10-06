@@ -1,6 +1,10 @@
+//----------------------------------------------
+// vertical
+// vertical-align: bl (baseline)
+//----------------------------------------------
 // vetical-align => baseline -> bl
-$attribute-map: baseline, sub,super,top,text-top,middle,bottom,text-bottom;
-@each $attr in $attribute-map{
+$attribute-list: baseline, sub,super,top,text-top,middle,bottom,text-bottom;
+@each $attr in $attribute-list{
     .bl\:#{$attr}{
         vertical-align: #{$attr} !important;
     }

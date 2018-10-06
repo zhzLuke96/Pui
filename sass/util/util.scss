@@ -1,3 +1,6 @@
+//----------------------------------------------
+// global var,color,pseudo class support
+//----------------------------------------------
 $gray: gray;
 $brown: brown;
 $red: red;
@@ -5,10 +8,14 @@ $orange: orange;
 $yellow: yellow;
 $green: green;
 $teal: teal;
-$blue: blue;
+$blue: #0366d6; //github link color
 $indigo: indigo;
 $purple: purple;
 $pink: pink;
+$black: #24292e; //github
+$white: white;
+$default-color: #eee; // border-color
+$shadow-color: rgba(0, 0, 0, .15);
 $color-dict: (
     'gray': $gray,
     'brown': $brown,
@@ -20,7 +27,9 @@ $color-dict: (
     'blue': $blue,
     'indigo': $indigo,
     'purple': $purple,
-    'pink': $pink
+    'pink': $pink,
+    'black':$black,
+    'white':$white,
 );
 $Pseudo-dict: (
     'hover': 'hover',
@@ -28,7 +37,8 @@ $Pseudo-dict: (
     'valid': 'valid',
     'invalid': 'invalid'
 );
-@import "color";
+// import
+@import "background";
 @import "margin";
 @import "padding";
 @import "rounded";
@@ -41,3 +51,4 @@ $Pseudo-dict: (
 @import "font";
 @import "float";
 @import "case";
+@import "cursor";

@@ -1,0 +1,11 @@
+.btn {
+    @extend .f-w\:900, .r\:2, .t\:center, .bl\:center, .f-f\:github, .cur\:pointer;
+}
+
+.btn-blue {
+    @extend .bg\:blue, .f-c\:white;
+}
+
+.btn-blue:hover {
+    @extend .bg\:blue-dark;
+}

@@ -1,9 +1,12 @@
 // ----------------------------------------------
-.pull\:left {
+// float
+// pull-left pull-right float:none
+// ----------------------------------------------
+.pull-left {
   float: left !important;
 }
 
-.pull\:right {
+.pull-right {
   float: right !important;
 }
 
@@ -12,11 +15,11 @@
 }
 
 @each $pseudo,$attr in $Pseudo-dict {
-    .#{$pseudo}\:pull\:left:#{$attr} {
+    .#{$pseudo}\:pull-left:#{$attr} {
       float: left !important;
     }
 
-    .#{$pseudo}\:pull\:right:#{$attr} {
+    .#{$pseudo}\:pull-right:#{$attr} {
       float: right !important;
     }
 

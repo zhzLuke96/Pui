@@ -1,62 +1,56 @@
+// ----------------------------------------------
+// border round
+// border-radius: r
+// border-top-left-radius: r-tl
+// ...
+//
+// ----------------------------------------------
+$r-attr-map:(
+    "":"-",
+    "tl":"-top-left-",
+    "tr":"-top-right-",
+    "br":"-bottom-right-",
+    "bl":"-bottom-left-"
+);
 @for $counter from 0 through 10 {
-    .r\:#{$counter} {
-        border-radius: ($counter * .2rem) !important;
-    }
-
-    .r-tl\:#{$counter} {
-        border-top-left-radius: ($counter * .2rem) !important;
-    }
-
-    .r-tr\:#{$counter} {
-        border-top-right-radius: ($counter * .2rem) !important;
-    }
-
-    .r-br\:#{$counter} {
-        border-bottom-right-radius: ($counter * .2rem) !important;
-    }
-
-    .r-bl\:#{$counter} {
-        border-bottom-left-radius: ($counter * .2rem) !important;
+    @each $name,$attr in $r-attr-map{
+        .r#{$name}\:#{$counter} {
+            border#{$attr}radius: ($counter * .2rem) !important;
+        }
     }
 }
 @for $counter from 0 through 10 {
-    .r\:#{$counter * 10}\% {
-        border-radius: ($counter * 10%) !important;
-    }
-
-    .r-tl\:#{$counter * 10}\% {
-        border-top-left-radius: ($counter * 10%) !important;
-    }
-
-    .r-tr\:#{$counter * 10}\% {
-        border-top-right-radius: ($counter * 10%) !important;
-    }
-
-    .r-br\:#{$counter * 10}\% {
-        border-bottom-right-radius: ($counter * 10%) !important;
-    }
-
-    .r-bl\:#{$counter * 10}\% {
-        border-bottom-left-radius: ($counter * 10%) !important;
+    @each $name,$attr in $r-attr-map{
+        .r#{$name}\:#{$counter * 10}\% {
+            border#{$attr}radius: ($counter * 10%) !important;
+        }
     }
 }
 
-.r\:full {
-    border-radius: 100%;
+@each $name,$attr in $r-attr-map{
+    .r#{$name}\:full {
+        border#{$attr}radius: 100% !important;
+    }
 }
 
-.r-tl\:full {
-    border-top-left-radius: 100%;
-}
-
-.r-tr\:full {
-    border-top-right-radius: 100%;
-}
-
-.r-br\:full {
-    border-bottom-right-radius: 100%;
-}
-
-.r-bl\:full {
-    border-bottom-left-radius: 100%;
+@each $pseudo,$pseudo_name in $Pseudo-dict {
+    @for $counter from 0 through 10 {
+        @each $name,$attr in $r-attr-map{
+            .#{$pseudo}\:r#{$name}\:#{$counter}:#{$pseudo_name} {
+                border#{$attr}radius: ($counter * .2rem) !important;
+            }
+        }
+    }
+    @for $counter from 0 through 10 {
+        @each $name,$attr in $r-attr-map{
+            .#{$pseudo}\:r#{$name}\:#{$counter * 10}\%:#{$pseudo_name} {
+                border#{$attr}radius: ($counter * 10%) !important;
+            }
+        }
+    }
+    @each $name,$attr in $r-attr-map{
+        .#{$pseudo}\:r#{$name}\:full:#{$pseudo_name} {
+            border#{$attr}radius: 100% !important;
+        }
+    }
 }

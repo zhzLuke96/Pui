@@ -1,4 +1,9 @@
 // ----------------------------------------------
+// overflow
+// overflow: of
+// overflow-x: of-x
+// overflow-y: of-y
+// ----------------------------------------------
 .of-auto {
   overflow: auto !important;
 }
@@ -13,19 +18,20 @@
       overflow-y: #{$attr} !important;
     }
 }
-@each $pseudo,$_attr in $Pseudo-dict {
-    .#{$pseudo}\:of-auto:#{$_attr} {
-      overflow: auto !important;
-    }
-    @each $attr in hidden,visible,scroll{
-        .#{$pseudo}\:of\:#{$attr}:#{$_attr} {
-          overflow: #{$attr} !important;
-        }
-        .#{$pseudo}\:of-x\:#{$attr}:#{$_attr} {
-          overflow-x: #{$attr} !important;
-        }
-        .#{$pseudo}\:of-y\:#{$attr}:#{$_attr} {
-          overflow-y: #{$attr} !important;
-        }
-    }
-}
+// 暂时去除
+// @each $pseudo,$_attr in $Pseudo-dict {
+//     .#{$pseudo}\:of-auto:#{$_attr} {
+//       overflow: auto !important;
+//     }
+//     @each $attr in hidden,visible,scroll{
+//         .#{$pseudo}\:of\:#{$attr}:#{$_attr} {
+//           overflow: #{$attr} !important;
+//         }
+//         .#{$pseudo}\:of-x\:#{$attr}:#{$_attr} {
+//           overflow-x: #{$attr} !important;
+//         }
+//         .#{$pseudo}\:of-y\:#{$attr}:#{$_attr} {
+//           overflow-y: #{$attr} !important;
+//         }
+//     }
+// }

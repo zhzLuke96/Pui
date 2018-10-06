@@ -1,3 +1,7 @@
+// ----------------------------------------------
+// padding
+// padding: p
+// ----------------------------------------------
 $attr-map : (
     "t":"top",
     "r":"right",
@@ -5,22 +9,22 @@ $attr-map : (
     "l":"left"
 );
 @for $counter from 0 through 6 {
-    .p\:#{ $counter * 5 } {
+    .p\:#{ $counter } {
         padding: ($counter * .25rem) !important;
     }
     @each $attr,$name in $attr-map{
-        .p-#{$attr}\:#{$counter * 5} {
+        .p-#{$attr}\:#{$counter} {
             padding-#{$name}: ($counter * .25rem) !important;
         }
     }
 }
 @each $pseudo,$_attr in $Pseudo-dict {
     @for $counter from 0 through 6 {
-        .#{$pseudo}\:p\:#{ $counter * 5 }:#{$_attr} {
+        .#{$pseudo}\:p\:#{ $counter }:#{$_attr} {
             padding: ($counter * .25rem) !important;
         }
         @each $attr,$name in $attr-map{
-            .#{$pseudo}\:p-#{$attr}\:#{$counter * 5}:#{$_attr} {
+            .#{$pseudo}\:p-#{$attr}\:#{$counter}:#{$_attr} {
                 padding-#{$name}: ($counter * .25rem) !important;
             }
         }

@@ -1,0 +1,11 @@
+// ----------------------------------------------
+// cursor: cur
+// ----------------------------------------------
+
+$style-list:auto,crosshair,hand,move,help,wait,text,w-resize,s-resize,n-resize,e-resize,ne-resize,sw-resize,se-resize,nw-resize,pointer,url;
+
+@each $style in $style-list{
+    .cur\:#{$style}{
+        cursor: #{$style};
+    }
+}

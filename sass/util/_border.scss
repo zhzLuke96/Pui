@@ -1,24 +1,24 @@
-// border => b
+// ----------------------------------------------
+// border
+// border-width: b
+// border-color: b-c
+// ----------------------------------------------
 .no-b {
   border-width: 0 !important;
 }
-@each $pseudo,$attr in $Pseudo-dict {
-    .#{$pseudo}\:no-b:#{$attr} {
-        border-width: 0 !important;
-    }
-}
 .b\:none {
   border-style: none !important;
-}
-@each $pseudo,$attr in $Pseudo-dict {
-    .#{$pseudo}\:b\:none:#{$attr} {
-         border-style: none !important;
-    }
 }
 .b\:hidden {
   border-style: hidden !important;
 }
 @each $pseudo,$attr in $Pseudo-dict {
+    .#{$pseudo}\:no-b:#{$attr} {
+        border-width: 0 !important;
+    }
+    .#{$pseudo}\:b\:none:#{$attr} {
+         border-style: none !important;
+    }
     .#{$pseudo}\:b\:hidden:#{$attr} {
          border-style: none !important;
     }
@@ -26,22 +26,22 @@
 // border-width with default color and style
 @for $counter from 0 through 5 {
   .b\:#{ $counter } {
-    border: ($counter * 1px) solid #eee !important;
+    border: ($counter * 1px) solid #{$default-color} !important;
   }
   @each $attr in t,r,b,l{
       .b-#{$attr}\:#{ $counter } {
-        border-top: ($counter * 1px) solid #eee !important;
+        border-top: ($counter * 1px) solid #{$default-color} !important;
       }
   }
 }
-@each $pseudo,$attr in $Pseudo-dict {
+@each $pseudo,$_attr in $Pseudo-dict {
     @for $counter from 0 through 5 {
-      .#{$pseudo}\:b\:#{ $counter }:#{$attr} {
-        border: ($counter * 1px) solid #eee !important;
+      .#{$pseudo}\:b\:#{ $counter }:#{$_attr} {
+        border: ($counter * 1px) solid #{$default-color} !important;
       }
       @each $attr in t,r,b,l{
-          .#{$pseudo}\:b-#{$attr}\:#{ $counter } {
-            border-top: ($counter * 1px) solid #eee !important;
+          .#{$pseudo}\:b-#{$attr}\:#{ $counter }:#{$_attr} {
+            border-top: ($counter * 1px) solid #{$default-color} !important;
           }
       }
     }

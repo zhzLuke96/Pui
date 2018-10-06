@@ -1,4 +1,7 @@
 // ----------------------------------------------
+// box-shadow
+// box-shadow: shadow
+// ----------------------------------------------
 
 $size-map: (
     "xs": 1,
@@ -13,7 +16,7 @@ $size-map: (
 };
 @each $name,$val in $size-map {
     .shadow\:#{$name} {
-        box-shadow: 0 #{1px * $val} #{5px * $val} #{1px * $val} rgba(0, 0, 0, .15);
+        box-shadow: 0 #{1px * $val} #{5px * $val} #{1px * $val} #{$shadow-color};
     }
 };
 @each $pseudo,$attr in $Pseudo-dict {
@@ -23,7 +26,7 @@ $size-map: (
     };
     @each $name,$val in $size-map {
         .#{$pseudo}\:shadow\:#{$name}:#{$attr} {
-            box-shadow: 0 #{1px * $val} #{5px * $val} #{1px * $val} rgba(0, 0, 0, .15);
+            box-shadow: 0 #{1px * $val} #{5px * $val} #{1px * $val} #{$shadow-color};
         }
     };
 }
