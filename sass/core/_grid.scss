@@ -1,0 +1,81 @@
+.container {
+    @extend .m-auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+// ----------------------------------------------
+// cell
+@for $gird-width from 1 through 10 {
+    .col\:#{$gird-width} {
+        flex: 0 0 #{100% * $gird-width / 10};
+    }
+}
+// media xs
+@media (min-width: 12rem) {
+    @for $gird-width from 1 through 10 {
+        .col-xs\:#{$gird-width} {
+            flex: 0 0 #{100% * $gird-width / 10};
+        }
+    }
+}
+// sm small
+@media (min-width: 24rem) {
+    @for $gird-width from 1 through 10 {
+        .col-sm\:#{$gird-width} {
+            flex: 0 0 #{100% * $gird-width / 10};
+        }
+    }
+}
+// md
+@media (min-width: 48rem) {
+    @for $gird-width from 1 through 10 {
+        .col-md\:#{$gird-width} {
+            flex: 0 0 #{100% * $gird-width / 10};
+        }
+    }
+}
+/* With gutters */
+@for $gap-size from 1 through 10 {
+    .row-gap\:#{$gap-size} {
+        margin: -#{0.25 * $gap-size}rem 0 0 -#{0.25 * $gap-size}rem;
+    }
+
+    .row-gap\:#{$gap-size} > [class^=col] {
+        padding: #{0.25 * $gap-size}rem 0 0 #{0.25 * $gap-size}rem;
+    }
+}
+
+.row-gap {
+    margin: -1rem 0 0 -1rem;
+}
+
+.row-gap > [class^=col] {
+    padding: 1rem 0 0 1rem;
+}
+/* Alignment per row */
+.row\:top {
+    align-items: flex-start;
+}
+
+.row\:bottom {
+    align-items: flex-end;
+}
+
+.row\:center {
+    align-items: center;
+}
+/* Alignment per cell */
+.cell\:top {
+    align-self: flex-start;
+}
+
+.cell\:bottom {
+    align-self: flex-end;
+}
+
+.cell\:center {
+    align-self: center;
+}

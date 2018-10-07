@@ -6,6 +6,14 @@
 // LICENSE: GPL-3.0
 // github: github.com/zhzLuke96/Pui
 // ----------------------------------------------
+// config: default-color,body-font-size,...
 @import "../util/util";
+@import 'config';
+// ----------------------------------------------
+// base sass
+@import "normalize";
+@import "pui";
+// ----------------------------------------------
+// components sass
 @import "grid";
 @import "button";

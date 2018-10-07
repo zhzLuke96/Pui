@@ -1,11 +1,15 @@
 .btn {
-    @extend .f-w\:900, .r\:2, .t\:center, .bl\:center, .f-f\:github, .cur\:pointer;
+    @extend .f-w\:900, .r\:2, .t\:center, .bl\:center, .f-f\:github, .cur\:pointer, .clearfix, .cbox, .b\:2;
+    border-color:transparent;
 }
 
 .btn-blue {
-    @extend .bg\:blue, .f-c\:white;
+    @extend .bg\:blue, .f-c\:white, .hover\:bg\:blue-dark,
+    .active\:b-c\:blue-lightest,
+    .hover\:b-c\:blue-lightest,
+    .focus\:b-c\:blue-lightest;
 }
 
-.btn-blue:hover {
-    @extend .bg\:blue-dark;
-}
+// .btn-blue:hover {
+//     @extend .bg\:blue-dark;
+// }

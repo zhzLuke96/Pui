@@ -1,0 +1,55 @@
+// ----------------------------------------------
+// pui base style (normalize after)
+// ----------------------------------------------
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    font-size: #{$body-font-size};
+    line-height: #{$body-line-height};
+    font-family: #{$body-font-famliy};
+}
+a{
+    text-decoration: none;
+    color: #{$link-color};
+}
+
+code,
+pre {
+  font-family: #{$ff-pui-coder};
+}
+
+// CodeMirror
+pre{
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: normal;
+    border-radius: 0;
+    border-width: 0;
+    background-color: #272822;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    line-height: inherit;
+    color: inherit;
+    // z-index: 2;
+    position: relative;
+    overflow: visible;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-variant-ligatures: contextual;
+    font-variant-ligatures: contextual;
+}
+
+code{
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    line-height: inherit;
+    color: inherit;
+}

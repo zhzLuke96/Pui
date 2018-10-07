@@ -1,42 +1,8 @@
 //----------------------------------------------
-// global var,color,pseudo class support
+// PUI-UTIL
 //----------------------------------------------
-$gray: gray;
-$brown: brown;
-$red: red;
-$orange: orange;
-$yellow: yellow;
-$green: green;
-$teal: teal;
-$blue: #0366d6; //github link color
-$indigo: indigo;
-$purple: purple;
-$pink: pink;
-$black: #24292e; //github
-$white: white;
-$default-color: #eee; // border-color
-$shadow-color: rgba(0, 0, 0, .15);
-$color-dict: (
-    'gray': $gray,
-    'brown': $brown,
-    'red': $red,
-    'orange': $orange,
-    'yellow': $yellow,
-    'green': $green,
-    'teal': $teal,
-    'blue': $blue,
-    'indigo': $indigo,
-    'purple': $purple,
-    'pink': $pink,
-    'black':$black,
-    'white':$white,
-);
-$Pseudo-dict: (
-    'hover': 'hover',
-    'focus': 'focus',
-    'valid': 'valid',
-    'invalid': 'invalid'
-);
+
+@import "config";
 // import
 @import "background";
 @import "margin";

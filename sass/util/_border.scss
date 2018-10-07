@@ -26,22 +26,28 @@
 // border-width with default color and style
 @for $counter from 0 through 5 {
   .b\:#{ $counter } {
-    border: ($counter * 1px) solid #{$default-color} !important;
+    // border: ($counter * 1px) solid #{$default-color} !important;
+    border-width: ($counter * 1px);
+    border-style: solid;
   }
   @each $attr in t,r,b,l{
       .b-#{$attr}\:#{ $counter } {
-        border-top: ($counter * 1px) solid #{$default-color} !important;
+        // border-top: ($counter * 1px) solid #{$default-color} !important;
+        border-top-width: ($counter * 1px);
+        border-top-style: solid;
       }
   }
 }
 @each $pseudo,$_attr in $Pseudo-dict {
     @for $counter from 0 through 5 {
       .#{$pseudo}\:b\:#{ $counter }:#{$_attr} {
-        border: ($counter * 1px) solid #{$default-color} !important;
+          border-width: ($counter * 1px);
+          border-style: solid;
       }
       @each $attr in t,r,b,l{
           .#{$pseudo}\:b-#{$attr}\:#{ $counter }:#{$_attr} {
-            border-top: ($counter * 1px) solid #{$default-color} !important;
+            border-top-width: ($counter * 1px);
+            border-top-style: solid;
           }
       }
     }

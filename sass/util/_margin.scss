@@ -9,42 +9,42 @@ $attr-map : (
     "b":"bottom",
     "l":"left"
 );
-@for $counter from 0 through 6 {
-    .m\:#{$counter * 5} {
+@for $counter from 0 through 10 {
+    .m\:#{$counter} {
         margin: ($counter * .25rem) !important;
     }
     @each $attr,$name in $attr-map{
-        .m-#{$attr}\:#{$counter * 5} {
+        .m-#{$attr}\:#{$counter} {
             margin-#{$name}: ($counter * .25rem) !important;
         }
     }
     @each $pseudo,$attr in $Pseudo-dict {
-        .#{$pseudo}\:m\:#{$counter * 5}:#{$attr} {
+        .#{$pseudo}\:m\:#{$counter}:#{$attr} {
             margin: ($counter * .25rem) !important;
         }
         @each $attr,$name in $attr-map{
-            .#{$pseudo}\:m-#{$attr}\:#{$counter * 5}:#{$attr} {
+            .#{$pseudo}\:m-#{$attr}\:#{$counter}:#{$attr} {
                 margin-#{$name}: ($counter * .25rem) !important;
             }
         }
     }
 }
 // margin: -[0-6]
-@for $counter from 0 through 6 {
-    .m\:-#{$counter * 5} {
+@for $counter from 0 through 10 {
+    .m\:-#{$counter} {
         margin: ($counter * .25rem) !important;
     }
     @each $attr,$name in $attr-map{
-        .m-#{$attr}\:-#{$counter * 5} {
+        .m-#{$attr}\:-#{$counter} {
             margin-top: ($counter * .25rem) !important;
         }
     }
     @each $pseudo,$attr in $Pseudo-dict {
-        .#{$pseudo}\:m\:-#{$counter * 5}:#{$attr} {
+        .#{$pseudo}\:m\:-#{$counter}:#{$attr} {
             margin: ($counter * .25rem) !important;
         }
         @each $attr,$name in $attr-map{
-            .#{$pseudo}\:m-#{$attr}\:-#{$counter * 5}:#{$attr} {
+            .#{$pseudo}\:m-#{$attr}\:-#{$counter}:#{$attr} {
                 margin-top: ($counter * .25rem) !important;
             }
         }

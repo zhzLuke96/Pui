@@ -15,3 +15,11 @@
 .cbox{
     box-sizing: content-box !important;
 }
+.clearfix:after {
+    content: " ";
+    display: block;;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}

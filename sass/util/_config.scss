@@ -1,0 +1,82 @@
+//----------------------------------------------
+// global var,color,pseudo class support
+//----------------------------------------------
+$gray: gray;
+$brown: brown;
+$red: red;
+$orange: orange;
+$yellow: yellow;
+$green: green;
+$teal: teal;
+$blue: #0366d6; //github link color
+$indigo: #6610f2; // Bootstrap
+$purple: #6f42c1; // Bootstrap
+$pink: pink;
+$cyan: #17a2b8; // Bootstrap
+$black: #24292e; //github
+$white: white;
+$default-color: #eee; // border-color
+$shadow-color: rgba(0, 0, 0, .15);
+$color-dict: (
+    'gray': $gray,
+    'brown': $brown,
+    'red': $red,
+    'orange': $orange,
+    'yellow': $yellow,
+    'green': $green,
+    'teal': $teal,
+    'blue': $blue,
+    'indigo': $indigo,
+    'purple': $purple,
+    'pink': $pink,
+    'cyan': $cyan,
+    'black':$black,
+    'white':$white,
+);
+
+// ----------------------------------------------
+// hover:xx:var
+
+$Pseudo-dict: (
+    'hover': 'hover',
+    'focus': 'focus',
+    'active': 'active',
+    'visited': 'visited',
+    'valid': 'valid',
+    'invalid': 'invalid'
+);
+
+// ----------------------------------------------
+// font-famliy
+$ff-pui-coder: "Menlo, Consolas, DejaVu Sans Mono, Microsoft YaHei, monospace";
+$ff-github: '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"';
+
+
+// Bootstrap
+//
+// --blue: #007bff;
+// --indigo: #6610f2;
+// --purple: #6f42c1;
+// --pink: #e83e8c;
+// --red: #dc3545;
+// --orange: #fd7e14;
+// --yellow: #ffc107;
+// --green: #28a745;
+// --teal: #20c997;
+// --cyan: #17a2b8;
+// --white: #fff;
+// --gray: #6c757d;
+// --gray-dark: #343a40;
+// --primary: #007bff;
+// --secondary: #6c757d;
+// --success: #28a745;
+// --info: #17a2b8;
+// --warning: #ffc107;
+// --danger: #dc3545;
+// --light: #f8f9fa;
+// --dark: #343a40;
+// --breakpoint-xs: 0;
+// --breakpoint-sm: 576px;
+// --breakpoint-md: 768px;
+// --breakpoint-lg: 992px;
+// --breakpoint-xl: 1200px;

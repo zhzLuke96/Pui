@@ -8,7 +8,7 @@ $attr-map : (
     "b":"bottom",
     "l":"left"
 );
-@for $counter from 0 through 6 {
+@for $counter from 0 through 10 {
     .p\:#{ $counter } {
         padding: ($counter * .25rem) !important;
     }
@@ -19,7 +19,7 @@ $attr-map : (
     }
 }
 @each $pseudo,$_attr in $Pseudo-dict {
-    @for $counter from 0 through 6 {
+    @for $counter from 0 through 10 {
         .#{$pseudo}\:p\:#{ $counter }:#{$_attr} {
             padding: ($counter * .25rem) !important;
         }

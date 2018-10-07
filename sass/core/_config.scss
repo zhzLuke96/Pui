@@ -1,0 +1,25 @@
+// ----------------------------------------------
+// global var
+// ----------------------------------------------
+
+
+$gray: #6a737d;
+$gray-light: lighten($gray,20%);
+$gray-dark: darken($gray,20%);
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+$link-color: #0366d6;
+
+
+$body-font-size: 14px;
+$body-line-height: 1.42858;
+$body-font-famliy: #{$ff-github};
+
+$text-color-default: #24292e; // github

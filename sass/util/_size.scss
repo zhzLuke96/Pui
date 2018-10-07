@@ -14,8 +14,14 @@
   .h\:#{ $counter } {
     height: ($counter * 48px) !important;
   }
+  .h\:#{ $counter }r {
+    height: ($counter * .25rem) !important;
+  }
   .w\:#{ $counter } {
     width: ($counter * 48px) !important;
+  }
+  .w\:#{ $counter }r {
+    width: ($counter * .25rem) !important;
   }
 }
 
