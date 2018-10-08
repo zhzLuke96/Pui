@@ -69,5 +69,4 @@ dist/post/*
 !dist/post/.gitkeep
 
 # local test
-index.html
-gird.html
+/*.html

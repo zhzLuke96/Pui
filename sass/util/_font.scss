@@ -8,32 +8,32 @@
 // Font Weight
 @for $counter from 1 through 9 {
     .f-w\:#{$counter * 100} {
-        font-weight: ($counter * 100) !important;
+        font-weight: ($counter * 100);
     }
     @each $pseudo,$attr in $Pseudo-dict {
         .#{$pseudo}\:f-w\:#{$counter * 100}:#{$attr} {
-            font-weight: ($counter * 100) !important;
+            font-weight: ($counter * 100);
         }
     }
 }
 // Font Size
 @for $counter from 1 through 20 {
     .f-s\:#{$counter} {
-        font-size: ($counter * .25rem) !important;
+        font-size: ($counter * .25rem);
     }
     @each $pseudo,$attr in $Pseudo-dict {
         .#{$pseudo}\:f-s\:#{$counter}:#{$attr} {
-            font-size: ($counter * .25rem) !important;
+            font-size: ($counter * .25rem);
         }
     }
 }
 
 .f-s\:0 {
-    font-size: 0 !important;
+    font-size: 0;
 }
 @each $pseudo,$attr in $Pseudo-dict {
     .#{$pseudo}\:f-s\:0:#{$attr} {
-        font-size: 0 !important;
+        font-size: 0;
     }
 }
 // Font-Family

@@ -1,41 +1,19 @@
+// ----------------------------------------------
+// gird layout
+//
+// power by flex
+// ----------------------------------------------
 .container {
     @extend .m-auto;
+    padding: 0 1rem;
 }
 
 .row {
     display: flex;
     flex-flow: row wrap;
 }
-// ----------------------------------------------
-// cell
-@for $gird-width from 1 through 10 {
-    .col\:#{$gird-width} {
-        flex: 0 0 #{100% * $gird-width / 10};
-    }
-}
-// media xs
-@media (min-width: 12rem) {
-    @for $gird-width from 1 through 10 {
-        .col-xs\:#{$gird-width} {
-            flex: 0 0 #{100% * $gird-width / 10};
-        }
-    }
-}
-// sm small
-@media (min-width: 24rem) {
-    @for $gird-width from 1 through 10 {
-        .col-sm\:#{$gird-width} {
-            flex: 0 0 #{100% * $gird-width / 10};
-        }
-    }
-}
-// md
-@media (min-width: 48rem) {
-    @for $gird-width from 1 through 10 {
-        .col-md\:#{$gird-width} {
-            flex: 0 0 #{100% * $gird-width / 10};
-        }
-    }
+.row + .row {
+    margin-top: 1rem;
 }
 /* With gutters */
 @for $gap-size from 1 through 10 {
@@ -66,6 +44,61 @@
 
 .row\:center {
     align-items: center;
+}
+// ----------------------------------------------
+// cell
+@for $gird-width from 1 through 10 {
+    .col\:#{$gird-width} {
+        flex: 0 0 #{100% * $gird-width / 10};
+        max-width: #{100% * $gird-width / 10}
+    }
+    .col-offest\:#{$gird-width} {
+        margin-left: #{100% * $gird-width / 10};
+    }
+}
+// media xs
+@media (max-width: 12rem) {
+    @for $gird-width from 1 through 10 {
+        .col-xs\:#{$gird-width} {
+            flex: 0 0 #{100% * $gird-width / 10};
+        }
+        .col-xs-offest\:#{$gird-width} {
+            margin-left: #{100% * $gird-width / 10};
+        }
+    }
+}
+// sm small
+@media (max-width: 24rem) {
+    @for $gird-width from 1 through 10 {
+        .col-sm\:#{$gird-width} {
+            flex: 0 0 #{100% * $gird-width / 10};
+        }
+        .col-sm-offest\:#{$gird-width} {
+            margin-left: #{100% * $gird-width / 10};
+        }
+    }
+}
+// md
+@media (min-width: 48rem) {
+    @for $gird-width from 1 through 10 {
+        .col-md\:#{$gird-width} {
+            flex: 0 0 #{100% * $gird-width / 10};
+        }
+        .col-md-offest\:#{$gird-width} {
+            margin-left: #{100% * $gird-width / 10};
+        }
+    }
+}
+// lg
+@media (min-width: 60rem) {
+    @for $gird-width from 1 through 10 {
+        .col-lg\:#{$gird-width} {
+            flex: 0 0 #{100% * $gird-width / 10};
+        }
+        .col-lg-offest\:#{$gird-width} {
+            margin-left: #{100% * $gird-width / 10};
+        }
+    }
 }
 /* Alignment per cell */
 .cell\:top {

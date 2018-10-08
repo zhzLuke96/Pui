@@ -1,0 +1,25 @@
+//----------------------------------------------
+// pin position: sticky;
+//
+//----------------------------------------------
+
+.pin{
+    position: sticky;
+    top:0;
+}
+
+
+.pin-b,.pin-bottom{
+    position: sticky;
+    bottom: 0;
+}
+
+.pin-l,.pin-left{
+    position: sticky;
+    left: 0;
+}
+
+.pin-r,.pin-right{
+    position: sticky;
+    right: 0;
+}

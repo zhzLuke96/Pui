@@ -1,0 +1,67 @@
+// ----------------------------------------------
+// card
+//
+// ----------------------------------------------
+$card-boder-color: $gray;
+$cards-boder-color: $gray;
+$card-radius: 0.4rem;
+$card-color-map:(
+    ('blue',"primary",$primary),
+    ("gray", "secondary", $secondary),
+    ("green", "success",$success),
+    ("cyan", "info", $info),
+    ("yellow", "warning", $warning),
+    ("red", "danger", $danger),
+    ("black", "dark", $dark)
+);
+
+.card {
+    padding: .5rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: #{$card-radius};
+    border: 1px solid #{$card-boder-color};
+    width: 100%;
+    @each $color_card in $card-color-map{
+        $name_1 : nth($color_card, 1);
+        $name_2 : nth($color_card, 2);
+        $t_color : nth($color_card, 3);
+        &.#{$name_1},&.#{$name_2} {
+            border-color: #{$t_color};
+            &.shadow{
+                box-shadow: 0 3px 15px 3px #{$t_color};
+            }
+        }
+    }
+}
+
+
+
+.cards {
+    @extend .card;
+    padding: 0;
+    border: 2px solid $cards-boder-color;
+
+    &:last-child{
+        margin: 0;
+    }
+    .card{
+        margin: 0;
+        border-width: 0;
+        border-radius: 0;
+    }
+    .card + .card{
+        border-top-width: 1px;
+    }
+
+    &.transparent {
+        background-color: transparent;
+
+        .card {
+            background-color: transparent;
+        }
+    }
+
+    &.shadow {
+        @extend .shadow\:md;
+    }
+}

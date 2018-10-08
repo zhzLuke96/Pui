@@ -1,0 +1,51 @@
+// --------------------------------------------------
+// Media
+// --------------------------------------------------
+
+.media {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.media > .avatar,
+.media > .figure {
+    margin-right: 1rem;
+}
+
+.media > .avatar {
+    display: inline-block;
+    border-radius: 100%;
+    overflow: hidden;
+    & img{
+        display: block;
+    }
+}
+
+.media > .body,
+.media > .content {
+    flex: 1;
+}
+
+.media > .body,
+.media > .body:last-child,
+.media > .content,
+.media > .content:last-child {
+    margin-bottom: 0;
+}
+
+.media > .body > .header,
+.media > .body > .title,
+.media > .content > .header,
+.media > .content > .title {
+    margin: 0 0 0.5rem;
+}
+
+.media\:center {
+    align-items: center;
+}
+
+.media-reverse > .figure {
+    order: 1;
+    margin: 0 0 0 1rem;
+}

@@ -1,15 +1,133 @@
+// ----------------------------------------------
+// button
+// ----------------------------------------------
+$btn-border-width: 2px;
+$btn-border-radius: .4rem;
+
 .btn {
-    @extend .f-w\:900, .r\:2, .t\:center, .bl\:center, .f-f\:github, .cur\:pointer, .clearfix, .cbox, .b\:2;
-    border-color:transparent;
+    @extend .f-w\:900, .t\:center, .bl\:center, .f-f\:github, .cur\:pointer, .bbox, .f-c\:white, .p-t\:1, .p-b\:1, .p-l\:2, .p-r\:2;
+    border-width: #{$btn-border-width};
+    border-radius: #{$btn-border-radius};
+    // display: inline-block;
+    border-color: transparent;
+    background-color: #{$gray};
+    border-style: solid;
+    outline: none;
+    width: 100%;
+}
+.btn:hover,.btn:focus,.btn:active{
+    background-color: $gray-dark;
+}
+.btn.outline{
+    color: $gray;
+    border-color: $gray;
+    background-color: transparent;
+}
+.btn.outline:active,
+.btn.outline:focus,
+.btn.outline:hover{
+    @extend .f-c\:white;
+    background-color: $gray;
+}
+$btn-color-map:(
+    ("blue","primary",$primary),
+    ("gray", "secondary", $secondary),
+    ("green", "success",$success),
+    ("cyan", "info", $info),
+    ("yellow", "warning", $warning),
+    ("red", "danger", $danger),
+    ("black", "dark", $dark)
+);
+@each $color_btn in $btn-color-map {
+    $name_1: nth($color_btn, 1);
+    $name_2: nth($color_btn, 2);
+    $t_color: nth($color_btn, 3);
+
+    .btn-#{$name_1},
+    .btn-#{$name_2} {
+        background-color: #{$t_color};
+    }
+
+    .btn-#{$name_1}:active,
+    .btn-#{$name_1}:focus,
+    .btn-#{$name_1}:hover,
+    .btn-#{$name_2}:active,
+    .btn-#{$name_2}:focus,
+    .btn-#{$name_2}:hover {
+        background-color: darken($t_color,5%);
+    }
+    // outline
+    .btn-#{$name_1}.outline,
+    .btn-#{$name_2}.outline {
+        color: #{$t_color};
+        border-color: #{$t_color};
+    }
+
+    .btn-#{$name_1}.outline:active,
+    .btn-#{$name_1}.outline:focus,
+    .btn-#{$name_1}.outline:hover,
+    .btn-#{$name_2}.outline:active,
+    .btn-#{$name_2}.outline:focus,
+    .btn-#{$name_2}.outline:hover {
+        @extend .f-c\:white;
+        background-color: #{$t_color};
+    }
+}
+// ----------------------------------------------
+// button style
+
+.btn.btn-block {
+    display: block;
+    width: 100vw;
 }
 
-.btn-blue {
-    @extend .bg\:blue, .f-c\:white, .hover\:bg\:blue-dark,
-    .active\:b-c\:blue-lightest,
-    .hover\:b-c\:blue-lightest,
-    .focus\:b-c\:blue-lightest;
+.btn.btn-pill {
+    @extend .r\:10;
 }
+// ----------------------------------------------
+// button group
 
-// .btn-blue:hover {
-//     @extend .bg\:blue-dark;
-// }
+.btns {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+
+    > .btn {
+        flex:1;
+        border-radius: 0;
+        margin-left: -$btn-border-width;
+
+        &:first-child {
+            margin-left: 0;
+            border-top-left-radius: $btn-border-radius;
+            border-bottom-left-radius: $btn-border-radius;
+        }
+
+        &:last-child {
+            border-top-right-radius: $btn-border-radius;
+            border-bottom-right-radius: $btn-border-radius;
+        }
+    }
+
+    &.vertical {
+        flex-flow: column nowrap;
+        > .btn {
+            flex:1;
+            padding: inherit;
+            border-radius: 0;
+            margin-left: 0;
+            margin-top: -$btn-border-width;
+
+            &:first-child {
+                margin-top: 0;
+                border-top-left-radius: $btn-border-radius;
+                border-top-right-radius: $btn-border-radius;
+            }
+
+            &:last-child {
+                border-bottom-left-radius: $btn-border-radius;
+                border-bottom-right-radius: $btn-border-radius;
+            }
+        }
+    }
+}

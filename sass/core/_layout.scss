@@ -1,0 +1,25 @@
+// ----------------------------------------------
+// layout
+//
+// 粘性 footer header
+//  more:https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/ ----------------------------------------------
+.pui {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.pui > .header,
+.pui > .footer {
+  flex: none;
+}
+.pui > .content{
+    flex: 1 0 auto;
+    width: 100%;
+}
+.pui > .content::after {
+  content: '\00a0'; /* &nbsp; */
+  display: block;
+  margin-top: 1rem;
+  height: 0px;
+  visibility: hidden;
+}
