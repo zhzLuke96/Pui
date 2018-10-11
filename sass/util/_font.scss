@@ -39,10 +39,13 @@
 // Font-Family
 
 .f-f\:coder {
-    font-family: #{$ff-pui-coder};
+    font-family: $ff-pui-coder;
 }
 .f-f\:github{
-    font-family: #{$ff-github};
+    font-family: $ff-github;
+}
+.f-f\:pillow{
+    font-family: $ff-pillow;
 }
 // Font-color
 @each $name,$color in $color-dict {

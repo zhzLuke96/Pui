@@ -1,0 +1,17 @@
+// ----------------------------------------------
+// flex util
+// ----------------------------------------------
+
+.flex\:y-center{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.flex\:x-center{
+    display: flex !important;
+    align-items: center !important;
+}
+
+.flex\:center{
+    @extend .flex\:x-center, .flex\:y-center;
+}

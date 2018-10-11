@@ -60,13 +60,18 @@ typings/
 # next.js build output
 .next
 
-# dist folder
-dist/css/core/*
-!dist/css/core/.gitkeep
-dist/css/util/*
-!dist/css/util/.gitkeep
-dist/post/*
-!dist/post/.gitkeep
+# pack folder
+pack/css/core/*
+!pack/css/core/.gitkeep
+pack/css/util/*
+!pack/css/util/.gitkeep
+pack/post/*
+!pack/post/.gitkeep
+pack/dist/*
+!pack/dist/.gitkeep
 
 # local test
 /*.html
+
+# pack tool
+/cssmin.js

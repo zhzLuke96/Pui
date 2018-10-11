@@ -7,7 +7,8 @@
 // github: github.com/zhzLuke96/Pui
 // ----------------------------------------------
 // config: default-color,body-font-size,...
-@import "../util/util";
+// @import "../util/util";
+@import "../util/config";
 @import 'config';
 // ----------------------------------------------
 // base sass
@@ -19,8 +20,10 @@
 @import "button";
 @import "btn_ripple";
 @import "layout";
-@import "input";
+// @import "input"; // form
 @import "media";
 @import "form";
 @import "card";
 @import "table";
+@import "flex";
+@import "progress";

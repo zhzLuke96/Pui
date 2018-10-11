@@ -108,10 +108,12 @@ hello world
     -   [x] btns(group)
     -   [x] media
     -   [ ] forms
-    -   [ ] table
+        - [x] input
+        - [ ] checkbox,text,file_upload...
+    -   [x] table
     -   [x] card
     -   [x] cards
--   [ ] js
+-   [ ] ~~js~~
 -   [ ] ...
 
 # 后
@@ -127,3 +129,4 @@ hello world
 > -   [autoprefix](https://www.npmjs.com/package/autoprefixer)
 > -   [post-cli](https://github.com/pirxpilot/postcss-cli)
 > -   [node-sass](https://github.com/sass/node-sass)
+> - cssmin

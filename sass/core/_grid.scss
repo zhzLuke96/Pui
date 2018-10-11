@@ -3,112 +3,133 @@
 //
 // power by flex
 // ----------------------------------------------
+// config responsive
+$responsive-map: (
+    "xs": (max-width,24rem), // ~=384px
+    "sm": (max-width,36rem), // ~=575px
+    "md": (min-width,60rem), // ~=960px
+    "lg": (min-width,84rem), // ~=1340px
+); // ----------------------------------------------
+
 .container {
-    @extend .m-auto;
+    // @extend .m-auto;
+    margin: 0 auto;
     padding: 0 1rem;
 }
 
 .row {
     display: flex;
     flex-flow: row wrap;
-}
-.row + .row {
-    margin-top: 1rem;
-}
-/* With gutters */
-@for $gap-size from 1 through 10 {
-    .row-gap\:#{$gap-size} {
-        margin: -#{0.25 * $gap-size}rem 0 0 -#{0.25 * $gap-size}rem;
-    }
 
-    .row-gap\:#{$gap-size} > [class^=col] {
-        padding: #{0.25 * $gap-size}rem 0 0 #{0.25 * $gap-size}rem;
+    & + .row {
+        margin-top: 1rem;
     }
 }
+@mixin responsive($tag:"") {
+    /* With gutters */
+    @for $gap-size from 1 through 10 {
+        .row#{$tag}-gap\:#{$gap-size} {
+            margin: -#{0.25 * $gap-size}rem 0 0 -#{0.25 * $gap-size}rem;
 
-.row-gap {
-    margin: -1rem 0 0 -1rem;
-}
-
-.row-gap > [class^=col] {
-    padding: 1rem 0 0 1rem;
-}
-/* Alignment per row */
-.row\:top {
-    align-items: flex-start;
-}
-
-.row\:bottom {
-    align-items: flex-end;
-}
-
-.row\:center {
-    align-items: center;
-}
-// ----------------------------------------------
-// cell
-@for $gird-width from 1 through 10 {
-    .col\:#{$gird-width} {
-        flex: 0 0 #{100% * $gird-width / 10};
-        max-width: #{100% * $gird-width / 10}
-    }
-    .col-offest\:#{$gird-width} {
-        margin-left: #{100% * $gird-width / 10};
-    }
-}
-// media xs
-@media (max-width: 12rem) {
-    @for $gird-width from 1 through 10 {
-        .col-xs\:#{$gird-width} {
-            flex: 0 0 #{100% * $gird-width / 10};
+            & > [class^=col] {
+                padding: #{0.25 * $gap-size}rem 0 0 #{0.25 * $gap-size}rem;
+            }
         }
-        .col-xs-offest\:#{$gird-width} {
+    }
+
+    .row#{$tag}-gap {
+        margin: -1rem 0 0 -1rem;
+
+        & > [class^=col] {
+            padding: 1rem 0 0 1rem;
+        }
+    }
+    /* Alignment per row */
+    .row#{$tag}\:top {
+        align-items: flex-start;
+    }
+
+    .row#{$tag}\:bottom {
+        align-items: flex-end;
+    }
+
+    .row#{$tag}\:center {
+        align-items: center;
+    }
+
+    .row#{$tag}\:baseline {
+        align-items: baseline;
+    }
+    // order
+    // direction
+    .row#{$tag}\:re,
+    .row#{$tag}\:reverse {
+        flex-direction: row-reverse;
+    }
+
+    .row#{$tag}\:column {
+        flex-direction: column;
+    }
+
+    .row#{$tag}\:re-column {
+        flex-direction: column-reverse;
+    }
+    // dist
+    .row#{$tag}\:around {
+        justify-content: space-around;
+    }
+
+    .row#{$tag}\:between {
+        justify-content: space-between;
+    }
+    // ----------------------------------------------
+    // cell
+    .col#{$tag},
+    .col#{$tag}\:auto {
+        flex: 1 1 0;
+    }
+
+    .col#{$tag}-order\:1,
+    .col#{$tag}\:first {
+        order: -1;
+    }
+
+    .col#{$tag}-order\:-1,
+    .col#{$tag}\:last {
+        order: 1;
+    }
+    @for $gird-width from 1 through 10 {
+        .col#{$tag}\:#{$gird-width} {
+            flex: 0 0 #{100% * $gird-width / 10};
+            max-width: #{100% * $gird-width / 10};
+        }
+
+        .col#{$tag}-offest\:#{$gird-width} {
             margin-left: #{100% * $gird-width / 10};
         }
     }
-}
-// sm small
-@media (max-width: 24rem) {
-    @for $gird-width from 1 through 10 {
-        .col-sm\:#{$gird-width} {
-            flex: 0 0 #{100% * $gird-width / 10};
-        }
-        .col-sm-offest\:#{$gird-width} {
-            margin-left: #{100% * $gird-width / 10};
-        }
+    /* Alignment per cell */
+    .col#{$tag}\:top {
+        align-self: flex-start;
     }
-}
-// md
-@media (min-width: 48rem) {
-    @for $gird-width from 1 through 10 {
-        .col-md\:#{$gird-width} {
-            flex: 0 0 #{100% * $gird-width / 10};
-        }
-        .col-md-offest\:#{$gird-width} {
-            margin-left: #{100% * $gird-width / 10};
-        }
-    }
-}
-// lg
-@media (min-width: 60rem) {
-    @for $gird-width from 1 through 10 {
-        .col-lg\:#{$gird-width} {
-            flex: 0 0 #{100% * $gird-width / 10};
-        }
-        .col-lg-offest\:#{$gird-width} {
-            margin-left: #{100% * $gird-width / 10};
-        }
-    }
-}
-/* Alignment per cell */
-.cell\:top {
-    align-self: flex-start;
-}
 
-.cell\:bottom {
-    align-self: flex-end;
-}
+    .col#{$tag}\:bottom {
+        align-self: flex-end;
+    }
 
-.cell\:center {
-    align-self: center;
+    .col#{$tag}\:center {
+        align-self: center;
+    }
+
+    .col#{$tag}\:baseline {
+        align-self: baseline;
+    }
+}
+@include responsive;
+@each $re-name,$re-option in $responsive-map {
+    $tag: nth($re-option,1);
+    $re-size: nth($re-option,2);
+    @media ($tag: $re-size) {
+        @include responsive(#{"-"+$re-name})
+    }
 }

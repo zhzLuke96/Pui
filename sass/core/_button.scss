@@ -5,7 +5,16 @@ $btn-border-width: 2px;
 $btn-border-radius: .4rem;
 
 .btn {
-    @extend .f-w\:900, .t\:center, .bl\:center, .f-f\:github, .cur\:pointer, .bbox, .f-c\:white, .p-t\:1, .p-b\:1, .p-l\:2, .p-r\:2;
+    // @extend .f-w\:900, .t\:center, .bl\:center, .f-f\:github, .cur\:pointer, .bbox, .f-c\:white, .p-t\:1, .p-b\:1, .p-l\:2, .p-r\:2;
+    font-weight: 900;
+    text-align: center;
+    vertical-align: middle;
+    font-family: $ff-github;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: white;
+    padding: .25rem .75rem;
+
     border-width: #{$btn-border-width};
     border-radius: #{$btn-border-radius};
     // display: inline-block;
@@ -26,7 +35,8 @@ $btn-border-radius: .4rem;
 .btn.outline:active,
 .btn.outline:focus,
 .btn.outline:hover{
-    @extend .f-c\:white;
+    // @extend .f-c\:white;
+    color: white;
     background-color: $gray;
 }
 $btn-color-map:(
@@ -69,7 +79,8 @@ $btn-color-map:(
     .btn-#{$name_2}.outline:active,
     .btn-#{$name_2}.outline:focus,
     .btn-#{$name_2}.outline:hover {
-        @extend .f-c\:white;
+        // @extend .f-c\:white;
+        color: white;
         background-color: #{$t_color};
     }
 }
@@ -82,7 +93,8 @@ $btn-color-map:(
 }
 
 .btn.btn-pill {
-    @extend .r\:10;
+    // @extend .r\:10;
+    border-radius: 2rem;
 }
 // ----------------------------------------------
 // button group
