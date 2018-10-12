@@ -23,31 +23,35 @@
          border-style: none !important;
     }
 }
+$b-attr-map: (
+    "t":"top",
+    "b":"bottom",
+    "r":"right",
+    "l":"left",
+);
 // border-width with default color and style
 @for $counter from 0 through 5 {
   .b\:#{ $counter } {
-    // border: ($counter * 1px) solid #{$default-color} !important;
-    border-width: ($counter * 1px);
-    border-style: solid;
+    border-width: ($counter * 1px) !important;
+    border-style: solid !important;
   }
-  @each $attr in t,r,b,l{
+  @each $attr,$attr_name in $b-attr-map{
       .b-#{$attr}\:#{ $counter } {
-        // border-top: ($counter * 1px) solid #{$default-color} !important;
-        border-top-width: ($counter * 1px);
-        border-top-style: solid;
+        border-#{$attr_name}-width: ($counter * 1px) !important;
+        border-#{$attr_name}-style: solid !important;
       }
   }
 }
 @each $pseudo,$_attr in $Pseudo-dict {
     @for $counter from 0 through 5 {
       .#{$pseudo}\:b\:#{ $counter }:#{$_attr} {
-          border-width: ($counter * 1px);
-          border-style: solid;
+          border-width: ($counter * 1px) !important;
+          border-style: solid !important;
       }
-      @each $attr in t,r,b,l{
+      @each $attr,$attr_name in $b-attr-map{
           .#{$pseudo}\:b-#{$attr}\:#{ $counter }:#{$_attr} {
-            border-top-width: ($counter * 1px);
-            border-top-style: solid;
+            border-#{$attr_name}-width: ($counter * 1px) !important;
+            border-#{$attr_name}-style: solid !important;
           }
       }
     }
@@ -55,61 +59,61 @@
 // border-color
 @each $name,$color in $color-dict {
     .b-c\:#{$name} {
-        border-color: $color;
+        border-color: $color !important;
     }
 
     .b-c\:#{$name}-light {
-        border-color: lighten($color, 15%);
+        border-color: lighten($color, 15%) !important;
     }
 
     .b-c\:#{$name}-lighter {
-        border-color: lighten($color, 25%);
+        border-color: lighten($color, 25%) !important;
     }
 
     .b-c\:#{$name}-lightest {
-        border-color: lighten($color, 35%);
+        border-color: lighten($color, 35%) !important;
     }
 
     .b-c\:#{$name}-dark {
-        border-color: darken($color, 15%);
+        border-color: darken($color, 15%) !important;
     }
 
     .b-c\:#{$name}-darker {
-        border-color: darken($color, 25%);
+        border-color: darken($color, 25%) !important;
     }
 
     .b-c\:#{$name}-darkest {
-        border-color: darken($color, 35%);
+        border-color: darken($color, 35%) !important;
     }
 }
 @each $pseudo,$attr in $Pseudo-dict {
     @each $name,$color in $color-dict {
         .#{$pseudo}\:b-c\:#{$name}:#{$attr} {
-            border-color: $color;
+            border-color: $color !important;
         }
 
         .#{$pseudo}\:b-c\:#{$name}-light:#{$attr} {
-            border-color: lighten($color, 15%);
+            border-color: lighten($color, 15%) !important;
         }
 
         .#{$pseudo}\:b-c\:#{$name}-lighter:#{$attr} {
-            border-color: lighten($color, 25%);
+            border-color: lighten($color, 25%) !important;
         }
 
         .#{$pseudo}\:b-c\:#{$name}-lightest:#{$attr} {
-            border-color: lighten($color, 35%);
+            border-color: lighten($color, 35%) !important;
         }
 
         .#{$pseudo}\:b-c\:#{$name}-dark:#{$attr} {
-            border-color: darken($color, 15%);
+            border-color: darken($color, 15%) !important;
         }
 
         .#{$pseudo}\:b-c\:#{$name}-darker:#{$attr} {
-            border-color: darken($color, 25%);
+            border-color: darken($color, 25%) !important;
         }
 
         .#{$pseudo}\:b-c\:#{$name}-darkest:#{$attr} {
-            border-color: darken($color, 35%);
+            border-color: darken($color, 35%) !important;
         }
     }
 }

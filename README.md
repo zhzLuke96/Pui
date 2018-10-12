@@ -1,6 +1,6 @@
 # Pui
 
-🔨CSS farm-work(tool)
+🔨CSS farm-work(tool) `lightweight` css framework
 
 > [normalize](https://github.com/necolas/normalize.css)
 
@@ -20,8 +20,7 @@ hello world
 ```
 
 > ~~core'll be built according to UTIL.css by @extend (sass)~~
-> <br>(这个想法一点也不好...core和util其实交际很少，为了简单的属性就让core模块也增大数倍，不是很值...之后将会让core脱离util)
-> <br>**当然这并不代表util是200k的废话**
+> <br>**coding proved it’s bad idea, In design**
 
 # usage
 
@@ -72,9 +71,11 @@ hello world
     <div class="card">other</div>
 </div>
 ```
-*.card.shadow can created colored shadow
+
+\*.card.shadow can created colored shadow
 
 #### media
+
 ```html
 <div class="media">
     <div class="avatar">
@@ -94,39 +95,81 @@ hello world
 ```
 
 #### form
+
 ...
 
 #### table
+
+like bootstrap
+
+#### modal
+
+```html
+<a class="btn btn-block btn-blue ripple" href="#modal1">modal1</a>
+
+<div class="modal" id="modal1">
+    <div class="body cards no-b shadow">
+        <div class="card container">
+            <div class="row row:baseline">
+                <div class="col:9">
+                    <span class="f-w:900 f:5">title</span>
+                </div>
+                <a class="col f-w:900 f:6 hover:f-c:purple" href="#close">×</a>
+            </div>
+        </div>
+        <div class="card container">
+            <div class="row row-gap">
+                <div class="col:1"></div>
+                <div class="col f:4 p:4">hello world!</div>
+            </div>
+        </div>
+        <div class="card container">
+            <div class="btns col-offest:7 col:3">
+                <a class="btn btn-dark outline ripple" href="#close">取消</a>
+                <a class="btn btn-blue ripple">提交</a>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+\*cards layout not required
+
+#### more
+
 ...
 
 # todo
 
 -   [x] util.css
--   [x] grid layout(flex)
+-   [ ] grid layout(flex)
+    -   [x] 10 cols
+    -   [ ] 12,14 cols
 -   [ ] core components
     -   [x] btn
     -   [x] btns(group)
     -   [x] media
     -   [ ] forms
-        - [x] input
-        - [ ] checkbox,text,file_upload...
+        -   [x] input
+        -   [ ] checkbox,text,file_upload...
     -   [x] table
     -   [x] card
     -   [x] cards
+    -   [x] modal(prue css)
 -   [ ] ~~js~~
 -   [ ] ...
 
 # 后
 
-虽然写的是`轻量`...但是单单util就已经200k了...
+虽然写的是`轻量`...但是单单util就已经200k了...(虽然不推荐，但是只是用core模块20k也够用了)
 
 > **关于pack.js**
 > <br>
-> 整体的打包流程就不复杂，遂没有上webpack，`dist目录`打包完后有两个文件夹，`css目录`是从sass编译过来的部分，`post目录`呢就是经过`autoprefix`之后的内容
+> 整体的打包流程就不复杂，遂没有上webpack，`dist目录`打包完后有两个文件夹，`css目录`是从sass编译过来的部分，`post目录`呢就是经过`autoprefix`之后的内容，`dist`里就是最后`cssmin`处理完成的
 >
-> 打包需要：<br>
+> pack.js required libs:<br>
 >
 > -   [autoprefix](https://www.npmjs.com/package/autoprefixer)
 > -   [post-cli](https://github.com/pirxpilot/postcss-cli)
 > -   [node-sass](https://github.com/sass/node-sass)
-> - cssmin
+> -   [cssmin](https://github.com/jbleuzen/node-cssmin)

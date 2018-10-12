@@ -18,21 +18,21 @@
 }
 // Font Size
 @for $counter from 1 through 20 {
-    .f-s\:#{$counter} {
+    .f\:#{$counter} {
         font-size: ($counter * .25rem);
     }
     @each $pseudo,$attr in $Pseudo-dict {
-        .#{$pseudo}\:f-s\:#{$counter}:#{$attr} {
+        .#{$pseudo}\:f\:#{$counter}:#{$attr} {
             font-size: ($counter * .25rem);
         }
     }
 }
 
-.f-s\:0 {
+.f\:0 {
     font-size: 0;
 }
 @each $pseudo,$attr in $Pseudo-dict {
-    .#{$pseudo}\:f-s\:0:#{$attr} {
+    .#{$pseudo}\:f\:0:#{$attr} {
         font-size: 0;
     }
 }

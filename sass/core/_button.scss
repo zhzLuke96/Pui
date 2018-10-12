@@ -17,12 +17,11 @@ $btn-border-radius: .4rem;
 
     border-width: #{$btn-border-width};
     border-radius: #{$btn-border-radius};
-    // display: inline-block;
+    display: inline-block;
     border-color: transparent;
     background-color: #{$gray};
     border-style: solid;
     outline: none;
-    width: 100%;
 }
 .btn:hover,.btn:focus,.btn:active{
     background-color: $gray-dark;
@@ -59,10 +58,10 @@ $btn-color-map:(
     }
 
     .btn-#{$name_1}:active,
-    .btn-#{$name_1}:focus,
+    // .btn-#{$name_1}:focus,
     .btn-#{$name_1}:hover,
     .btn-#{$name_2}:active,
-    .btn-#{$name_2}:focus,
+    // .btn-#{$name_2}:focus,
     .btn-#{$name_2}:hover {
         background-color: darken($t_color,5%);
     }
@@ -74,10 +73,10 @@ $btn-color-map:(
     }
 
     .btn-#{$name_1}.outline:active,
-    .btn-#{$name_1}.outline:focus,
+    // .btn-#{$name_1}.outline:focus,
     .btn-#{$name_1}.outline:hover,
     .btn-#{$name_2}.outline:active,
-    .btn-#{$name_2}.outline:focus,
+    // .btn-#{$name_2}.outline:focus,
     .btn-#{$name_2}.outline:hover {
         // @extend .f-c\:white;
         color: white;
@@ -89,7 +88,7 @@ $btn-color-map:(
 
 .btn.btn-block {
     display: block;
-    width: 100vw;
+    width: 100%;
 }
 
 .btn.btn-pill {

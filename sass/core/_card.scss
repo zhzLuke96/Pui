@@ -19,10 +19,11 @@ $card-color-map:(
 }
 
 .card {
+    background-color: $light;
     padding: .5rem 1rem;
     margin-bottom: 1.5rem;
     border-radius: #{$card-radius};
-    border: 1px solid #{$card-boder-color};
+    border: 2px solid #{$card-boder-color};
     width: 100%;
     @each $color_card in $card-color-map{
         $name_1 : nth($color_card, 1);

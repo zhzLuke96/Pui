@@ -1,0 +1,46 @@
+// ----------------------------------------------
+// prue css modal
+// ----------------------------------------------
+@mixin transition($time: 0.5s, $range: all, $ease: ease-out) {
+    transition: $range $time $ease;
+}
+@mixin transition-delay($time: 0.4s) {
+    transition-delay: $time;
+}
+
+.modal {
+    @include transition(0.2s);
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    z-index: 99999;
+
+    @include transition-delay(0.3s);
+    &:target {
+        opacity: 1;
+        z-index: 99999;
+        pointer-events: auto;
+        background: rgba(0,0,0,.5);
+        .body{
+            opacity: 1;
+            @include transition(0.3s);
+            @include transition-delay(0.2s);
+        }
+    }
+    // center layout
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .body {
+        opacity: 0;
+        margin-top: 10%;
+        position: relative;
+        max-width: 32rem;
+        overflow: hidden;
+    }
+}
