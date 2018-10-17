@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PUI - home</title>
+    <link rel="stylesheet" href="./dist/core.min.css">
+    <link rel="stylesheet" href="./dist/util.min.css">
+    <style media="screen">
+        *{
+            transition: all .3s;
+        }
+        header{
+            background-color: #f6f6f6;
+            font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+            color: #2c3e50;
+        }
+        header .logo{
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        header .nav>a{
+            color: rgba(44, 62, 80, .5);
+            padding-left: 1rem;
+            font-weight: bold;
+        }
+        header .nav>a:hover{
+            color: rgba(44, 62, 80, .8);
+            cursor: pointer;
+            text-decoration:underline;
+        }
+        header .btn{
+            white-space: nowrap;
+            width: 100%;
+        }
+        p>small{
+            color: rgba(44, 62, 80, 1);
+            font-size: 1rem;
+        }
+        footer{
+            color: rgba(238, 238, 238, 1);
+            background-color: rgb(114, 127, 128);
+        }
+        .big-logo{
+            user-select:none;
+        }
+        .doc-log{
+            opacity: .5;
+            border-bottom: 1px solid gray;
+        }
+    </style>
+</head>
+<body class="pui">
+    <header class="p:5 header">
+        <div class="container">
+            <div class="row row-gap row:baseline">
+                <div class="col col:2 col-sm:10 logo">
+                        <span class="p-logo bg:green r:3 p:1 p-l:2 p-r:2 f-c:white">P</span>
+                </div>
+                <div class="col col:5 col-sm:10 flex:center nav">
+                    <a href="#">started</a>
+                    <a href="#">guide</a>
+                    <a href="#">github</a>
+                </div>
+            </div>
+            <div class="row row-gap">
+                <div class="col col:5 col-sm:10">
+                    <h1 class="f-c:green f-f:github">pUI</h1>
+                    <p>pui 是一个易用的css组件库
+                    </p>
+                    <p>
+                    pui 设计中汲取了web开发的新力量。利用我们提供的 util 构建库、响应式栅格系统、基于 Poi 的强大的插件系统，能够快速为你的想法开发出原型或者构建整个 web app 。
+                    </p>
+                    <div class="row row-gap">
+                        <div class="col col-sm:10">
+                            <button class="btn btn-green outline ripple-outer f:6 p:5">
+                                Get Started
+                            </button>
+                        </div>
+                        <div class="col col-sm:10">
+                            <button class="btn btn-blue outline ripple-outer p:5 f:6">
+                                源码
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col:5 col-sm:10 col-sm:first col:center flex:center">
+                    <div class="big-logo cards flex:center f:20 f-c:green f-f:coder no-b shadow h:20% w:4 b-c:purple ripple cur:pointer">
+                        P
+                    </div>
+
+                </div>
+            </div>
+            <div class="row row-gap doc-log">
+                <div class="col">
+                    文档更新时间：
+                </div>
+                <div class="col col:2">
+                    18/10/17
+                </div>
+                <div class="col col:2">
+                    zhzLuke96
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container content">
+        <div class="row row-gap">
+            <div class="col col-sm:10">
+                <h4>
+                    coding style
+                </h4>
+
+            </div>
+            <div class="col col-sm:10">
+                <h4>
+                    util
+                </h4>
+            </div>
+            <div class="col flex:center col-sm:10">
+                <h4>
+                    <a href="#">Guide</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+    <footer class="footer p:5 t:center">
+        <p>
+            LICENSE GPL v3
+        </p>
+        <hr>
+        <div>
+            <a href="https://github.com/zhzLuke96/" title="poijs;jsonflow;yoi...">
+                more open proj
+            </a>
+            <br>
+        </div>
+        Copyright © 2018-now <a href="https://github.com/zhzLuke96/" title="zhzLuke96">
+            about me
+        </a>
+    </footer>
+</body>
+</html>
