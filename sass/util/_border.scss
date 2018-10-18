@@ -1,6 +1,6 @@
 // ----------------------------------------------
 // border
-// border-width: b
+// border-width: b,b-w
 // border-color: b-c
 // ----------------------------------------------
 .no-b {
@@ -31,12 +31,12 @@ $b-attr-map: (
 );
 // border-width with default color and style
 @for $counter from 0 through 5 {
-  .b\:#{ $counter } {
+  .b\:#{ $counter },.b-w\:#{ $counter } {
     border-width: ($counter * 1px) !important;
     border-style: solid !important;
   }
   @each $attr,$attr_name in $b-attr-map{
-      .b-#{$attr}\:#{ $counter } {
+      .b-#{$attr}\:#{ $counter },.b-w-#{$attr}\:#{ $counter } {
         border-#{$attr_name}-width: ($counter * 1px) !important;
         border-#{$attr_name}-style: solid !important;
       }
@@ -44,12 +44,12 @@ $b-attr-map: (
 }
 @each $pseudo,$_attr in $Pseudo-dict {
     @for $counter from 0 through 5 {
-      .#{$pseudo}\:b\:#{ $counter }:#{$_attr} {
+      .#{$pseudo}\:b\:#{ $counter }:#{$_attr},.#{$pseudo}\:b-w\:#{ $counter }:#{$_attr} {
           border-width: ($counter * 1px) !important;
           border-style: solid !important;
       }
       @each $attr,$attr_name in $b-attr-map{
-          .#{$pseudo}\:b-#{$attr}\:#{ $counter }:#{$_attr} {
+          .#{$pseudo}\:b-#{$attr}\:#{ $counter }:#{$_attr},.#{$pseudo}\:b-w-#{$attr}\:#{ $counter }:#{$_attr} {
             border-#{$attr_name}-width: ($counter * 1px) !important;
             border-#{$attr_name}-style: solid !important;
           }

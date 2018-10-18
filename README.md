@@ -4,6 +4,9 @@
 
 > [normalize](https://github.com/necolas/normalize.css)
 
+# docment & guide
+[link...](https://zhzluke96.github.io/Pui/)
+
 # utility-first
 
 ```html
@@ -20,7 +23,7 @@ hello world
 ```
 
 > ~~core'll be built according to UTIL.css by @extend (sass)~~
-> <br>**coding proved it’s bad idea, In design**
+> <br>**coding proved it’s bad idea, In design, but good for work**
 
 # usage
 
@@ -142,10 +145,12 @@ like bootstrap
 # todo
 
 -   [x] util.css
--   [ ] grid layout(flex)
+-   [x] grid layout(flex)
     -   [x] 10 cols
-    -   [ ] 12,14 cols
--   [ ] core components
+    -   [x] order
+    -   [x] media hidden
+    -   [ ] ~~12,14 cols~~ `由于flex的各种特性，不需要更多的划分(吧)`
+-   [ ] core elements
     -   [x] btn
     -   [x] btns(group)
     -   [x] media
@@ -156,12 +161,13 @@ like bootstrap
     -   [x] card
     -   [x] cards
     -   [x] modal(prue css)
--   [ ] ~~js~~
+    -   [x] progress(h5)
+-   [ ] ~~js~~ `poiJs` [Learn more](https://zhzluke96.github.io/PoiJs/)
 -   [ ] ...
 
 # 后
 
-虽然写的是`轻量`...但是单单util就已经200k了...(虽然不推荐，但是只是用core模块20k也够用了)
+虽然写的是`轻量`...但是单单util就已经200k了...(虽然不推荐，20k的core是够用的)
 
 > **关于pack.js**
 > <br>

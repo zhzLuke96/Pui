@@ -1,0 +1,93 @@
+// ----------------------------------------------
+// outline
+// outline: ol => ol:color
+// * support radius
+// ----------------------------------------------
+$default-width: 3px;
+
+@mixin outline($color:$gray,$size:$default-width,$opacity:.5){
+    box-shadow: 0 0 0 $size rgba($color,$opacity) !important;
+}
+
+.no-ol,.ol\:none {
+  box-shadow: none !important;
+}
+.ol\:hidden {
+  box-shadow: unset !important;
+}
+@each $pseudo,$attr in $Pseudo-dict {
+    .#{$pseudo}\:no-ol:#{$attr},#{$pseudo}\:.ol\:none:#{$attr} {
+      box-shadow: none !important;
+    }
+    .#{$pseudo}\:ol\:hidden:#{$attr} {
+      box-shadow: unset !important;
+    }
+}
+// outline-color
+.ol{
+    box-shadow: 0 0 0 $default-width;
+}
+@each $name,$color in $color-dict {
+    .ol\:#{$name} {
+        @include outline($color);
+    }
+
+    .ol\:#{$name}-light {
+        @include outline(lighten($color, 15%));
+    }
+
+    .ol\:#{$name}-lighter {
+        @include outline(lighten($color, 25%));
+    }
+
+    .ol\:#{$name}-lightest {
+        @include outline(lighten($color, 35%));
+    }
+
+    .ol\:#{$name}-dark {
+        @include outline(darken($color, 15%));
+    }
+
+    .ol\:#{$name}-darker {
+        @include outline(darken($color, 25%));
+    }
+
+    .ol\:#{$name}-darkest {
+        @include outline(darken($color, 35%));
+    }
+}
+@each $pseudo,$attr in $Pseudo-dict {
+    .#{$pseudo}\:ol:#{$attr}{
+        // @include outline;
+        box-shadow: 0 0 0 $default-width;
+    }
+    @each $name,$color in $color-dict {
+        .#{$pseudo}\:ol\:#{$name}:#{$attr} {
+            @include outline($color);
+        }
+
+        .#{$pseudo}\:ol\:#{$name}-light:#{$attr} {
+            @include outline(lighten($color, 15%));
+        }
+
+        .#{$pseudo}\:ol\:#{$name}-lighter:#{$attr} {
+            @include outline(lighten($color, 25%));
+        }
+
+        .#{$pseudo}\:ol\:#{$name}-lightest:#{$attr} {
+            @include outline(lighten($color, 35%));
+        }
+
+        .#{$pseudo}\:ol\:#{$name}-dark:#{$attr} {
+            @include outline(darken($color, 15%));
+        }
+
+        .#{$pseudo}\:ol\:#{$name}-darker:#{$attr} {
+            @include outline(darken($color, 25%));
+        }
+
+        .#{$pseudo}\:ol\:#{$name}-darkest:#{$attr} {
+            @include outline(darken($color, 35%));
+        }
+    }
+}

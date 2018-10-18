@@ -1,1 +1,62 @@
 // progress
+$pro-bg: hsl(0, 0%, 86%);
+$pro-val: hsl(0, 0%, 29%);
+$radius-inf: 9999rem;
+
+@mixin rubust_color($val-volor:$pro-val,$bg-color:$pro-bg){
+    background-color: $bg-color;
+    color: $val-volor; // *IE10
+    &::-moz-progress-bar {
+        background: $val-volor;
+    }
+
+    &::-webkit-progress-bar {
+        background: $bg-color;
+    }
+
+    &::-webkit-progress-value {
+        background: $val-volor;
+    }
+}
+$pro-color-map:(
+    ("blue","primary",$primary),
+    ("gray", "secondary", $secondary),
+    ("green", "success",$success),
+    ("cyan", "info", $info),
+    ("yellow", "warning", $warning),
+    ("red", "danger", $danger),
+    ("black", "dark", $dark)
+);
+// ----------------------------------------------
+progress {
+    width: 100%;
+    border:none;
+    border-radius: $radius-inf;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+
+    height: 1rem; // defautl height
+
+    @include rubust_color;
+    @each $color_pro in $pro-color-map {
+        $name_1: nth($color_pro, 1);
+        $name_2: nth($color_pro, 2);
+        $t_color: nth($color_pro, 3);
+
+        &.#{$name_1},&.#{$name_2}{
+            @include rubust_color($t_color);
+        }
+    }
+    $size-map:(
+        small:.5rem,
+        big:1.5rem,
+        large:2rem
+    );
+    @each $attr,$size in $size-map{
+        &.#{$attr}{
+            height: $size;
+        }
+    }
+
+}

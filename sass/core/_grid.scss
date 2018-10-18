@@ -27,7 +27,7 @@ $responsive-map: (
 }
 @mixin responsive($tag:"") {
     /* With gutters */
-    @for $gap-size from 1 through 10 {
+    @for $gap-size from 0 through 10 {
         .row#{$tag}-gap\:#{$gap-size} {
             margin: -#{0.25 * $gap-size}rem 0 0 -#{0.25 * $gap-size}rem;
 
@@ -82,6 +82,12 @@ $responsive-map: (
     .row#{$tag}\:between {
         justify-content: space-between;
     }
+    // hidden
+    .row#{$tag}\:0,.row#{$tag}\:hidden
+    .col#{$tag}\:0,.col#{$tag}\:hidden{
+        display: none;
+    }
+
     // ----------------------------------------------
     // cell
     .col#{$tag},
