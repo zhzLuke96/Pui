@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>🍭PUI - </title>
+    <link rel="stylesheet" href="../dist/core.min.css">
+    <link rel="stylesheet" href="../dist/util.min.css">
+    <style media="screen">
+        *{
+            transition: all .3s;
+        }
+        header{
+            background-color: #f6f6f6;
+            font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+            color: #2c3e50;
+        }
+        header .logo{
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        header .nav>a{
+            color: rgba(44, 62, 80, .5);
+            padding-left: 1rem;
+            font-weight: bold;
+        }
+        header .nav>a:hover{
+            color: rgba(44, 62, 80, .8);
+            cursor: pointer;
+            text-decoration:underline;
+        }
+        header .btn{
+            white-space: nowrap;
+            width: 100%;
+        }
+        footer{
+            /* color: rgba(238, 238, 238, 1); */
+            color: rgba(44, 62, 80, .8);
+            background-color: rgba(114, 127, 128,.4);
+        }
+    </style>
+</head>
+<body class="pui">
+    <header class="p:5 header">
+        <div class="container">
+            <div class="row row-gap row:baseline">
+                <div class="col col:2 col-sm:hidden logo">
+                        <a href="../index.html" class="p-logo bg:green r:3 p:1 p-l:2 p-r:2 f-c:white">
+                            P
+                        </a>
+                </div>
+                <div class="col col:5 col-sm:10 flex:center nav">
+                    <a href="#">started</a>
+                    <a href="#">guide</a>
+                    <a href="https://github.com/zhzLuke96/Pui">github</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container content">
+        <div class="row row-gap">
+            <div class="col col-sm:10">
+                <h4>
+                    content
+                </h4>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer p:5 t:center">
+        <p>
+            LICENSE GPL v3
+        </p>
+        <hr>
+        <div>
+            <a href="https://github.com/zhzLuke96/" title="poijs;jsonflow;yoi...">
+                more open proj
+            </a>
+            <br>
+        </div>
+        Copyright © 2018-now <a href="https://github.com/zhzLuke96/" title="github">
+            zhzLuke96
+        </a>
+    </footer>
+</body>
+</html>

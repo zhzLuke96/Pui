@@ -1,67 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PUI - home</title>
+    <title>🍭PUI - lightweight css framework</title>
     <link rel="stylesheet" href="./dist/core.min.css">
     <link rel="stylesheet" href="./dist/util.min.css">
     <style media="screen">
-        *{
+        * {
             transition: all .3s;
-        }
-        header{
-            background-color: #f6f6f6;
-            font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
             color: #2c3e50;
         }
-        header .logo{
+
+        header {
+            background-color: #f6f6f6;
+            font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        header .logo {
             font-weight: bold;
             font-size: 2rem;
         }
-        header .nav>a{
+
+        header .nav>a {
             color: rgba(44, 62, 80, .5);
             padding-left: 1rem;
             font-weight: bold;
         }
-        header .nav>a:hover{
+
+        header .nav>a:hover {
             color: rgba(44, 62, 80, .8);
             cursor: pointer;
-            text-decoration:underline;
+            text-decoration: underline;
         }
-        header .btn{
+
+        header .btn {
             white-space: nowrap;
             width: 100%;
         }
-        p>small{
-            color: rgba(44, 62, 80, 1);
+
+        p>small {
             font-size: 1rem;
+            color: rgba(44, 62, 80, 1);
         }
-        footer{
-            color: rgba(238, 238, 238, 1);
-            background-color: rgb(114, 127, 128);
+
+        footer {
+            /* color: rgba(238, 238, 238, 1); */
+            color: rgba(44, 62, 80, .8);
+            background-color: rgba(114, 127, 128, .4);
         }
-        .big-logo{
-            user-select:none;
+
+        .big-logo {
+            user-select: none;
         }
-        .doc-log{
+
+        .doc-log {
             opacity: .5;
             border-bottom: 1px solid gray;
         }
+
+        .guide-btn {
+            margin: 4rem;
+            height: 100px;
+        }
+
+        .guide-btn>a {
+            background-color: #2c3e50;
+            color: rgba(238, 238, 238, .7);
+            border-radius: 999rem;
+            font-weight: bold;
+            color: white;
+            font-size: 2rem;
+            height: 5rem;
+            width: 5rem;
+            box-shadow: 0 0 0 2.5rem #FFCC33,
+                0 0 0 3rem #99CC33,
+                0 0 0 3.5rem #99CCCC,
+                0 0 0 4rem #FFCCCC;
+        }
+
+        .guide-btn>a:hover {
+            height: 10rem;
+            width: 10rem;
+            box-shadow: none;
+        }
+
+        .zebra>:nth-child(2n+0) {
+            background-color: #f6f6f6;
+        }
+
+        h4 {
+            padding: 1rem;
+            margin: -1rem auto;
+            width: 100%;
+            max-width: 48rem;
+        }
+        header>.container{
+            max-width: 48rem;
+        }
+    </style>
+    <style media="screen">
+        .gird-demo {
+            color: rgba(238, 238, 238, 1);
+            text-align: center;
+            line-height: 2rem;
+            height: 2rem;
+            background-color: #996699;
+            border-radius: 5px;
+        }
+    </style>
+    <style media="screen">
+        .logos{
+            align-items: stretch;
+        }
+        .logos>.col{
+            display: flex;
+            align-items: stretch;
+        }
+        .logos>.col>.cards{
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
+
 <body class="pui">
     <header class="p:5 header">
         <div class="container">
             <div class="row row-gap row:baseline">
-                <div class="col col:2 col-sm:10 logo">
-                        <span class="p-logo bg:green r:3 p:1 p-l:2 p-r:2 f-c:white">P</span>
+                <div class="col col:2 col-sm:hidden logo">
+                    <a href="#" class="p-logo bg:green r:3 p:1 p-l:2 p-r:2 f-c:white">
+                            P
+                        </a>
                 </div>
                 <div class="col col:5 col-sm:10 flex:center nav">
                     <a href="#">started</a>
                     <a href="#">guide</a>
-                    <a href="#">github</a>
+                    <a href="https://github.com/zhzLuke96/Pui">github</a>
                 </div>
             </div>
             <div class="row row-gap">
@@ -70,16 +149,16 @@
                     <p>pui 是一个易用的css组件库
                     </p>
                     <p>
-                    pui 设计中汲取了web开发的新力量。利用我们提供的 util 构建库、响应式栅格系统、基于 Poi 的强大的插件系统，能够快速为你的想法开发出原型或者构建整个 web app 。
+                        pui 设计中汲取了web开发的新力量。利用我们提供的 util 构建库、响应式栅格系统、基于 Poi 的强大的插件系统，能够快速为你的想法开发出原型或者构建整个 web app 。
                     </p>
                     <div class="row row-gap">
                         <div class="col col-sm:10">
-                            <button class="btn btn-green outline ripple-outer f:6 p:5">
+                            <button class="btn btn-green outline focus:ol:green ripple f:6 p:5">
                                 Get Started
                             </button>
                         </div>
                         <div class="col col-sm:10">
-                            <button class="btn btn-blue outline ripple-outer p:5 f:6">
+                            <button class="btn btn-blue outline focus:ol:blue ripple p:5 f:6">
                                 源码
                             </button>
                         </div>
@@ -105,22 +184,160 @@
             </div>
         </div>
     </header>
-    <div class="container content">
+    <div class="container content zebra p:0">
         <div class="row row-gap">
-            <div class="col col-sm:10">
-                <h4>
-                    coding style
-                </h4>
-
+            <div class="col t:center">
+                <h1>Guide</h1>
+                <h4>火速开始</h4>
+                <div class="guide-btn flex:center">
+                    <a href="#" class="flex:center ripple">
+                        Guide
+                    </a>
+                </div>
             </div>
-            <div class="col col-sm:10">
-                <h4>
-                    util
+        </div>
+        <div class="row">
+            <div class="col t:center">
+                <h1>
+                    Flex
+                </h1>
+                <h4 class="t:left">
+                    <p>
+                        基于 flex box 的布局方案，易维护，使用时定制方便，符合human编码逻辑。
+                    </p>
+                    <div class="row">
+                        <div class="col col:10 t:left">
+                            <h2>
+                                Gird layout
+                            </h2>
+                            <div class="row row-gap">
+                                <div class="col col:3 col-sm:5">
+                                    <button class="btn ripple-outer outline btn-green btn-block focus:ol:gray" onclick="push_ele('gird-tpl1')">push one</button>
+                                </div>
+                                <div class="col col:3 col-sm:5">
+                                    <button class="btn ripple-outer outline btn-info btn-block focus:ol:gray" onclick="pop_ele('gird-tpl1')">pop one</button>
+                                </div>
+                            </div>
+                            <div class="row row-gap">
+                                <div id="gird-tpl1" class="col">
+                                    <div class="gird-demo">col</div>
+                                </div>
+                                <div class="col">
+                                    <div class="gird-demo">col</div>
+                                </div>
+                                <div class="col">
+                                    <div class="gird-demo">col</div>
+                                </div>
+                                <div class="col">
+                                    <div class="gird-demo">col</div>
+                                </div>
+                                <div class="col">
+                                    <div class="gird-demo">col</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col:10 t:left">
+                            <h2>
+                                Highly customized
+                            </h2>
+                            <div class="row row-gap">
+                                <div class="col col:3 col-sm:5">
+                                    <button class="btn ripple-outer outline btn-green btn-block focus:ol:gray" onclick="push_ele('gird-tpl2')">add one</button>
+                                </div>
+                                <div class="col col:3 col-sm:5">
+                                    <button class="btn ripple-outer outline btn-info btn-block focus:ol:gray" onclick="pop_ele('gird-tpl2')">delete one</button>
+                                </div>
+                            </div>
+                            <div class="row row-gap">
+                                <div class="col col:2">
+                                    <div class="gird-demo">col:2</div>
+                                </div>
+                                <div id="gird-tpl2" class="col">
+                                    <div class="gird-demo">col</div>
+                                </div>
+                                <div class="col col:1">
+                                    <div class="gird-demo">col:1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col:10 t:left">
+                            <h2>
+                                <a href="./page/guide.html">More features...</a>
+                            </h2>
+                        </div>
+                    </div>
                 </h4>
             </div>
-            <div class="col flex:center col-sm:10">
-                <h4>
-                    <a href="#">Guide</a>
+        </div>
+        <div class="row">
+            <div class="col t:center">
+                <h1>Utility-first</h1>
+                <h4 class="t:left">
+                    <p>
+                        通常我们从抽象元素/组件开始构建 app ，如表单，按钮，卡片，布局器等高层的抽象组件。
+                    </p>
+                    <p>
+                        相反，这里我们提供了更低级的快速调用模块，可以轻松构建复杂的用户界面，而不会使得同一个框架为基础的网站按上去是那么明显。
+                    </p>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col t:center">
+                <h1>
+                    Name specification
+                </h1>
+                <h4 class="t:left">
+                    <p>
+                        这部分规范主要针对 util 根据库，为了易用性，从逻辑直观上将很多功能化繁为简，最重要的，现在，我们把奇淫技巧翻译为 readable 的工具。
+                    </p>
+                    <p>
+                        <a href="#">more...</a>
+                    </p>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col t:center">
+                <h1>
+                    Inspiration
+                </h1>
+                <h4 class="t:left">
+                    如果可能我们一定会告诉你这是一个完完全全原创的内容，可是，不得不承认它是建立在各个前辈之上的拙作。下面是一些与它相关的好项目。
+                    <div class="row row-gap:10 m-t:1 row:center logos">
+                        <div class="col col:5 col-sm:10">
+                            <div class="cards no-b shadow">
+                                <a href="#" title="bulma">
+                                    <img src="https://bulma.io/images/bulma-logo.png" width="100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col col:5 col-sm:10">
+                            <div class="cards no-b shadow t:center">
+                                <a href="https://philipwalton.github.io/solved-by-flexbox/">
+                                    <img src="https://camo.githubusercontent.com/97517e40f9727cc4637bea2d0e1b813d4639f8b2/68747470733a2f2f7461696c77696e646373732e636f6d2f696d672f7461696c77696e642e737667" width="100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col col:5 col-sm:10">
+                            <div class="cards no-b shadow t:center">
+                                <a href="http://necolas.github.io/normalize.css/" title="normalize.css">
+                                    <img src="http://necolas.github.io/normalize.css/logo.svg" width="100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col col:5 col-sm:10">
+                            <div class="cards no-b shadow t:center">
+                                <a href="https://philipwalton.github.io/solved-by-flexbox/" title="Solved-by-flexbox">
+                                    Solved-by-flexbox
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </h4>
             </div>
         </div>
@@ -136,9 +353,11 @@
             </a>
             <br>
         </div>
-        Copyright © 2018-now <a href="https://github.com/zhzLuke96/" title="zhzLuke96">
-            about me
+            Copyright © 2018-now <a href="https://github.com/zhzLuke96/" title="github">
+            zhzLuke96
         </a>
     </footer>
+    <script src="./page/js/index.js" charset="utf-8"></script>
 </body>
+
 </html>
