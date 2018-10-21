@@ -6,46 +6,48 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 1rem;
-}
 
-.media > .avatar,
-.media > .figure {
-    margin-right: 1rem;
-}
-
-.media > .avatar {
-    display: inline-block;
-    border-radius: 100%;
-    overflow: hidden;
-    & img{
-        display: block;
+    .avatar,
+    .figure {
+        margin-right: 1rem;
     }
-}
 
-.media > .body,
-.media > .content {
-    flex: 1;
-}
+    .avatar {
+        display: inline-block;
+        border-radius: 100%;
+        overflow: hidden;
+        & img{
+            display: block;
+        }
+    }
 
-.media > .body,
-.media > .body:last-child,
-.media > .content,
-.media > .content:last-child {
-    margin-bottom: 0;
-}
+    .body,
+    .content {
+        flex: 1;
+    }
 
-.media > .body > .header,
-.media > .body > .title,
-.media > .content > .header,
-.media > .content > .title {
-    margin: 0 0 0.5rem;
+    .body,
+    .body:last-child,
+    .content,
+    .content:last-child {
+        margin-bottom: 0;
+    }
+
+    .body > .header,
+    .body > .title,
+    .content > .header,
+    .content > .title {
+        margin: 0 0 0.5rem;
+    }
 }
 
 .media\:center {
     align-items: center;
 }
 
-.media-reverse > .figure {
-    order: 1;
-    margin: 0 0 0 1rem;
+.media-reverse{
+    > .avatar, > .figure{
+        order: 1;
+        margin: 0 0 0 1rem;
+    }
 }

@@ -1,0 +1,35 @@
+// --------------------------------------------------
+// emoij icon
+// --------------------------------------------------
+$icon-map: (
+    "fire": "🔥",
+    "heart": "❤",
+    "thumbs-down": "👎",
+    "thumbs-up": "👍",
+    "face-joy": "😂",
+    "face-joy-loudly": "😭",
+    "speech": "💬",
+    "r18": "🔞",
+    "rainbow": "🌈",
+    "game-die": "🎲",
+    "label": "🏷️",
+    "package": "📦",
+    "pin": "📌",
+    "clipboard": "📋",
+    "anger": "💢",
+    "music": "🎶",
+    "headphone": "🎧",
+    "warning": "⚠️",
+);
+
+[class*="icon-"] {
+    font-family: apple color emoji,segoe ui emoji,notocoloremoji,android emoji,emojisymbols,emojione mozilla,segoe ui symbol;
+};
+@each $name,$code in $icon-map {
+    .icon-#{$name}::before {
+        content: $code;
+    };
+    .icon-after-#{$name}::after {
+        content: $code;
+    };
+};

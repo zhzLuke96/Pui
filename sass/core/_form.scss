@@ -4,13 +4,12 @@
 @import "./form/input";
 @import "./form/file";
 
+
 form{
-    input{
-        outline:none;
-        transition: border-color .15s ease-in;
-        border: 2px solid #ddd;
-        &[disabled]{
-            background-color: #eee;
-        }
+    input,select,textarea{
+        width: 100%;
+    }
+    textarea{
+        resize: vertical;
     }
 }

@@ -1,7 +1,10 @@
 // ----------------------------------------------
 // input-group
 // ----------------------------------------------
-$field-color-map:(
+
+$inp-radius: 2px;
+
+$input-color-map:(
     ("blue","primary",$primary),
     ("gray", "secondary", $secondary),
     ("green", "success",$success),
@@ -10,11 +13,37 @@ $field-color-map:(
     ("red", "danger", $danger),
     ("black", "dark", $dark)
 );
-$inp-radius: 2px;
+input{
+    outline:none;
+    border: 1px solid #{$gray};
+    padding: 0.5em 0.75em;
+
+    &[disabled]{
+        cursor: not-allowed;
+        background-color: #eee;
+    }
+
+    @each $color_f in $input-color-map {
+        $name_1: nth($color_f, 1);
+        $name_2: nth($color_f, 2);
+        $t_color: nth($color_f, 3);
+
+        &.#{$name_1}:focus,
+        &.#{$name_2}:focus {
+            border-color: $t_color;
+
+            &.shadow {
+                box-shadow: 0 0 5px $t_color;
+            }
+        }
+    }
+
+}
+
 
 .input-group {
     display: flex;
-    margin-bottom: 1.5em;
+    // margin-bottom: 1.5em;
 
     > .field {
         flex: 1;
@@ -39,23 +68,23 @@ $inp-radius: 2px;
         border: 1px solid #{$gray};
         padding: 0.5em 0.75em;
     }
-    // focus color
-    > .field {
-        @each $color_f in $field-color-map {
-            $name_1: nth($color_f, 1);
-            $name_2: nth($color_f, 2);
-            $t_color: nth($color_f, 3);
-
-            &.#{$name_1}:focus,
-            &.#{$name_2}:focus {
-                border-color: $t_color;
-
-                &.shadow {
-                    box-shadow: 0 0 5px $t_color;
-                }
-            }
-        }
-    }
+    // // focus color
+    // > .field {
+    //     @each $color_f in $field-color-map {
+    //         $name_1: nth($color_f, 1);
+    //         $name_2: nth($color_f, 2);
+    //         $t_color: nth($color_f, 3);
+    //
+    //         &.#{$name_1}:focus,
+    //         &.#{$name_2}:focus {
+    //             border-color: $t_color;
+    //
+    //             &.shadow {
+    //                 box-shadow: 0 0 5px $t_color;
+    //             }
+    //         }
+    //     }
+    // }
 
     > .field:first-child,
     > .item:first-child {
