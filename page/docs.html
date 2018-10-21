@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>🍭PUI - Docs</title>
+    <link rel="stylesheet" href="../dist/core.min.css">
+    <link rel="stylesheet" href="../dist/util.min.css">
+    <style media="screen">
+        *{
+            transition: all .3s;
+        }
+        header{
+            background-color: #f6f6f6;
+            font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+            color: #2c3e50;
+        }
+        header .logo{
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        header .nav>a{
+            color: rgba(44, 62, 80, .5);
+            padding-left: 1rem;
+            font-weight: bold;
+        }
+        header .nav>a:hover{
+            color: rgba(44, 62, 80, .8);
+            cursor: pointer;
+            text-decoration:underline;
+        }
+        header .btn{
+            white-space: nowrap;
+            width: 100%;
+        }
+        footer{
+            /* color: rgba(238, 238, 238, 1); */
+            color: rgba(44, 62, 80, .8);
+            background-color: rgba(114, 127, 128,.4);
+        }
+        .link{
+            padding: .5rem;
+            border-radius: .3rem;
+            text-align: right;
+            width: 100%;
+            display: block;
+        }
+        .link:hover{
+            /* text-decoration: underline; */
+            background-color: rgba(114, 127, 128,.2);
+        }
+        .left-nav>[class*="col"]{
+            padding: 0;
+        }
+        html{
+            background: hsla(31,15%,90%,.1);
+        }
+    </style>
+    <style media="screen">
+        .router-page{
+            margin-top: 1rem;
+            padding: 1rem;
+            padding-top: 0;
+            width: 100%;
+            /* margin: 1rem; */
+            z-index: -1;
+            display: none;
+            border-radius: 1rem;
+            background: white;
+            box-shadow: 0 5px 10px -7px rgba(87, 53, 117, 0.13), 0 10px 30px -6px rgba(0, 60, 170, 0.1);
+        }
+        .router-page:target{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="pui">
+    <header class="p:5 header">
+        <div class="container">
+            <div class="row row-gap row:baseline">
+                <div class="col col:2 col-sm:hidden logo t:right">
+                        <a href="../index.html" class="p-logo bg:green r:3 p:1 p-l:2 m-r:4 p-r:2 f-c:white">
+                            P
+                        </a>
+                </div>
+                <div class="col col:5 col-sm:10 flex:center nav">
+                    <a href="#">started</a>
+                    <a href="#">guide</a>
+                    <a href="https://github.com/zhzLuke96/Pui">github</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container content">
+        <div class="row row-gap">
+            <div class="col:2 p-t:10">
+                <div class="row row-gap pin left-nav">
+                    <div class="col:10">
+                        <a href="#welcome" class="link t:cap"> welcome</a>
+                    </div>
+                    <div class="col:10">
+                        <hr>
+                    </div>
+                    <div class="col:10">
+                        <a href="#start" class="link t:cap">quick start</a>
+                    </div>
+                    <div class="col:10">
+                        <hr>
+                    </div>
+                    <div class="col:10">
+                        <a href="#layout" class="link t:cap"> layout</a>
+                    </div>
+                    <div class="col:10">
+                        <a href="#color" class="link t:cap"> color</a>
+                    </div>
+                    <div class="col:10">
+                        <a href="#button" class="link t:cap"> button</a>
+                    </div>
+                    <div class="col:10">
+                        <a href="#progress" class="link t:cap"> progress</a>
+                    </div>
+                    <div class="col:10">
+                        <a href="#card" class="link t:cap"> card</a>
+                    </div>
+                    <div class="col:10">
+                        <a href="#media" class="link t:cap"> media</a>
+                    </div>
+                    <div class="col:10">
+                        <a href="#form" class="link t:cap"> form</a>
+                    </div>
+                    <div class="col:10">
+                        <a href="#table" class="link t:cap"> table</a>
+                    </div>
+                    <div class="col:10">
+                        <a href="#modal" class="link t:cap"> modal</a>
+                    </div>
+                    <div class="col:10">
+                        <hr>
+                    </div>
+                    <div class="col:10">
+                        <a href="#util" class="link t:cap"> util lib</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col:8">
+                <div class="row row-gap">
+                    <div class="col:10">
+                        <div id="welcome" class="router-page">
+                            <h1>
+                                Welcome
+                            </h1>
+                            <p>感谢开源社区.</p>
+                            <p class="icon-speech">click left nav,know more.</p>
+                        </div>
+                    </div>
+                    <div class="col:10 p-t:0">
+                        <div class="router-page" id="start">
+                            <h1>
+                                Quick Start
+                            </h1>
+                            <p>曾经我们都会经历一个完全不懂为什么要用框架额时期，如果你现在有这样的顾虑，这篇指南你肯定会喜欢.</p>
+                            <p class="icon-speech">click left nav,know more.</p>
+                        </div>
+                    </div>
+                    <div class="col:10 p-t:0">
+                        <div class="router-page" id="form">
+                            <h1>
+                                表单
+                            </h1>
+                            <p>曾经我们都会经历一个完全不懂为什么要用框架额时期，如果你现在有这样的顾虑，这篇指南你肯定会喜欢.</p>
+                            <div class="row row-gap">
+                                <div class="col">
+                                    <form class="">
+                                        <h4>Input - Base</h4>
+                                        <div class="row row:baseline">
+                                            <label for="" class="col col:2 t:right p-r:2">Normal Input</label>
+                                            <div class="col col:8">
+                                                <input class="">
+                                                <span class="f-c:gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                                            </div>
+                                        </div>
+                                        <div class="row row:baseline">
+                                            <label for="" class="col col:2 t:right p-r:2">Disable Input</label>
+                                            <div class="col col:8">
+                                                <input disabled class="">
+                                            </div>
+                                        </div>
+                                        <h4>Input - Color</h4>
+                                        <div class="row row-gap row:baseline">
+                                            <div class="col:2 col-sm:5">
+                                                <input class="blue" placeholder="primary">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="info" placeholder="info">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="yellow" placeholder="warning">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="red" placeholder="danger">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="green" placeholder="success">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="dark" placeholder="dark">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="gray" placeholder="secondary">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input placeholder="default">
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h4>Input - Focus Shadow</h4>
+                                        <div class="row row-gap row:baseline">
+                                            <div class="col:2 col-sm:5">
+                                                <input class="blue shadow" placeholder="primary">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="info shadow" placeholder="info">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="yellow shadow" placeholder="warning">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="red shadow" placeholder="danger">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="green shadow" placeholder="success">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="dark shadow" placeholder="dark">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="gray shadow" placeholder="secondary">
+                                            </div>
+                                            <div class="col:2 col-sm:5">
+                                                <input class="shadow" placeholder="default">
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <h4>Input - Group</h4>
+                                        <div class="row row:baseline">
+                                            <label for="" class="col col:2 t:right p-r:2">Group Input</label>
+                                            <div class="col col:8">
+                                                <div class="input-group">
+                                                    <input class="field">
+                                                    <div class="item">
+                                                        $/ g
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row row:baseline">
+                                            <label for="" class="col col:2 t:right p-r:2">Date</label>
+                                            <div class="col col:8 input-group">
+                                                <div class="item">
+                                                    Year
+                                                </div>
+                                                <input class="field">
+                                                <div class="item">
+                                                    Mouth
+                                                </div>
+                                                <input class="field">
+                                                <div class="item">
+                                                    Day
+                                                </div>
+                                                <input class="field">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <p class="icon-speech">click left nav,know more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer p:5 t:center">
+        <p>
+            LICENSE GPL v3
+        </p>
+        <hr>
+        <div>
+            <a href="https://github.com/zhzLuke96/" title="poijs;jsonflow;yoi...">
+                more open proj
+            </a>
+            <br>
+        </div>
+        Copyright © 2018-now <a href="https://github.com/zhzLuke96/" title="github">
+            zhzLuke96
+        </a>
+    </footer>
+</body>
+</html>
