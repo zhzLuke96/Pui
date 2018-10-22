@@ -97,6 +97,42 @@
             text-align: center;
         }
     </style>
+    <style media="screen">
+        .color-card {
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: Center;
+        }
+    </style>
+    <style media="screen">
+
+        .media-demo{
+        color: #404040;
+        font: 400 1em/1.4 'Open Sans',sans-serif;
+        text-rendering: optimizeLegibility;
+        border-left: 3px solid hsla(31,15%,50%,.6);
+        /* border: 1px solid rgba(212, 194, 183, .4); */
+        background: hsla(31,15%,50%,.1);
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+    .media-demo h3{
+        margin-top: 0;
+    }
+    .media-demo img{
+        width: 5rem;
+    }
+    .clear-m{
+        border-left: none;
+        background: transparent;
+        border-radius: 0;
+        /* margin-top: 0; */
+        padding: 0;
+    }
+    </style>
 </head>
 
 <body class="pui">
@@ -109,13 +145,38 @@
                         </a>
                 </div>
                 <div class="col col:5 col-sm:10 flex:center nav">
-                    <a href="#">started</a>
-                    <a href="#">guide</a>
+                    <a href="#start">started</a>
+                    <a href="#welcome">guide</a>
                     <a href="https://github.com/zhzLuke96/Pui">github</a>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="modal" id="modal1">
+        <div class="body cards no-b shadow">
+            <div class="card container">
+                <div class="row row:baseline">
+                    <div class="col:9">
+                        <span class="f-w:900 f:5">title</span>
+                    </div>
+                    <a class="col f-w:900 f:6 hover:f-c:purple" href="#modal" title="close">×</a>
+                </div>
+            </div>
+            <div class="card container">
+                <div class="row row-gap">
+                    <div class="col:1"></div>
+                    <div class="col f:4 p:4">hello world!</div>
+                </div>
+            </div>
+            <div class="card container">
+                <div class="btns col-offest:7 col:3">
+                    <a class="btn btn-dark outline ripple" href="#modal">取消</a>
+                    <a class="btn btn-blue ripple">提交</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container content">
         <div class="row row-gap">
             <div class="col:2 p-t:10">
@@ -190,170 +251,16 @@
                         </div>
                     </div>
                     <div class="col:10 p-t:0">
-                        <div class="router-page" id="layout">
+                        <div class="router-page" id="modal">
                             <h1>
-                                Grid layout
+                                Modal
                             </h1>
-                            <p>
-                                基于 flex box 的布局方案，易维护，使用时定制方便，符合编码逻辑。
-                            </p>
+                            <p>模态框，其实可以写得更好一点，不过，在开始前我们就定下了prue css的路线，这里我们也采用了一点hack的方法实现了modal组件.</p>
+                            <p>( 也导致了一点不可避免的小bug... )</p>
+                            <h4>Example</h4>
                             <div class="row row-gap">
-                                <div class="col">
-                                    <h4>
-                                        Base
-                                    </h4>
-                                    <div class="row row-gap gird-demo">
-                                        <div class="col:2 h:2">
-                                            <span class="flex:center">col:2</span>
-                                        </div>
-                                        <div class="col">
-                                            <div class="row row-gap">
-                                                <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
-                                                <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
-                                                <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
-                                                <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
-                                                <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
-                                                <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
-                                                <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
-                                                <div class="col h:1"><span class="flex:center">auto</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row row-gap gird-demo">
-                                        <div class="col">
-                                            <span class="flex:center">auto</span>
-                                        </div>
-                                        <div class="col">
-                                            <p class="t:left p:3">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <h4>
-                                        offest
-                                    </h4>
-                                    <div class="row row-gap gird-demo">
-                                        <div class="col:2 col-offest:1 h:3">
-                                            <span class="flex:center">
-                                                col:2
-                                                <br>
-                                                col-offest:1
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <div class="row row-gap">
-                                                <div class="col:4 h:1"><span class="flex:center">col:4</span></div>
-                                                <div class="col:4 h:1"><span class="flex:center">col:4</span></div>
-                                                <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
-                                                <div class="col col-offest:5 h:2"><span class="flex:center">
-                                                    auto
-                                                    <br>
-                                                    col-offest:5
-                                                </span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4>
-                                        Responsive
-                                    </h4>
-                                    <div class="row row-gap gird-demo">
-                                        <div class="col:2 col-sm:hidden h:2">
-                                            <span class="flex:center">
-                                                col:2
-                                                <br>
-                                                col-sm:0(hidden)
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <div class="row row-gap">
-                                                <div class="col:4 col-sm:10 h:1"><span class="flex:center">col:4 & col-sm:10</span></div>
-                                                <div class="col:4 col-sm:10 h:1"><span class="flex:center">col:4 & col-sm:10</span></div>
-                                                <div class="col:2 col-sm:5 h:1"><span class="flex:center">col:2 & col-sm:5</span></div>
-                                                <div class="col h:1"><span class="flex:center">
-                                                    auto
-                                                </span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4>
-                                        Gird inherited
-                                    </h4>
-                                    <div class="row row-gap gird-demo">
-                                        <div class="col:6">
-                                            <span class="p:2">
-                                                <div class="row row-gap gird-demo">
-                                                    <div class="col:6">
-                                                        <span class="flex:center">col:6</span>
-                                                    </div>
-                                                    <div class="col">
-                                                        <span class="flex:center">auto</span>
-                                                    </div>
-                                                </div>
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <span class="flex:center">auto</span>
-                                        </div>
-                                    </div>
-                                    <h4>
-                                        Better Alignment [Features]
-                                    </h4>
-                                    <div class="row row-gap gird-demo">
-                                        <div class="col col:center h:2">
-                                            <span class="flex:center">
-                                                col:center
-                                            </span>
-                                        </div>
-                                        <div class="col:4">
-                                            <p class="t:left p:3">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                            </p>
-                                        </div>
-                                        <div class="col col:bottom h:2">
-                                            <span class="flex:center">
-                                                col:bottom
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="row row-gap gird-demo">
-                                        <div class="col col:baseline h:2">
-                                            <span class="flex:center">
-                                                col:baseline
-                                            </span>
-                                        </div>
-                                        <div class="col:4 col:baseline">
-                                            <p class="t:left p:3">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                            </p>
-                                        </div>
-                                        <div class="col col:top h:2">
-                                            <span class="flex:center">
-                                                col:top
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="row row-gap row:center gird-demo">
-                                        <div class="col:10 h:1">
-                                            <span class="flex:center">
-                                                row:center
-                                            </span>
-                                        </div>
-                                        <div class="col h:2">
-                                            <span class="flex:center">
-                                                auto
-                                            </span>
-                                        </div>
-                                        <div class="col:4">
-                                            <p class="t:left p:3">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                            </p>
-                                        </div>
-                                        <div class="col h:2">
-                                            <span class="flex:center">
-                                                auto
-                                            </span>
-                                        </div>
-                                    </div>
+                                <div class="col:5 col-sm:10">
+                                    <a class="btn btn-block btn-blue ripple" href="#modal1">open modal</a>
                                 </div>
                             </div>
                             <hr>
@@ -361,139 +268,1061 @@
                         </div>
                     </div>
                     <div class="col:10 p-t:0">
-                        <div class="router-page" id="form">
+                        <div class="router-page" id="table">
                             <h1>
-                                表单
+                                Table
                             </h1>
-                            <p>能够发挥的地方不多，实际使用也很少需要框架支持，主要是几个设定会规范.</p>
+                            <p>表格.</p>
+                            <h4>Example ( can i use)</h4>
                             <div class="row row-gap">
-                                <div class="col">
-                                    <form class="">
-                                        <h4>Input - Base</h4>
-                                        <div class="row row:baseline">
-                                            <label for="" class="col col:2 t:right p-r:2">Normal Input</label>
-                                            <div class="col col:8">
-                                                <input class="">
-                                                <span class="f-c:gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                                            </div>
-                                        </div>
-                                        <div class="row row:baseline">
-                                            <label for="" class="col col:2 t:right p-r:2">Disable Input</label>
-                                            <div class="col col:8">
-                                                <input disabled class="">
-                                            </div>
-                                            </div>
-                                            <h4>Input - Color</h4>
-                                            <div class="row row-gap row:baseline">
-                                                <div class="col:2 col-sm:5">
-                                                    <input class="blue" placeholder="primary">
-                                            </div>
-                                                    <div class="col:2 col-sm:5">
-                                                        <input class="info" placeholder="info">
-                                            </div>
-                                                        <div class="col:2 col-sm:5">
-                                                            <input class="yellow" placeholder="warning">
-                                            </div>
-                                                            <div class="col:2 col-sm:5">
-                                                                <input class="red" placeholder="danger">
-                                            </div>
-                                                                <div class="col:2 col-sm:5">
-                                                                    <input class="green" placeholder="success">
-                                            </div>
-                                                                    <div class="col:2 col-sm:5">
-                                                                        <input class="dark" placeholder="dark">
-                                            </div>
-                                                                        <div class="col:2 col-sm:5">
-                                                                            <input class="gray" placeholder="secondary">
-                                            </div>
-                                                                            <div class="col:2 col-sm:5">
-                                                                                <input placeholder="default">
-                                            </div>
-                                                                            </div>
-                                                                            <hr>
-                                                                            <h4>Input - Focus Shadow</h4>
-                                                                            <div class="row row-gap row:baseline">
-                                                                                <div class="col:2 col-sm:5">
-                                                                                    <input class="blue shadow" placeholder="primary">
-                                            </div>
-                                                                                    <div class="col:2 col-sm:5">
-                                                                                        <input class="info shadow" placeholder="info">
-                                            </div>
-                                                                                        <div class="col:2 col-sm:5">
-                                                                                            <input class="yellow shadow" placeholder="warning">
-                                            </div>
-                                                                                            <div class="col:2 col-sm:5">
-                                                                                                <input class="red shadow" placeholder="danger">
-                                            </div>
-                                                                                                <div class="col:2 col-sm:5">
-                                                                                                    <input class="green shadow" placeholder="success">
-                                            </div>
-                                                                                                    <div class="col:2 col-sm:5">
-                                                                                                        <input class="dark shadow" placeholder="dark">
-                                            </div>
-                                                                                                        <div class="col:2 col-sm:5">
-                                                                                                            <input class="gray shadow" placeholder="secondary">
-                                            </div>
-                                                                                                            <div class="col:2 col-sm:5">
-                                                                                                                <input class="shadow" placeholder="default">
-                                            </div>
-                                                                                                            </div>
-                                                                                                            <hr>
-                                                                                                            <h4>Input - Group</h4>
-                                                                                                            <div class="row row:baseline">
-                                                                                                                <label for="" class="col col:2 t:right p-r:2">Group Input</label>
-                                                                                                                <div class="col col:8">
-                                                                                                                    <div class="input-group">
-                                                                                                                        <input class="field">
-                                                                                                                        <div class="item">
-                                                                                                                            $/ g
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="row row:baseline">
-                                                                                                                <label for="" class="col col:2 t:right p-r:2">Date</label>
-                                                                                                                <div class="col col:8 input-group">
-                                                                                                                    <div class="item">
-                                                                                                                        Year
-                                                                                                                    </div>
-                                                                                                                    <input class="field">
-                                                                                                                    <div class="item">
-                                                                                                                        Mouth
-                                                                                                                    </div>
-                                                                                                                    <input class="field">
-                                                                                                                    <div class="item">
-                                                                                                                        Day
-                                                                                                                    </div>
-                                                                                                                    <input class="field">
-                                            </div>
-                                                                                                                </div>
-                                    </form>
+                                <div class="col:5 col-sm:10">
+                                    <table class="table hover striped">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>IE</th>
+                                                <th>Edge</th>
+                                                <th>Firefox</th>
+                                                <th>Chrome</th>
+                                                <th>Safari</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>calc()</td>
+                                            <td>11</td>
+                                            <td>17</td>
+                                            <td>61</td>
+                                            <td>49</td>
+                                            <td>11.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>grid</td>
+                                            <td>11</td>
+                                            <td>17</td>
+                                            <td>63</td>
+                                            <td>49</td>
+                                            <td>11.1</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row row-gap">
+                                <div class="col:5 col-sm:10">
+                                    <h4>Base</h4>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Firefox</th>
+                                                <th>Chrome</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>calc()</td>
+                                            <td>61</td>
+                                            <td>49</td>
+                                        </tr>
+                                        <tr>
+                                            <td>grid</td>
+                                            <td>63</td>
+                                            <td>49</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="col:5 col-sm:10">
+                                    <h4>Hover</h4>
+                                    <table class="table hover">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Firefox</th>
+                                                <th>Chrome</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>calc()</td>
+                                            <td>61</td>
+                                            <td>49</td>
+                                        </tr>
+                                        <tr>
+                                            <td>grid</td>
+                                            <td>63</td>
+                                            <td>49</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row row-gap">
+                                <div class="col:5 col-sm:10">
+                                    <h4>Bordered</h4>
+                                    <table class="table bordered">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Firefox</th>
+                                                <th>Chrome</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>calc()</td>
+                                            <td>61</td>
+                                            <td>49</td>
+                                        </tr>
+                                        <tr>
+                                            <td>grid</td>
+                                            <td>63</td>
+                                            <td>49</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="col:5 col-sm:10">
+                                    <h4>Striped</h4>
+                                    <table class="table striped">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Firefox</th>
+                                                <th>Chrome</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>calc()</td>
+                                            <td>61</td>
+                                            <td>49</td>
+                                        </tr>
+                                        <tr>
+                                            <td>grid</td>
+                                            <td>63</td>
+                                            <td>49</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                             <hr>
                             <p class="icon-speech">click left nav,know more.</p>
                         </div>
                     </div>
+                    <div class="col:10 p-t:0">
+                        <div class="router-page" id="progress">
+                            <h1>
+                                Progress
+                            </h1>
+                            <p>其实这是个相对冷门的标签...说实话我们自己都不常用，但是尝试下感觉确实有一些方便.</p>
+                            <h4>Base</h4>
+                            <div class="row row-gap">
+                                <div class="col:5">
+                                    <progress value="25" max="100">25%</progress>
+                                </div>
+                            </div>
+                            <h4>Size</h4>
+                            <div class="row row-gap">
+                                <div class="col:5">
+                                    <div class="row row-gap">
+                                        <div class="col:10">
+                                            <progress class="small" value="10" max="100"></progress>
+                                        </div>
+                                        <div class="col:10">
+                                            <progress value="20" max="100"></progress>
+                                        </div>
+                                        <div class="col:10">
+                                            <progress class="big" value="30" max="100"></progress>
+                                        </div>
+                                        <div class="col:10">
+                                            <progress class="large" value="40" max="100"></progress>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col:5">
+                                    {{code reader}}
+                                </div>
+                                </div>
+                                <h4>Color</h4>
+
+                                <div class="row row-gap">
+                                    <div class="col:5">
+                                        <div class="row row-gap">
+                                            <div class="col:10">
+                                                <progress class="blue" value="15" max="100"></progress>
+                                            </div>
+                                            <div class="col:10">
+                                                <progress class="green" value="25" max="100"></progress>
+                                            </div>
+                                            <div class="col:10">
+                                                <progress class="red" value="35" max="100"></progress>
+                                            </div>
+                                            <div class="col:10">
+                                                <progress class="warning" value="45" max="100"></progress>
+                                            </div>
+                                            <div class="col:10">
+                                                <progress class="info" value="55" max="100"></progress>
+                                            </div>
+                                            <div class="col:10">
+                                                <progress class="secondary" value="65" max="100"></progress>
+                                            </div>
+                                            <div class="col:10">
+                                                <progress class="dark" value="75" max="100"></progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col:5">
+                                        {{code reader}}
+                                </div>
+                                    </div>
+                                    <hr>
+                                    <p class="icon-speech">click left nav,know more.</p>
+                                </div>
+                            </div>
+                            <div class="col:10 p-t:0">
+                                <div class="router-page" id="card">
+                                    <h1>
+                                Card
+                            </h1>
+                                    <p>卡片风格在扁平化审美的时代算是比较流行，我们在这里提供了一个较为简单的实现.</p>
+                                    <h4>Example ( with media )</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:5">
+                                            <div class="card shadow:sm no-b">
+                                                <div class="media">
+                                                    <div class="avatar"><a href="#" class="avatar">
+                                              <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540135194771&di=6b1d360f483932cd510c4d854a3d75b0&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201607%2F19%2F20160719003421_fkLWY.thumb.700_0.png">
+                                            </a></div>
+                                                    <div class="body">
+                                                        <div class="title">
+                                                            <h1 class="m-t:0">Lorem</h1>
+                                                        </div>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4>Base</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:5">
+                                            <div class="card ">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                aliquip ex ea commodo consequat.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4>Color</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:2">
+                                            <div class="card blue">
+                                                primary
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card green">
+                                                success
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card info">
+                                                info
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card warning">
+                                                warning
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card danger">
+                                                danger
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card dark">
+                                                dark
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card gray">
+                                                gray
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card">
+                                                default
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4>Shadow ( no good,better see util-lib )</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:3">
+                                            <div class="card gray shadow">
+                                                .card.gray.shadow
+                                            </div>
+                                        </div>
+                                        <div class="col:3">
+                                            <div class="card gray shadow no-b">
+                                                .no-b
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row-gap">
+                                        <div class="col:2">
+                                            <div class="card blue shadow">
+                                                primary
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card green shadow">
+                                                success
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card info shadow">
+                                                info
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card warning shadow">
+                                                warning
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card danger shadow">
+                                                danger
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card dark shadow">
+                                                dark
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="card gray shadow">
+                                                gray
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4>Cards</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:5">
+                                            <div class="cards">
+                                                <div class="card">header</div>
+                                                <div class="card t:cap">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                                                <div class="card">footer</div>
+                                            </div>
+                                        </div>
+                                        <div class="col:5">
+                                            <div class="cards blue">
+                                                <div class="card">primary</div>
+                                                <div class="card t:cap">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                                                <div class="card">footer</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <p class="icon-speech">click left nav,know more.</p>
+                                </div>
+                            </div>
+                            <div class="col:10 p-t:0">
+                                <div class="router-page" id="button">
+                                    <h1>
+                                Button
+                            </h1>
+                                    <p>webapp 最重要的交互部分，大概就是button了，它将指引用户操作，并对操作分级.</p>
+                                    <h4>base</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:3">
+                                            <button type="button" name="button" class=" btn btn-block">click</button>
+                                        </div>
+                                        <div class="col:3">
+                                            <a href="#">link</a>
+                                        </div>
+                                    </div>
+                                    <h4>Class</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block btn-blue">.primary</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block btn-secondary">.secondary</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block btn-success">.success</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block btn-info">.info</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block btn-warning">.warning</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block btn-danger">.danger</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block btn-dark">.dark</button>
+                                        </div>
+                                    </div>
+                                    <h4>Outline</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block outline btn-blue">.primary</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block outline btn-secondary">.secondary</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block outline btn-success">.success</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block outline btn-info">.info</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block outline btn-warning">.warning</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block outline btn-danger">.danger</button>
+                                        </div>
+                                        <div class="col:2">
+                                            <button type="button" name="button" class=" btn btn-block outline btn-dark">.dark</button>
+                                        </div>
+                                    </div>
+                                    <h4>Rripple ( Animation Effect click )</h4>
+                                    <div class="row row-gap">
+                                        <div class="col">
+                                            <button type="button" name="button" class=" btn btn-block btn-blue">.primary</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" name="button" class=" btn btn-block btn-blue ripple">.ripple</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" name="button" class=" btn btn-block btn-blue ripple-inner">.ripple-inner</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" name="button" class=" btn btn-block btn-blue ripple-outer">.ripple-outer</button>
+                                        </div>
+                                    </div>
+                                    <div class="row row-gap">
+                                        <div class="col">
+                                            <button type="button" name="button" class=" btn btn-block btn-green outline">.success</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" name="button" class=" btn btn-block btn-green outline ripple">.ripple</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" name="button" class=" btn btn-block btn-green outline ripple-inner">.ripple-inner</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" name="button" class=" btn btn-block btn-green outline ripple-outer">.ripple-outer</button>
+                                        </div>
+                                    </div>
+                                    <h4>Button Group ( btns )</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:3">
+                                            <div class="btns">
+                                                <button type="button" name="button" class="btn btn-blue">click</button>
+                                                <button type="button" name="button" class=" btn btn-blue">click</button>
+                                                <button type="button" name="button" class=" btn btn-blue">click</button>
+                                            </div>
+                                        </div>
+                                        <div class="col:2">
+                                            <div class="btns vertical">
+                                                <button type="button" name="button" class="btn btn-gray p:2">click</button>
+                                                <button type="button" name="button" class="btn btn-gray p:2">click</button>
+                                                <button type="button" name="button" class="btn btn-gray p:2">click</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4>Mix</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:5">
+                                            <div class="btns">
+                                                <button type="button" name="button" class="btn  outline ripple btn-blue">click</button>
+                                                <button type="button" name="button" class=" btn  outline ripple-outer btn-blue">click</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <p class="icon-speech">click left nav,know more.</p>
+                                </div>
+                            </div>
+                            <div class="col:10 p-t:0">
+                                <div class="router-page" id="media">
+                                    <h1>
+                                Media
+                            </h1>
+                                    <p>多媒体对象，即图像-文本对，可以抽象出很多布局需求.</p>
+                                    <h4>Example</h4>
+                                    <div class="row row-gap">
+                                        <div class="col:8 col-sm:10">
+                                            <div class="media media-demo">
+                                                <div class="figure">
+                                                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540134550036&di=d9c165705c34253068cfc4a3283aa162&imgtype=0&src=http%3A%2F%2Fa3.mzstatic.com%2Fus%2Fr30%2FPurple7%2Fv4%2Ff3%2F91%2F1e%2Ff3911e6e-e42c-7cd0-5e52-55ea8e930f9f%2Ficon175x175.png" alt="">
+                                        </div>
+                                                    <div class="body">
+                                                        <h3><span class="icon-fire"></span>Sad frog <small class="icon-after-speech">2</small></h3>
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                        nisi ut aliquip ex ea commodo consequat.
+                                                        <div class="media media-demo">
+                                                            <div class="avatar">
+                                                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540135194771&di=6b1d360f483932cd510c4d854a3d75b0&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201607%2F19%2F20160719003421_fkLWY.thumb.700_0.png" alt="">
+                                                </div>
+                                                                <div class="body">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    <div class="media media-demo media:center clear-m">
+                                                                        <div class="figure icon-thumbs-up"></div>
+                                                                        <div class="content">Excepteur sint occaecat.</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media media-demo">
+                                                                <div class="avatar">
+                                                                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540135194771&di=6b1d360f483932cd510c4d854a3d75b0&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201607%2F19%2F20160719003421_fkLWY.thumb.700_0.png" alt="">
+                                                </div>
+                                                                    <div class="body">
+                                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        <div class="media media-demo media:center clear-m">
+                                                                            <div class="figure icon-heart"></div>
+                                                                            <div class="content">Excepteur sint occaecat.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h4>Usage</h4>
+                                                <hr>
+                                                <p class="icon-speech">click left nav,know more.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col:10 p-t:0">
+                                            <div class="router-page" id="color">
+                                                <h1>
+                                Color
+                            </h1>
+                                                <p>基色和主题色.</p>
+                                                <h4>Base</h4>
+                                                <div class="row row-gap">
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:blue color-card h:1">
+                                                            blue
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:green color-card h:1">
+                                                            green
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:red color-card h:1">
+                                                            red
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:purple color-card h:1">
+                                                            purple
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:orange color-card h:1">
+                                                            orange
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:teal color-card h:1">
+                                                            teal
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:yellow color-card h:1">
+                                                            yellow
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:brown color-card h:1">
+                                                            brown
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:indigo color-card h:1">
+                                                            indigo
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:pink color-card h:1">
+                                                            pink
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:cyan color-card h:1">
+                                                            cyan
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:black color-card h:1">
+                                                            black
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:white f-c:black color-card h:1">
+                                                            white
+                                                        </div>
+                                                    </div>
+                                                    <div class="col:2">
+                                                        <div class="cards no-b shadow bg:gray color-card h:1">
+                                                            gray
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h4>Color - mapping</h4>
+                                                <div class="row row-gap">
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:blue-lightest color-card">
+                                                            lightest
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:blue-lighter color-card">
+                                                            lighter
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:blue color-card">
+                                                            blue
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:blue-dark color-card">
+                                                            dark
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:blue-darkest color-card">
+                                                            darkest
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-gap">
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:red-lightest color-card">
+                                                            lightest
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:red-lighter color-card">
+                                                            lighter
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:red color-card">
+                                                            red
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:red-dark color-card">
+                                                            dark
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:red-darkest color-card">
+                                                            darkest
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-gap">
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:green-lightest color-card ">
+                                                            lightest
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:green-lighter color-card">
+                                                            lighter
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:green color-card">
+                                                            green
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:green-dark color-card">
+                                                            dark
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:green-darkest color-card">
+                                                            darkest
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-gap">
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:purple-lightest color-card ">
+                                                            lightest
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:purple-lighter color-card">
+                                                            lighter
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:purple color-card">
+                                                            purple
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:purple-dark color-card">
+                                                            dark
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:purple-darkest color-card">
+                                                            darkest
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-gap">
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:orange-lightest color-card ">
+                                                            lightest
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:orange-lighter color-card">
+                                                            lighter
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:orange color-card">
+                                                            orange
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:orange-dark color-card">
+                                                            dark
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="cards no-b shadow bg:orange-darkest color-card">
+                                                            darkest
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <p class="icon-speech">click left nav,know more.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col:10 p-t:0">
+                                            <div class="router-page" id="layout">
+                                                <h1>
+                                Grid System
+                            </h1>
+                                                <p>
+                                                    基于 flex box 的布局方案，易维护，使用时定制方便，符合编码逻辑。
+                                                </p>
+                                                <div class="row row-gap">
+                                                    <div class="col">
+                                                        <h4>
+                                        Base
+                                    </h4>
+                                                        <div class="row row-gap gird-demo">
+                                                            <div class="col:2 h:2">
+                                                                <span class="flex:center">col:2</span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="row row-gap">
+                                                                    <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+                                                                    <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+                                                                    <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+                                                                    <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+                                                                    <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+                                                                    <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+                                                                    <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+                                                                    <div class="col h:1"><span class="flex:center">auto</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-gap gird-demo">
+                                                            <div class="col">
+                                                                <span class="flex:center">auto</span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p class="t:left p:3">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                                                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <h4>
+                                        offest
+                                    </h4>
+                                                        <div class="row row-gap gird-demo">
+                                                            <div class="col:2 col-offest:1 h:3">
+                                                                <span class="flex:center">
+                                                col:2
+                                                <br>
+                                                col-offest:1
+                                            </span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="row row-gap">
+                                                                    <div class="col:4 h:1"><span class="flex:center">col:4</span></div>
+                                                                    <div class="col:4 h:1"><span class="flex:center">col:4</span></div>
+                                                                    <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+                                                                    <div class="col col-offest:5 h:2"><span class="flex:center">
+                                                    auto
+                                                    <br>
+                                                    col-offest:5
+                                                </span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h4>
+                                        Responsive
+                                    </h4>
+                                                        <div class="row row-gap gird-demo">
+                                                            <div class="col:2 col-sm:hidden h:2">
+                                                                <span class="flex:center">
+                                                col:2
+                                                <br>
+                                                col-sm:0(hidden)
+                                            </span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="row row-gap">
+                                                                    <div class="col:4 col-sm:10 h:1"><span class="flex:center">col:4 & col-sm:10</span></div>
+                                                                    <div class="col:4 col-sm:10 h:1"><span class="flex:center">col:4 & col-sm:10</span></div>
+                                                                    <div class="col:2 col-sm:5 h:1"><span class="flex:center">col:2 & col-sm:5</span></div>
+                                                                    <div class="col h:1"><span class="flex:center">
+                                                    auto
+                                                </span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h4>
+                                        Gird inherited
+                                    </h4>
+                                                        <div class="row row-gap gird-demo">
+                                                            <div class="col:6">
+                                                                <span class="p:2">
+                                                <div class="row row-gap gird-demo">
+                                                    <div class="col:6">
+                                                        <span class="flex:center">col:6</span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <span class="flex:center">auto</span>
+                                                            </div>
+                                                        </div>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <span class="flex:center">auto</span>
+                                                    </div>
+                                                </div>
+                                                <h4>
+                                        Better Alignment [Features]
+                                    </h4>
+                                                <div class="row row-gap gird-demo">
+                                                    <div class="col col:center h:1">
+                                                        <span class="flex:center">
+                                                col:center
+                                            </span>
+                                                    </div>
+                                                    <div class="col:4">
+                                                        <p class="t:left p:3">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col col:bottom h:1">
+                                                        <span class="flex:center">
+                                                col:bottom
+                                            </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-gap gird-demo">
+                                                    <div class="col col:baseline h:1">
+                                                        <span class="flex:center">
+                                                col:baseline
+                                            </span>
+                                                    </div>
+                                                    <div class="col:4 col:baseline">
+                                                        <p class="t:left p:3">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col col:top h:1">
+                                                        <span class="flex:center">
+                                                col:top
+                                            </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-gap row:center gird-demo">
+                                                    <div class="col:10 h:1">
+                                                        <span class="flex:center">
+                                                row:center
+                                            </span>
+                                                    </div>
+                                                    <div class="col h:1">
+                                                        <span class="flex:center">
+                                                auto
+                                            </span>
+                                                    </div>
+                                                    <div class="col:4">
+                                                        <p class="t:left p:3">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col h:1">
+                                                        <span class="flex:center">
+                                                auto
+                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p class="icon-speech">click left nav,know more.</p>
+                                    </div>
+                                </div>
+                                <div class="col:10 p-t:0">
+                                    <div class="router-page" id="form">
+                                        <h1>
+                                表单
+                            </h1>
+                                        <p>能够发挥的地方不多，实际使用也很少需要框架支持，主要是几个设定会规范.</p>
+                                        <div class="row row-gap">
+                                            <div class="col">
+                                                <form class="">
+                                                    <h4>Input - Base</h4>
+                                                    <div class="row row:baseline">
+                                                        <label for="" class="col col:2 t:right p-r:2">Normal Input</label>
+                                                        <div class="col col:8">
+                                                            <input class="">
+                                                            <span class="f-c:gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row:baseline">
+                                                        <label for="" class="col col:2 t:right p-r:2">Disable Input</label>
+                                                        <div class="col col:8">
+                                                            <input disabled class="">
+                                            </div>
+                                                        </div>
+                                                        <h4>Input - Color</h4>
+                                                        <div class="row row-gap row:baseline">
+                                                            <div class="col:2 col-sm:5">
+                                                                <input class="blue" placeholder="primary">
+                                            </div>
+                                                                <div class="col:2 col-sm:5">
+                                                                    <input class="info" placeholder="info">
+                                            </div>
+                                                                    <div class="col:2 col-sm:5">
+                                                                        <input class="yellow" placeholder="warning">
+                                            </div>
+                                                                        <div class="col:2 col-sm:5">
+                                                                            <input class="red" placeholder="danger">
+                                            </div>
+                                                                            <div class="col:2 col-sm:5">
+                                                                                <input class="green" placeholder="success">
+                                            </div>
+                                                                                <div class="col:2 col-sm:5">
+                                                                                    <input class="dark" placeholder="dark">
+                                            </div>
+                                                                                    <div class="col:2 col-sm:5">
+                                                                                        <input class="gray" placeholder="secondary">
+                                            </div>
+                                                                                        <div class="col:2 col-sm:5">
+                                                                                            <input placeholder="default">
+                                            </div>
+                                                                                        </div>
+                                                                                        <hr>
+                                                                                        <h4>Input - Focus Shadow</h4>
+                                                                                        <div class="row row-gap row:baseline">
+                                                                                            <div class="col:2 col-sm:5">
+                                                                                                <input class="blue shadow" placeholder="primary">
+                                            </div>
+                                                                                                <div class="col:2 col-sm:5">
+                                                                                                    <input class="info shadow" placeholder="info">
+                                            </div>
+                                                                                                    <div class="col:2 col-sm:5">
+                                                                                                        <input class="yellow shadow" placeholder="warning">
+                                            </div>
+                                                                                                        <div class="col:2 col-sm:5">
+                                                                                                            <input class="red shadow" placeholder="danger">
+                                            </div>
+                                                                                                            <div class="col:2 col-sm:5">
+                                                                                                                <input class="green shadow" placeholder="success">
+                                            </div>
+                                                                                                                <div class="col:2 col-sm:5">
+                                                                                                                    <input class="dark shadow" placeholder="dark">
+                                            </div>
+                                                                                                                    <div class="col:2 col-sm:5">
+                                                                                                                        <input class="gray shadow" placeholder="secondary">
+                                            </div>
+                                                                                                                        <div class="col:2 col-sm:5">
+                                                                                                                            <input class="shadow" placeholder="default">
+                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <hr>
+                                                                                                                        <h4>Input - Group</h4>
+                                                                                                                        <div class="row row:baseline">
+                                                                                                                            <label for="" class="col col:2 t:right p-r:2">Group Input</label>
+                                                                                                                            <div class="col col:8">
+                                                                                                                                <div class="input-group">
+                                                                                                                                    <input class="field">
+                                                                                                                                    <div class="item">
+                                                                                                                                        $/ g
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="row row:baseline">
+                                                                                                                            <label for="" class="col col:2 t:right p-r:2">Date</label>
+                                                                                                                            <div class="col col:8 input-group">
+                                                                                                                                <div class="item">
+                                                                                                                                    Year
+                                                                                                                                </div>
+                                                                                                                                <input class="field">
+                                                                                                                                <div class="item">
+                                                                                                                                    Mouth
+                                                                                                                                </div>
+                                                                                                                                <input class="field">
+                                                                                                                                <div class="item">
+                                                                                                                                    Day
+                                                                                                                                </div>
+                                                                                                                                <input class="field">
+                                            </div>
+                                                                                                                            </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p class="icon-speech">click left nav,know more.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <footer class="footer p:5 t:center">
-        <p>
-            LICENSE GPL v3
-        </p>
-        <hr>
-        <div>
-            <a href="https://github.com/zhzLuke96/" title="poijs;jsonflow;yoi...">
+                <footer class="footer p:5 t:center">
+                    <p>
+                        LICENSE GPL v3
+                    </p>
+                    <hr>
+                    <div>
+                        <a href="https://github.com/zhzLuke96/" title="poijs;jsonflow;yoi...">
                 more open proj
             </a>
-            <br>
+                        <br>
         </div>
-            Copyright © 2018-now <a href="https://github.com/zhzLuke96/" title="github">
+                        Copyright © 2018-now <a href="https://github.com/zhzLuke96/" title="github">
             zhzLuke96
         </a>
-    </footer>
+                </footer>
 </body>
 
 </html>
