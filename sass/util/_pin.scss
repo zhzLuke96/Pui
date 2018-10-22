@@ -3,23 +3,23 @@
 //
 //----------------------------------------------
 
-.pin{
-    position: sticky;
+.pin,.pin-t{
+    position: sticky !important;
     top:0;
 }
 
 
 .pin-b,.pin-bottom{
-    position: sticky;
+    position: sticky !important;
     bottom: 0;
 }
 
 .pin-l,.pin-left{
-    position: sticky;
+    position: sticky !important;
     left: 0;
 }
 
 .pin-r,.pin-right{
-    position: sticky;
+    position: sticky !important;
     right: 0;
 }

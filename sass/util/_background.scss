@@ -4,62 +4,62 @@
 //----------------------------------------------
 @each $name,$color in $color-dict {
     .bg\:#{$name} {
-        background-color: $color;
+        background-color: $color !important;
     }
 
     .bg\:#{$name}-light {
-        background-color: lighten($color, 15%);
+        background-color: lighten($color, 15%) !important;
     }
 
     .bg\:#{$name}-lighter {
-        background-color: lighten($color, 25%);
+        background-color: lighten($color, 25%) !important;
     }
 
     .bg\:#{$name}-lightest {
-        background-color: lighten($color, 35%);
+        background-color: lighten($color, 35%) !important;
     }
 
     .bg\:#{$name}-dark {
-        background-color: darken($color, 15%);
+        background-color: darken($color, 15%) !important;
     }
 
     .bg\:#{$name}-darker {
-        background-color: darken($color, 25%);
+        background-color: darken($color, 25%) !important;
     }
 
     .bg\:#{$name}-darkest {
-        background-color: darken($color, 35%);
+        background-color: darken($color, 35%) !important;
     }
 }
 
 @each $pseudo,$attr in $Pseudo-dict{
     @each $name,$color in $color-dict {
         .#{$pseudo}\:bg\:#{$name}:#{$attr} {
-            background-color: $color;
+            background-color: $color !important;
         }
 
         .#{$pseudo}\:bg\:#{$name}-light:#{$attr} {
-            background-color: lighten($color, 15%);
+            background-color: lighten($color, 15%) !important;
         }
 
         .#{$pseudo}\:bg\:#{$name}-lighter:#{$attr} {
-            background-color: lighten($color, 25%);
+            background-color: lighten($color, 25%) !important;
         }
 
         .#{$pseudo}\:bg\:#{$name}-lightest:#{$attr} {
-            background-color: lighten($color, 35%);
+            background-color: lighten($color, 35%) !important;
         }
 
         .#{$pseudo}\:bg\:#{$name}-dark:#{$attr} {
-            background-color: darken($color, 15%);
+            background-color: darken($color, 15%) !important;
         }
 
         .#{$pseudo}\:bg\:#{$name}-darker:#{$attr} {
-            background-color: darken($color, 25%);
+            background-color: darken($color, 25%) !important;
         }
 
         .#{$pseudo}\:bg\:#{$name}-darkest:#{$attr} {
-            background-color: darken($color, 35%);
+            background-color: darken($color, 35%) !important;
         }
     }
 }

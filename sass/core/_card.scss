@@ -45,6 +45,7 @@ $card-color-map:(
     @extend .card;
     padding: 0;
     border: 2px solid $cards-boder-color;
+    overflow: hidden;
 
     &:last-child{
         margin: 0;
