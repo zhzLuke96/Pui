@@ -5,10 +5,6 @@
 # Index
 [welcome page](https://zhzluke96.github.io/Pui/)
 
-- [specification](https://zhzluke96.github.io/Pui/)
-- [guide](https://zhzluke96.github.io/Pui/)
-- [community](https://zhzluke96.github.io/Pui/)
-
 # todo
 - [x] index
 - [ ] index & better
@@ -17,8 +13,13 @@
     - [ ] code reader
     - [ ] specification
     - [ ]
-- [ ] guide
 - [ ] docs
+    - [x] base
+    - [ ] code viewer
+    - [ ] util
+- [ ] guide
+    - [ ] quick start
+    - [ ] more demo
 - [ ] community
 
 # -
