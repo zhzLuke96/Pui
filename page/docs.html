@@ -113,17 +113,20 @@
         color: #404040;
         font: 400 1em/1.4 'Open Sans',sans-serif;
         text-rendering: optimizeLegibility;
-        border-left: 3px solid hsla(31,15%,50%,.6);
+        /* border-left: 3px solid hsla(31,15%,50%,.6); */
         /* border: 1px solid rgba(212, 194, 183, .4); */
         background: hsla(31,15%,50%,.1);
-        margin-top: 1rem;
-        padding: 1rem;
+        margin-top: 1em;
+        padding: 1em;
+    }
+    .media .avatar, .media .figure {
+        margin-right: 1em;
     }
     .media-demo h3{
         margin-top: 0;
     }
     .media-demo img{
-        width: 5rem;
+        width: 2.5rem;
     }
     .clear-m{
         border-left: none;
@@ -139,7 +142,7 @@
     <header class="p:5 header">
         <div class="container">
             <div class="row row-gap row:baseline">
-                <div class="col col:2 col-sm:hidden logo t:right">
+                <div class="col col:2 col-sm:10 logo t:center">
                     <a href="../index.html" class="p-logo bg:green r:3 p:1 p-l:2 m-r:4 p-r:2 f-c:white">
                             P
                         </a>
@@ -154,7 +157,7 @@
     </header>
 
     <div class="modal" id="modal1">
-        <div class="body cards no-b shadow">
+        <div class="body cards no-b m-l:3 m-r:3">
             <div class="card container">
                 <div class="row row:baseline">
                     <div class="col:9">
@@ -179,7 +182,7 @@
     </div>
     <div class="container content">
         <div class="row row-gap">
-            <div class="col:2 p-t:10">
+            <div class="col:2 p-t:10 col-sm:10">
                 <div class="row row-gap pin left-nav">
                     <div class="col:10">
                         <a href="#welcome" class="link t:cap"> welcome</a>
@@ -228,7 +231,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col:8">
+            <div class="col:8 col-sm:10">
                 <div class="row row-gap">
                     <div class="col:10">
                         <div id="welcome" class="router-page">
@@ -412,13 +415,13 @@
                             <p>其实这是个相对冷门的标签...说实话我们自己都不常用，但是尝试下感觉确实有一些方便.</p>
                             <h4>Base</h4>
                             <div class="row row-gap">
-                                <div class="col:5">
+                                <div class="col:5 col-sm:10">
                                     <progress value="25" max="100">25%</progress>
                                 </div>
                             </div>
                             <h4>Size</h4>
                             <div class="row row-gap">
-                                <div class="col:5">
+                                <div class="col:5 col-sm:10">
                                     <div class="row row-gap">
                                         <div class="col:10">
                                             <progress class="small" value="10" max="100"></progress>
@@ -434,14 +437,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col:5">
+                                <div class="col:5 col-sm:10">
                                     {{code reader}}
                                 </div>
                                 </div>
                                 <h4>Color</h4>
 
                                 <div class="row row-gap">
-                                    <div class="col:5">
+                                    <div class="col:5 col-sm:10">
                                         <div class="row row-gap">
                                             <div class="col:10">
                                                 <progress class="blue" value="15" max="100"></progress>
@@ -466,7 +469,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col:5">
+                                    <div class="col:5 col-sm:10">
                                         {{code reader}}
                                 </div>
                                     </div>
@@ -480,21 +483,45 @@
                                 Card
                             </h1>
                                     <p>卡片风格在扁平化审美的时代算是比较流行，我们在这里提供了一个较为简单的实现.</p>
-                                    <h4>Example ( with media )</h4>
+                                    <h4>Example ( Reddit )</h4>
                                     <div class="row row-gap">
-                                        <div class="col:5">
-                                            <div class="card shadow:sm no-b">
-                                                <div class="media">
-                                                    <div class="avatar"><a href="#" class="avatar">
-                                              <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540135194771&di=6b1d360f483932cd510c4d854a3d75b0&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201607%2F19%2F20160719003421_fkLWY.thumb.700_0.png">
-                                            </a></div>
-                                                    <div class="body">
-                                                        <div class="title">
-                                                            <h1 class="m-t:0">Lorem</h1>
+                                        <div class="col:5 col-sm:10">
+                                            <div class="cards shadow:sm no-b">
+                                                <div class="card bg:blue f-c:white">
+                                                    COMMUNITY DETAILS
+                                                    <span class="pull-right">📧</span>
+                                                </div>
+                                                <div class="card">
+                                                    <h4>
+                                                        <span class="icon-fire"></span>r/Pui
+                                                    </h4>
+                                                    <div class="row row-gap">
+                                                        <div class="col">
+                                                            <h4>
+                                                                1.5k
+                                                                <br>
+                                                                <span class="f-w:400 f-s:3">
+                                                                    Subscribers
+                                                                </span>
+                                                            </h4>
                                                         </div>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                        </p>
+                                                        <div class="col b-l:1 b-c:gray-lightest">
+                                                            <h4>
+                                                                42
+                                                                <br>
+                                                                <span class="f-w:400 f-s:3">
+                                                                    Online
+                                                                </span>
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-gap">
+                                                        <div class="col:10">
+                                                            <div class="btn btn-blue ripple btn-block t:upper f-f:coder">Subscribe</div>
+                                                        </div>
+                                                        <div class="col:10">
+                                                            <div class="btn btn-blue ripple btn-block t:upper f-f:coder">create post</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -502,7 +529,7 @@
                                     </div>
                                     <h4>Base</h4>
                                     <div class="row row-gap">
-                                        <div class="col:5">
+                                        <div class="col:5 col-sm:10">
                                             <div class="card ">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                                                 aliquip ex ea commodo consequat.
@@ -511,42 +538,42 @@
                                     </div>
                                     <h4>Color</h4>
                                     <div class="row row-gap">
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card blue">
                                                 primary
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card green">
                                                 success
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card info">
                                                 info
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card warning">
                                                 warning
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card danger">
                                                 danger
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card dark">
                                                 dark
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card gray">
                                                 gray
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card">
                                                 default
                                             </div>
@@ -554,49 +581,49 @@
                                     </div>
                                     <h4>Shadow ( no good,better see util-lib )</h4>
                                     <div class="row row-gap">
-                                        <div class="col:3">
+                                        <div class="col:3 col-sm:10">
                                             <div class="card gray shadow">
                                                 .card.gray.shadow
                                             </div>
                                         </div>
-                                        <div class="col:3">
+                                        <div class="col:3 col-sm:10">
                                             <div class="card gray shadow no-b">
                                                 .no-b
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row row-gap">
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card blue shadow">
                                                 primary
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card green shadow">
                                                 success
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card info shadow">
                                                 info
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card warning shadow">
                                                 warning
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card danger shadow">
                                                 danger
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card dark shadow">
                                                 dark
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="card gray shadow">
                                                 gray
                                             </div>
@@ -604,14 +631,14 @@
                                     </div>
                                     <h4>Cards</h4>
                                     <div class="row row-gap">
-                                        <div class="col:5">
+                                        <div class="col:5 col-sm:10">
                                             <div class="cards">
                                                 <div class="card">header</div>
                                                 <div class="card t:cap">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                                                 <div class="card">footer</div>
                                             </div>
                                         </div>
-                                        <div class="col:5">
+                                        <div class="col:5 col-sm:10">
                                             <div class="cards blue">
                                                 <div class="card">primary</div>
                                                 <div class="card t:cap">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -631,58 +658,58 @@
                                     <p>webapp 最重要的交互部分，大概就是button了，它将指引用户操作，并对操作分级.</p>
                                     <h4>base</h4>
                                     <div class="row row-gap">
-                                        <div class="col:3">
+                                        <div class="col:3 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block">click</button>
                                         </div>
-                                        <div class="col:3">
+                                        <div class="col:3 col-sm:5">
                                             <a href="#">link</a>
                                         </div>
                                     </div>
                                     <h4>Class</h4>
                                     <div class="row row-gap">
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block btn-blue">.primary</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block btn-secondary">.secondary</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block btn-success">.success</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block btn-info">.info</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block btn-warning">.warning</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block btn-danger">.danger</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block btn-dark">.dark</button>
                                         </div>
                                     </div>
                                     <h4>Outline</h4>
                                     <div class="row row-gap">
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block outline btn-blue">.primary</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block outline btn-secondary">.secondary</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block outline btn-success">.success</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block outline btn-info">.info</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block outline btn-warning">.warning</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block outline btn-danger">.danger</button>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <button type="button" name="button" class=" btn btn-block outline btn-dark">.dark</button>
                                         </div>
                                     </div>
@@ -717,14 +744,14 @@
                                     </div>
                                     <h4>Button Group ( btns )</h4>
                                     <div class="row row-gap">
-                                        <div class="col:3">
+                                        <div class="col:3 col-sm:10">
                                             <div class="btns">
                                                 <button type="button" name="button" class="btn btn-blue">click</button>
                                                 <button type="button" name="button" class=" btn btn-blue">click</button>
                                                 <button type="button" name="button" class=" btn btn-blue">click</button>
                                             </div>
                                         </div>
-                                        <div class="col:2">
+                                        <div class="col:2 col-sm:5">
                                             <div class="btns vertical">
                                                 <button type="button" name="button" class="btn btn-gray p:2">click</button>
                                                 <button type="button" name="button" class="btn btn-gray p:2">click</button>
@@ -734,9 +761,9 @@
                                     </div>
                                     <h4>Mix</h4>
                                     <div class="row row-gap">
-                                        <div class="col:5">
+                                        <div class="col:5 col-sm:10">
                                             <div class="btns">
-                                                <button type="button" name="button" class="btn  outline ripple btn-blue">click</button>
+                                                <button type="button" name="button" class="btn  outline ripple btn-red">click</button>
                                                 <button type="button" name="button" class=" btn  outline ripple-outer btn-blue">click</button>
                                             </div>
                                         </div>
@@ -803,74 +830,74 @@
                                                 <p>基色和主题色.</p>
                                                 <h4>Base</h4>
                                                 <div class="row row-gap">
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:blue color-card h:1">
                                                             blue
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:green color-card h:1">
                                                             green
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:red color-card h:1">
                                                             red
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:purple color-card h:1">
                                                             purple
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:orange color-card h:1">
                                                             orange
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:teal color-card h:1">
                                                             teal
                                                         </div>
                                                     </div>
 
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:yellow color-card h:1">
                                                             yellow
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:brown color-card h:1">
                                                             brown
                                                         </div>
                                                     </div>
 
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:indigo color-card h:1">
                                                             indigo
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:pink color-card h:1">
                                                             pink
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:cyan color-card h:1">
                                                             cyan
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:black color-card h:1">
                                                             black
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:white f-c:black color-card h:1">
                                                             white
                                                         </div>
                                                     </div>
-                                                    <div class="col:2">
+                                                    <div class="col:2 col-sm:5">
                                                         <div class="cards no-b shadow bg:gray color-card h:1">
                                                             gray
                                                         </div>
@@ -878,135 +905,135 @@
                                                 </div>
                                                 <h4>Color - mapping</h4>
                                                 <div class="row row-gap">
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:blue-lightest color-card">
                                                             lightest
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:blue-lighter color-card">
                                                             lighter
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:blue color-card">
                                                             blue
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:blue-dark color-card">
                                                             dark
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:blue-darkest color-card">
                                                             darkest
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row row-gap">
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:red-lightest color-card">
                                                             lightest
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:red-lighter color-card">
                                                             lighter
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:red color-card">
                                                             red
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:red-dark color-card">
                                                             dark
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:red-darkest color-card">
                                                             darkest
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row row-gap">
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:green-lightest color-card ">
                                                             lightest
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:green-lighter color-card">
                                                             lighter
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:green color-card">
                                                             green
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:green-dark color-card">
                                                             dark
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:green-darkest color-card">
                                                             darkest
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row row-gap">
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:purple-lightest color-card ">
                                                             lightest
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:purple-lighter color-card">
                                                             lighter
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:purple color-card">
                                                             purple
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:purple-dark color-card">
                                                             dark
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:purple-darkest color-card">
                                                             darkest
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row row-gap">
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:orange-lightest color-card ">
                                                             lightest
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:orange-lighter color-card">
                                                             lighter
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:orange color-card">
                                                             orange
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:orange-dark color-card">
                                                             dark
                                                         </div>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col col-sm:10">
                                                         <div class="cards no-b shadow bg:orange-darkest color-card">
                                                             darkest
                                                         </div>
