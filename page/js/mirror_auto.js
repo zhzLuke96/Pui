@@ -7,7 +7,7 @@
                 mode: "htmlmixed",
                 lineNumbers: true,
                 autoRefresh:true,
-                // theme: theme,
+                theme: theme,
                 styleActiveLine: true,
                 lineWrapping: true,
                 foldGutter: true,
