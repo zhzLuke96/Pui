@@ -8,6 +8,45 @@
     <title>🍭PUI - Docs</title>
     <link rel="stylesheet" href="../dist/core.min.css">
     <link rel="stylesheet" href="../dist/util.min.css">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/codemirror.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/theme/monokai.min.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/theme/mdn-like.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/fold/foldgutter.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/fold/foldcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/fold/foldgutter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/fold/brace-fold.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/fold/comment-fold.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/selection/active-line.min.js"></script>
+    <!--行注释-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/comment/comment.min.js"></script>
+
+    <style media="screen">
+        .code_view *{
+            transition: none !important;
+        }
+        .CodeMirror{
+            height: auto;
+            box-sizing: content-box;
+            /* border-radius: .5rem;
+            padding: .5rem; */
+            overflow: hidden;
+            /* font-size: 1rem; */
+            font-family: "Menlo, Consolas, DejaVu Sans Mono, Microsoft YaHei, monospace";
+            font-weight: bold;
+        }
+        .CodeMirror-sizer{
+            margin-left: 2rem !important;
+        }
+    </style>
+
     <style media="screen">
         * {
             transition: all .3s;
@@ -437,8 +476,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col:5 col-sm:10">
-                                    {{code reader}}
+                                <div class="col col-sm:10">
+                                    <div class="code_view shadow:md">
+                                        <textarea><progress class="small" value="10" max="100"></progress>
+<progress value="20" max="100"></progress>
+<progress class="big" value="30" max="100"></progress>
+<progress class="large" value="40" max="100"></progress></textarea>
+                                    </div>
                                 </div>
                                 </div>
                                 <h4>Color</h4>
@@ -470,7 +514,15 @@
                                         </div>
                                     </div>
                                     <div class="col:5 col-sm:10">
-                                        {{code reader}}
+                                        <div class="code_view shadow:md">
+                                            <textarea><progress class="blue" value="15" max="100"></progress>
+<progress class="green" value="25" max="100"></progress>
+<progress class="red" value="35" max="100"></progress>
+<progress class="warning" value="45" max="100"></progress>
+<progress class="info" value="55" max="100"></progress>
+<progress class="secondary" value="65" max="100"></progress>
+<progress class="dark" value="75" max="100"></progress></textarea>
+                                        </div>
                                 </div>
                                     </div>
                                     <hr>
@@ -533,6 +585,15 @@
                                             <div class="card ">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                                                 aliquip ex ea commodo consequat.
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="code_view shadow:md">
+                                                <textarea><div class="col:5 col-sm:10">
+    <div class="card ">
+        {{ content }}
+    </div>
+</div></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -639,10 +700,28 @@
                                             </div>
                                         </div>
                                         <div class="col:5 col-sm:10">
+                                            <div class="code_view shadow:md">
+                                                <textarea><div class="cards">
+    <div class="card">header</div>
+    <div class="card t:cap"> {{ content }} </div>
+    <div class="card">footer</div>
+</div></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col:5 col-sm:10">
                                             <div class="cards blue">
                                                 <div class="card">primary</div>
                                                 <div class="card t:cap">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                                                 <div class="card">footer</div>
+                                            </div>
+                                        </div>
+                                        <div class="col:5 col-sm:10">
+                                            <div class="code_view shadow:md">
+                                                <textarea><div class="cards blue">
+    <div class="card">header</div>
+    <div class="card t:cap"> {{ content }} </div>
+    <div class="card">footer</div>
+</div></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -663,6 +742,11 @@
                                         </div>
                                         <div class="col:3 col-sm:5">
                                             <a href="#">link</a>
+                                        </div>
+                                        <div class="col:10">
+                                            <div class="code_view shadow:md">
+                                                <textarea><button type="button" name="button" class=" btn btn-block">click</button></textarea>
+                                            </div>
                                         </div>
                                     </div>
                                     <h4>Class</h4>
@@ -751,11 +835,29 @@
                                                 <button type="button" name="button" class=" btn btn-blue">click</button>
                                             </div>
                                         </div>
+                                        <div class="col-offest:2 col:5 col-sm:10">
+                                            <div class="code_view shadow:md">
+                                                <textarea><div class="btns">
+    <button class="btn btn-blue">click</button>
+    <button class=" btn btn-blue">click</button>
+    <button class=" btn btn-blue">click</button>
+</div></textarea>
+                                            </div>
+                                        </div>
                                         <div class="col:2 col-sm:5">
                                             <div class="btns vertical">
                                                 <button type="button" name="button" class="btn btn-gray p:2">click</button>
                                                 <button type="button" name="button" class="btn btn-gray p:2">click</button>
                                                 <button type="button" name="button" class="btn btn-gray p:2">click</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-offest:3 col:5 col-sm:10">
+                                            <div class="code_view shadow:md">
+                                                <textarea><div class="btns vertical">
+    <button class="btn btn-gray p:2">click</button>
+    <button class="btn btn-gray p:2">click</button>
+    <button class="btn btn-gray p:2">click</button>
+</div></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -765,6 +867,14 @@
                                             <div class="btns">
                                                 <button type="button" name="button" class="btn  outline ripple btn-red">click</button>
                                                 <button type="button" name="button" class=" btn  outline ripple-outer btn-blue">click</button>
+                                            </div>
+                                        </div>
+                                        <div class="col:5 col-sm:10">
+                                            <div class="code_view shadow:md">
+                                                <textarea><div class="btns">
+    <button class="btn outline ripple btn-red">click</button>
+    <button class=" btn outline ripple-outer btn-blue">click</button>
+</div></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -1072,6 +1182,23 @@
                                                                     <div class="col h:1"><span class="flex:center">auto</span></div>
                                                                 </div>
                                                             </div>
+                                                            <div class="col:10">
+                                                                <div class="code_view shadow:md">
+<textarea><div class="row row-gap">
+    <div class="col:2 h:2">
+        <span class="flex:center">col:2</span>
+    </div>
+    <div class="col">
+        <div class="row row-gap">
+            <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+            <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+            <!-- ... -->
+            <div class="col h:1"><span class="flex:center">auto</span></div>
+        </div>
+    </div>
+</div></textarea>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="row row-gap gird-demo">
                                                             <div class="col">
@@ -1083,6 +1210,20 @@
                                                                     ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                                                                     occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                                                 </p>
+                                                            </div>
+                                                            <div class="col:10">
+                                                                <div class="col:10">
+                                                                    <div class="code_view shadow:md">
+<textarea><div class="col">
+    <span class="flex:center">auto</span>
+</div>
+<div class="col">
+    <p class="t:left p:3">
+        {{ content }}
+    </p>
+</div></textarea>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <h4>
@@ -1108,6 +1249,33 @@
                                                 </span></div>
                                                                 </div>
                                                             </div>
+                                                            <div class="col:10">
+                                                                <div class="col:10">
+                                                                    <div class="code_view shadow:md">
+<textarea><div class="col:2 col-offest:1 h:3">
+    <span class="flex:center">
+        col:2
+        <br>
+        col-offest:1
+    </span>
+</div>
+<div class="col">
+    <div class="row row-gap">
+        <div class="col:4 h:1"><span class="flex:center">col:4</span></div>
+        <div class="col:4 h:1"><span class="flex:center">col:4</span></div>
+        <div class="col:2 h:1"><span class="flex:center">col:2</span></div>
+        <div class="col col-offest:5 h:2">
+            <span class="flex:center">
+                auto
+                <br>
+                col-offest:5
+            </span>
+        </div>
+    </div>
+</div></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                         </div>
                                                         <h4>
                                         Responsive
@@ -1350,6 +1518,7 @@
             zhzLuke96
         </a>
                 </footer>
+                <script src="./js/mirror_auto.js" charset="utf-8"></script>
 </body>
 
 </html>
