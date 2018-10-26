@@ -83,7 +83,7 @@ $responsive-map: (
         justify-content: space-between;
     }
     // hidden
-    .row#{$tag}\:0,.row#{$tag}\:hidden
+    .row#{$tag}\:0,.row#{$tag}\:hidden,
     .col#{$tag}\:0,.col#{$tag}\:hidden{
         display: none;
     }
@@ -110,10 +110,15 @@ $responsive-map: (
             max-width: #{100% * $gird-width / 10};
         }
 
-        .col#{$tag}-offest\:#{$gird-width} {
+        .col#{$tag}-offset\:#{$gird-width} {
             margin-left: #{100% * $gird-width / 10};
         }
     }
+    // none offset
+    .col#{$tag}-offset\:0,.col#{$tag}-offset\:hidden{
+        margin-left: 0;
+    }
+
     /* Alignment per cell */
     .col#{$tag}\:top {
         align-self: flex-start;

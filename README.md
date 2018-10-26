@@ -1,10 +1,10 @@
 # Pui
 
-🔨CSS farm-work(tool) `lightweight` css framework
+🔨`lightweight` css framework
 
 > [normalize](https://github.com/necolas/normalize.css)
 
-# docment & guide
+# usage & guide
 [link...](https://zhzluke96.github.io/Pui/)
 
 # utility-first
@@ -24,123 +24,6 @@ hello world
 
 > ~~core'll be built according to UTIL.css by @extend (sass)~~
 > <br>**coding proved it’s bad idea, In design, but good for work**
-
-# usage
-
-#### gird
-
-> \*基于flexbox构建的网格布局，语义容易理解还能方便的修改row cell对齐方式
-
-```html
-<div class="container">
-    <div class="row row-gap">
-        <div class="col-sm:1 col-xs:5 cell:center">
-            <div class="demo t:center bl:center h:1">
-                1
-            </div>
-        </div>
-        <div class="col-sm-offest:2 col-sm:3 col-xs:10">
-            <div class="demo t:center bl:center h:2">
-                2
-            </div>
-        </div>
-        <!-- ... -->
-    </div>
-</div>
-```
-
-\*pls keep no text-node in div\[class^="col"],otherwise css-style will not be what you want
-
-#### btn
-
-```html
-<button type="button" name="button" class=" btn btn-blue">click</button>
-
-<div class="btns">
-    <button type="button" name="button" class=" btn btn-blue ripple">click</button>
-    <button type="button" name="button" class=" btn btn-blue ripple">click</button>
-    <button type="button" name="button" class=" btn btn-blue ripple">click</button>
-</div>
-```
-
-\*ripple is default ripple-inner, and ripple-outer is outward(Compatibility is not good, no JS).
-
-#### card
-
-```html
-<div class="card primary">primary</div>
-<div class="cards">
-    <div class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quisquam ullam, atque eveniet enim mollitia fugit quo aut molestiae voluptas!</div>
-    <div class="card">other</div>
-</div>
-```
-
-\*.card.shadow can created colored shadow
-
-#### media
-
-```html
-<div class="media">
-    <div class="avatar">
-        <a href="#" class="avatar cell:center">
-            <img src="./time.jpg">
-        </a>
-    </div>
-    <div class="body">
-        <div class="title">
-            <h1 class="m-t:0">Lorem</h1>
-        </div>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-    </div>
-</div>
-```
-
-#### form
-
-...
-
-#### table
-
-like bootstrap
-
-#### modal
-
-```html
-<a class="btn btn-block btn-blue ripple" href="#modal1">modal1</a>
-
-<div class="modal" id="modal1">
-    <div class="body cards no-b shadow">
-        <div class="card container">
-            <div class="row row:baseline">
-                <div class="col:9">
-                    <span class="f-w:900 f:5">title</span>
-                </div>
-                <a class="col f-w:900 f:6 hover:f-c:purple" href="#close">×</a>
-            </div>
-        </div>
-        <div class="card container">
-            <div class="row row-gap">
-                <div class="col:1"></div>
-                <div class="col f:4 p:4">hello world!</div>
-            </div>
-        </div>
-        <div class="card container">
-            <div class="btns col-offest:7 col:3">
-                <a class="btn btn-dark outline ripple" href="#close">取消</a>
-                <a class="btn btn-blue ripple">提交</a>
-            </div>
-        </div>
-    </div>
-</div>
-```
-
-\*cards layout not required
-
-#### more
-
-...
 
 # todo
 
@@ -162,12 +45,15 @@ like bootstrap
     -   [x] cards
     -   [x] modal(prue css)
     -   [x] progress(h5)
+-   [ ] mulit-media tool ~~放在这里意思一下~~
+    -   [ ] video
+    -   [ ] img
 -   [ ] ~~js~~ `poiJs` [Learn more](https://zhzluke96.github.io/PoiJs/)
 -   [ ] ...
 
 # 后
 
-虽然写的是`轻量`...但是单单util就已经200k了...(虽然不推荐，20k的core是够用的)
+写的是`轻量`...但是单单util就已经200k了...(虽然不推荐，20k的core是够用的)
 
 > **关于pack.js**
 > <br>
