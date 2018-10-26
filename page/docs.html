@@ -27,10 +27,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/selection/active-line.min.js"></script>
     <!--行注释-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/comment/comment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.40.2/addon/display/autorefresh.min.js"></script>
 
     <style media="screen">
         .code_view *{
             transition: none !important;
+        }
+        .code_view{
+            display: block !important;
         }
         .CodeMirror{
             height: auto;
@@ -835,7 +839,7 @@
                                                 <button type="button" name="button" class=" btn btn-blue">click</button>
                                             </div>
                                         </div>
-                                        <div class="col-offest:2 col:5 col-sm:10">
+                                        <div class="col:7 col-sm:10">
                                             <div class="code_view shadow:md">
                                                 <textarea><div class="btns">
     <button class="btn btn-blue">click</button>
@@ -851,7 +855,7 @@
                                                 <button type="button" name="button" class="btn btn-gray p:2">click</button>
                                             </div>
                                         </div>
-                                        <div class="col-offest:3 col:5 col-sm:10">
+                                        <div class="col col-sm:10">
                                             <div class="code_view shadow:md">
                                                 <textarea><div class="btns vertical">
     <button class="btn btn-gray p:2">click</button>

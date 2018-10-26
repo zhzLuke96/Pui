@@ -6,6 +6,7 @@
             {
                 mode: "htmlmixed",
                 lineNumbers: true,
+                autoRefresh:true,
                 // theme: theme,
                 styleActiveLine: true,
                 lineWrapping: true,
@@ -17,11 +18,5 @@
                 readOnly: true,
         });
     }
-    for (v of document.querySelectorAll(".code_view>textarea")){
-        let editor = editor_factory(v);
-        // 不知道是哪里的问题，docs页面里不触发一下init的时候不显示...
-        setTimeout(function() {
-            editor.refresh();
-        },1);
-    }
+    for (v of document.querySelectorAll(".code_view>textarea"))editor_factory(v);
 }(document)
