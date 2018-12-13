@@ -20,7 +20,15 @@
 - [ ] guide
     - [ ] quick start
     - [ ] more demo
+- [ ] examples
+    - [ ] reddit
+    - [ ] Tumblr
+    - [x] github profile page
+    - [ ] gmail
 - [ ] community
+
+# examples
+- [github](https://zhzluke96.github.io/Pui/demo/github/profile.html) 
 
 # -
 have fun
