@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!-- [if gt IE 8]><! -->
+<html class="no-js">
+<!-- <![endif] -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>reddit - THE FRONT</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../../dist/core.min.css" />
+    <link rel="stylesheet" href="../../dist/util.min.css" />
+    <style>
+        body{
+            background: rgb(218, 224, 230);
+        }
+        .fill{
+            width: 100%;
+            width: -webkit-fill-available;
+        }
+        .nav-table > *{
+            padding: 1em !important;
+            padding-left: .5em !important;
+            padding-right: .5em !important;
+        }
+        .nav-table{
+            width: 960px;
+        }
+        .nav-warpper{
+            z-index: 10;
+            padding: 0 1em;
+            margin: -12px;
+        }
+        header>.container>.row{
+            margin: 0 -16px;
+            padding: .5em 0;
+        }
+        .start-card{
+            background-color: rgb(3, 46, 94);
+            background-size: contain;
+            position: relative;
+            margin-bottom: 8px;
+            background-image: url(https://www.redditstatic.com/desktop2x/img/banner/banner-personalize@2x.png);
+            background-position: right center;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            padding: 16px;
+        }
+        .close-btn{
+            font-size: 1.5em;
+            line-height: 1.5em;
+            position: absolute;
+            right: .5rem;
+            top: .25rem;
+        }
+        .sn-header{
+            background: url(https://www.redditstatic.com/desktop2x/img/id-cards/banner@2x.png) center center / cover no-repeat rgb(0, 121, 211);
+        }
+        .max-content{
+            max-width: 960px;
+        }
+        #main-content{
+            max-height: max-content;
+        }
+        .post:hover{
+            /* outline: black solid 1px; */
+            box-shadow: 0 0 0 1px black !important;
+            overflow: hidden;
+        }
+        .acard>img{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="pui">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <header id="header" class="header bg:white p-l:3 p-r:3 p-t:1">
+        <div class="container ">
+            <div class="row row:center bg:white b-b:1 b-c:white-dark pin">
+                <div class="col:1">--LOGO--</div>
+                <div class="col:1">
+                    <span class="cur:pointer b:1 b-c:white hover:b-c:gray-lightest p:1 r:2">📈 🔽</span>
+                </div>
+                <div class="col p-r:2">
+                    <input class="fill" type="text" name="" id="" placeholder="Search Reddit" />
+                </div>
+                <div class="col:1 col-sm:0">
+                    <span>👍</span>
+                    <span>📈</span>
+                    <span>📉</span>
+                </div>
+                <div class="col:4">
+                    <div class="row row-gap">
+                        <div class="col">
+                            <button class="btn btn-blue btn-block outline b:1 p-l:5 p-r:5">LOG IN</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-blue btn-block b:1 p-l:5 p-r:5">SIGN UP</button>
+                        </div>
+                        <div class="col:2">
+                            <span class="pull-right cur:pointer b:1 b-c:white hover:b-c:gray-lightest p:1 r:2">
+                                🙍
+                                🔽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row:center f-w:600 b-b:1 b-c:white-dark max-content m-auto">
+                <div class="col:2">
+                    <div class="row">
+                        <div class="col">
+                            <span>VIEW</span>
+                        </div>
+                        <div class="col">
+                            <span>💬</span>
+                        </div>
+                        <div class="col">
+                            <span>💢</span>
+                        </div>
+                        <div class="col">
+                            <span>💤</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>SORT</span>
+                    <span class="cur:pointer f-c:blue hover:b-b:2 b-c:blue p:1">🔥 HOT 🔽</span>
+                    <span class="cur:pointer f-c:blue hover:b-b:2 b-c:blue p:1">UNITED STATES 🔽</span>
+                    <span class="cur:pointer f-c:blue hover:b-b:2 b-c:blue p:1">ALL STATES 🔽</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content" class="container content p:3">
+        <div class="row t:center p-b:0 bg:white nav-warpper pin">
+            <div class="row row:end f-w:600 f-c:black-light f-s:2 nav-table t:center p-b:0 bg:white pin max-content m-auto">
+                <div class="col">
+                    All&nbspCategories
+                </div>
+                <div class="col b-b:2 b-c:blue">
+                    Popular
+                </div>
+                <div class="col">
+                    Gaming
+                </div>
+                <div class="col">
+                    Memes
+                </div>
+                <div class="col">
+                    Sports
+                </div>
+                <div class="col">
+                    Wholesome
+                </div>
+                <div class="col">
+                    Video&nbspGames
+                </div>
+                <div class="col">
+                    Pics&nbsp&&nbspGifs
+                </div>
+                <div class="col">
+                    Mindblowing
+                </div>
+                <div class="col">
+                    Videos
+                </div>
+                <div class="col">
+                    News
+                </div>
+                <div class="col">
+                    Science
+                </div>
+                <div class="col">
+                    <span class="pull-right">
+                        ▶️
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row row-gap row:start p-t:4 max-content m-auto">
+            <div id="main-content" class="col:7 clo-md:10">
+                <div class="row">
+                    <div class="col:10">
+                        <div class="card no-b start-card f-c:white">
+                            <h2 class="m:0 f-s:8">
+                                Personalize your Reddit
+                                <p class="f-w:400 f-s:4">
+                                    Get updates from your favorite communities
+                                </p>
+                            </h2>
+                            <button class="btn btn-blue r:1 p-t:2 p-b:2 p-l:5 p-r:5 ripple">
+                                GET STARTED
+                            </button>
+                            <span class="cur:pointer close-btn">×</span>
+                        </div>
+                    </div>
+                    <div id="post-tpl" class="col:10">
+                        <div class="card no-b p:0 post">
+                            <div class="row">
+                                <div class="col:1 t:center p-t:2">
+                                    👍<br>50<br>👎
+                                </div>
+                                <div class="col bg:white p-t:2 p-l:2">
+                                    <div class="row row:column">
+                                        <div class="col">
+                                            <span class="f-w:700">
+                                                🍔r/xx
+                                            </span>
+                                            <span class="f-c:gray-lighter f-s:2">
+                                                Crossposted by
+                                                u/xxx
+                                                2 hours ago
+                                            </span>
+                                        </div>
+                                        <div class="col">
+                                            <h2 class="m:0 f-c:gray-light">Are you ok?</h2>
+                                            <a href="#" class="f-s:1">youtube.com/watch?...🔗</a>
+                                        </div>
+                                        <div class="col p-t:5 p-b:2 f-w:700 f-c:gray">
+                                            <span class="p-r:2">
+                                                💬42 Comments
+                                            </span>
+                                            <span class="p-r:2">
+                                                ⤴️️Share
+                                            </span>
+                                            <span class="p-r:2">
+                                                🚀Save
+                                            </span>
+                                            <span class="p-r:2">
+                                                ···
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bg:white p:2 flex:center">
+                                    <img src="https://b.thumbs.redditmedia.com/Gc4KERkStSUV9QGjbkmQyO9pLEzhIFuKtVJ-idtE9Kg.jpg"
+                                        class="r:2 m-auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="side-nav" class="col col-sm:0">
+                <div class="row row:column">
+                    <div class="cards no-b f-w:600">
+                        <div class="card no-b sn-header h:1"></div>
+                        <div class="card no-b">
+                            <h3>
+                                🤷r/popular
+                            </h3>
+                            The best posts on Reddit for you, pulled from the most active communities on Reddit. Check
+                            here
+                            to see the most shared, upvoted, and commented content on the internet.
+                        </div>
+                        <div class="card no-b">
+                            <button class="btn btn-blue btn-block ripple-outer">
+                                CREATE POST
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cards no-b f-w:600">
+                        <div class="card no-b t:upper f-s:1">
+                            advertisement
+                        </div>
+                        <div class="card no-b acard">
+                            <img src="https://dummyimage.com/200x100/000/fff&text=ads" alt="">
+                            <img src="https://dummyimage.com/200x100/000/fff&text=ads" alt="">
+                        </div>
+                    </div>
+                    <div class="card no-b">
+                        <div class="row row-gap row:center">
+                            <div class="col:1 f-s:5 m:0">
+                                <span>🛡️</span>
+                            </div>
+                            <div class="col f-s:1 m:0 f-c:gray-light">
+                                <p class="p:0 m:0">Reddit Premium</p>
+                                <p class="p:0 m:0">Ads-free browsing</p>
+                            </div>
+                            <div class="col:4 f-s:1">
+                                <button class="btn btn-green btn-block ripple-outer">GET PREMIUM</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards no-b f-w:600">
+                        <div class="card no-b t:upper f-s:1">
+                            advertisement
+                        </div>
+                        <div class="card no-b acard">
+                            <img src="https://dummyimage.com/200x100/000/fff&text=ads" alt="">
+                        </div>
+                    </div>
+                    <div id="web-footer" class="cards no-b f-w:600 f-s:2">
+                        <div class="card no-b">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#">About</a>
+                                    <br>
+                                    <a href="#">Careers</a>
+                                    <br>
+                                    <a href="#">Press</a>
+                                </div>
+                                <div class="col">
+                                    <a href="#">Advertise</a>
+                                    <br>
+                                    <a href="#">Blog</a>
+                                    <br>
+                                    <a href="#">Help</a>
+                                </div>
+                                <div class="col">
+                                    <a href="#">App</a>
+                                    <br>
+                                    <a href="#">Coins</a>
+                                    <br>
+                                    <a href="#">Premium</a>
+                                    <br>
+                                    <a href="#">Gifts</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card no-b t:center">
+                            <span>Content Policy| Privacy Policy</span>
+                            <br>
+                            <span>User Agreement| Mod Policy</span>
+                            <br>
+                            <span>© 2018 Reddit, Inc. All rights reserved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer p:3">
+        <div class="container flex:center f-w:900 f-c:gray-light">
+            Loading...
+        </div>
+    </footer>
+    <script src="../common.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
