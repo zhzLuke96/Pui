@@ -13,6 +13,14 @@ $attr-map : (
     .m\:#{$counter} {
         margin: ($counter * .25rem) !important;
     }
+    .m-x\:#{$counter} {
+        margin-left: ($counter * .25rem) !important;        
+        margin-right: ($counter * .25rem) !important;        
+    }
+    .m-y\:#{$counter} {
+        margin-top: ($counter * .25rem) !important;
+        margin-bottom: ($counter * .25rem) !important;
+    }
     @each $attr,$name in $attr-map{
         .m-#{$attr}\:#{$counter} {
             margin-#{$name}: ($counter * .25rem) !important;
@@ -21,6 +29,14 @@ $attr-map : (
     @each $pseudo,$attr in $Pseudo-dict {
         .#{$pseudo}\:m\:#{$counter}:#{$attr} {
             margin: ($counter * .25rem) !important;
+        }
+        .#{$pseudo}\:m-x\:#{$counter} {
+            margin-left: ($counter * .25rem) !important;
+            margin-right: ($counter * .25rem) !important;
+        }
+        .#{$pseudo}\:m-y\:#{$counter} {
+            margin-top: ($counter * .25rem) !important;
+            margin-bottom: ($counter * .25rem) !important;
         }
         @each $attr,$name in $attr-map{
             .#{$pseudo}\:m-#{$attr}\:#{$counter}:#{$attr} {

@@ -54,6 +54,11 @@ function exec_cmd(script, cb) {
 // ----------------------------------------------
 // ----------------------------------------------
 
+function parseErrMsg(text){
+    let e = text.match(/{[\s\S]*}/)[0]
+    return JSON.parse(e).message
+}
+
 function pack(dist_path) {
     function css_min(flist) {
         for (let f of flist) {
@@ -67,14 +72,14 @@ function pack(dist_path) {
 
     exec_cmd(sass_parse, (err, sin, sout) => {
         if (err){
-            console.log(err);
+            console.log(parseErrMsg(err.message))
             return
         }
         console.log(sin);
         console.log(sout);
         exec_cmd(postcss_auto, (err, sin, sout) => {
             if (err){
-                console.log(err);
+                console.log(parseErrMsg(err.message))
                 return
             }
             console.log(sin);

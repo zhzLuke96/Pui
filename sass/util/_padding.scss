@@ -12,6 +12,14 @@ $attr-map : (
     .p\:#{ $counter } {
         padding: ($counter * .25rem) !important;
     }
+    .p-x\:#{ $counter } {
+        padding-left: ($counter * .25rem) !important;
+        padding-right: ($counter * .25rem) !important;
+    }
+    .p-y\:#{ $counter } {
+        padding-top: ($counter * .25rem) !important;
+        padding-bottom: ($counter * .25rem) !important;
+    }
     @each $attr,$name in $attr-map{
         .p-#{$attr}\:#{$counter} {
             padding-#{$name}: ($counter * .25rem) !important;
@@ -22,6 +30,14 @@ $attr-map : (
     @for $counter from 0 through 10 {
         .#{$pseudo}\:p\:#{ $counter }:#{$_attr} {
             padding: ($counter * .25rem) !important;
+        }
+        .#{$pseudo}\:p-x\:#{ $counter } {
+            padding-left: ($counter * .25rem) !important;
+            padding-right: ($counter * .25rem) !important;
+        }
+        .#{$pseudo}\:p-y\:#{ $counter } {
+            padding-top: ($counter * .25rem) !important;
+            padding-bottom: ($counter * .25rem) !important;
         }
         @each $attr,$name in $attr-map{
             .#{$pseudo}\:p-#{$attr}\:#{$counter}:#{$_attr} {
