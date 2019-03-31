@@ -30,3 +30,13 @@
 @import "progress";
 @import "modal";
 @import "tooltip";
+@import "alerts";
+@import "loader";
+@import "overlay";
+// ----------------------------------------------
+// socail
+@import "./social/Notification";
+// ----------------------------------------------
+// form
+@import "./form/input";
+@import "./form/switch";

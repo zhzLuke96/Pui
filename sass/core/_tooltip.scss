@@ -5,7 +5,7 @@
 [tip] {
     position: relative;
     // Vertically position
-    :after {
+    &:after {
         content: attr(tip);
         visibility: hidden;
         z-index: 99;
@@ -27,11 +27,11 @@
         0 0 1px rgba(0, 0, 0, 1);
     }
 
-    :hover {
+    &:hover {
         /* ie */
         overflow: visible;
 
-        :after {
+        &:after {
             opacity: .8;
             transition: all .3s;
             transform: translate(5px, -50%);
@@ -69,11 +69,13 @@
 [tip\:left]:after {
     top: unset;
     bottom: 100%;
-    left: 100%;
+    left: 0;
 }
 
 [tip\:mid]:after {
     top: 50%;
-    right: 50%;
-    left: unset;
+    right: unset;
+    bottom: unset;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

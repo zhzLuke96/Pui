@@ -32,7 +32,6 @@ hello world
     -   [x] 10 cols
     -   [x] order
     -   [x] media hidden
-    -   [ ] ~~12,14 cols~~ `由于flex的各种特性，不需要更多的划分(吧)`
 -   [ ] core elements
     -   [x] btn
     -   [x] btns(group)
@@ -46,7 +45,10 @@ hello world
     -   [x] modal(prue css)
     -   [x] progress(h5)
     -   [x] tooltip
--   [ ] mulit-media tool ~~放在这里意思一下~~
+    -   [x] loader
+    -   [x] overlay
+    -   [x] alert
+-   [ ] mulit-media
     -   [ ] video
     -   [ ] img
 -   [ ] ~~js~~ `poiJs` [Learn more](https://zhzluke96.github.io/PoiJs/)
