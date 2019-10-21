@@ -73,5 +73,6 @@ pack/dist/*
 # local test
 /*.html
 
-# pack tool
-/cssmin.js
+# pack
+/package-lock.json
+/dist/*.css

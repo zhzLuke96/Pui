@@ -1,0 +1,41 @@
+{
+  "name": "Pui",
+  "version": "1.0.0",
+  "description": "🔨`lightweight` css framework",
+  "main": "cssmin.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --mode=production",
+    "build:w": "cross-env NODE_ENV=production webpack --watch --mode=production",
+    "dev": "cross-env NODE_ENV=development webpack --mode=development",
+    "dev:w": "cross-env NODE_ENV=development webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhzLuke96/Pui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhzLuke96/Pui/issues"
+  },
+  "homepage": "https://github.com/zhzLuke96/Pui#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.5",
+    "cross-env": "^5.2.1",
+    "css": "^2.2.4",
+    "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "fast-css-loader": "^1.0.2",
+    "fast-sass-loader": "^1.5.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "nano": "^8.1.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
