@@ -69,3 +69,5 @@ pack/
 
 # pack tool
 /cssmin.js
+
+package-lock.json

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>收件箱 (7) - zhzluke96@gmail.com - Gmail</title>
+    <link rel="stylesheet" href="../../dist/core.min.css">
+    <link rel="stylesheet" href="../../dist/util.min.css">
+    <style>
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+    <style>
+        * {
+            transition: .3s all;
+        }
+
+        .material-icons {
+            cursor: pointer;
+        }
+
+        .avatar {
+            background: url(https://lh3.googleusercontent.com/-L1PjQbGo59g/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rfR4tYaqDrdt_ytdMtqRe8WHS6E5Q.CMID/s32-c/photo.jpg);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 2rem;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        .topRight>* {
+            padding: .5rem;
+        }
+
+        .serachbar {
+            width: 100%;
+            max-width: 720px;
+            background: #f1f3f4;
+        }
+
+        .serachbar:hover {
+            background: white;
+        }
+
+        .leftMaxWidth {
+            margin: 1rem 0 0;
+            max-width: 238px !important;
+            min-width: 238px !important;
+        }
+
+        .msger-btns {
+            width: 80%;
+            margin: -1rem auto;
+        }
+
+        .msger-btns>* {
+            border-radius: 10rem;
+            cursor: pointer;
+        }
+
+        .msger-btns>*:hover {
+            background: rgba(0, 0, 0, .1);
+        }
+
+        .leftMenu {
+            font-weight: bold;
+            overflow-y: auto;
+        }
+
+        .leftMenu>.row {
+            padding-right: 1rem;
+            border-radius: 0 3rem 3rem 0;
+            cursor: pointer;
+        }
+
+        .leftMenu>.row:hover {
+            background: #f5f7f7;
+        }
+
+        .leftMenu>.active {
+            background: #fce8e6;
+            color: #d93025;
+        }
+
+        .label-badge {
+            padding: 0;
+            margin: 0;
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        .mailLable>.active {
+            color: #d93025;
+            border-bottom: 3px solid #d93025;
+        }
+
+        .mailLable>* {
+            padding: .5rem;
+        }
+
+        .mail {
+            cursor: pointer;
+            border: 1px solid #fff;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .mail:hover {
+            border: 1px solid #ccc;
+            background: #f5f7f7;
+            z-index: 1;
+        }
+
+        .mail>* {
+            white-space: nowrap;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+
+        .header {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: .5rem;
+            z-index: 1;
+            background: white;
+        }
+
+        body>.content>.container {
+            padding-right: 0;
+        }
+
+        .maillist>.row {
+            margin: 0;
+        }
+
+        .contentBody {
+            flex-flow: nowrap;
+        }
+
+        .rightActions>* {
+            margin-top: 1rem;
+        }
+
+        .rightActionsOut {
+            max-width: 64px;
+        }
+
+        .bbox {
+            border: 1px solid #ccc;
+        }
+
+        .maxw1 {
+            max-width: 64px;
+        }
+
+        .maxw2 {
+            max-width: 128px;
+        }
+
+        body>.content,
+        .content>.container,
+        .contentBody {
+            display: flex;
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body class="pui">
+    <header class="header">
+        <div class="container p-y:3 p-x:5">
+            <div class="row row-gap row:center">
+                <div class="leftMaxWidth col:2 col-sm:10 col:center">
+                    <div class="row row:center">
+                        <div class="col">
+                            <i class="material-icons pull-right m:2">
+                                menu
+                            </i>
+                        </div>
+                        <div class="col flex:center">
+                            <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col:auto col-sm:10 col:center">
+                    <input class="serachbar b:0 p:3 r:2 hover:shadow:sm" type="text" placeholder="搜索邮件">
+                </div>
+                <div class="col:2 col-sm:10 col:center">
+                    <div class="pull-right topRight">
+                        <i class="material-icons">
+                            help_outline
+                        </i>
+                        <i class="material-icons">
+                            apps
+                        </i>
+                        <i class="avatar"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="row row-gap contentBody">
+                <div class="leftMaxWidth col col-sm:0">
+                    <div class="row row-gap">
+                        <div class="col:10">
+                            <div class="btn btn-success outline b:0 flex:center">
+                                <i class="material-icons">
+                                    fiber_new
+                                </i>
+                                写邮件
+                            </div>
+                        </div>
+                        <div class="col leftMenu h:40%">
+                            <div class="row m-r:3 active row:center m-l:0 p:1">
+                                <div class="col:2 m-l:3">
+                                    <i class="material-icons">
+                                        all_inbox
+                                    </i>
+                                </div>
+                                <div class="col">
+                                    收件箱
+                                </div>
+                                <div class="col:2">
+                                    100
+                                </div>
+                            </div>
+
+                            <div class="row m-r:3 m-t:0 row:center m-l:0 p:1">
+                                <div class="col:2 m-l:3">
+                                    <i class="material-icons">
+                                        book
+                                    </i>
+                                </div>
+                                <div class="col">
+                                    已加星标
+                                </div>
+                                <div class="col:2">
+                                    -
+                                </div>
+                            </div>
+                            <div class="row m-r:3 m-t:0 row:center m-l:0 p:1">
+                                <div class="col:2 m-l:3">
+                                    <i class="material-icons">
+                                        access_time
+                                    </i>
+                                </div>
+                                <div class="col">
+                                    已延迟
+                                </div>
+                                <div class="col:2">
+                                    -
+                                </div>
+                            </div>
+                            <div class="row m-r:3 m-t:0 row:center m-l:0 p:1">
+                                <div class="col:2 m-l:3">
+                                    <i class="material-icons">
+                                        label_important
+                                    </i>
+                                </div>
+                                <div class="col">
+                                    重要邮件
+                                </div>
+                                <div class="col:2">
+                                    -
+                                </div>
+                            </div>
+                            <div class="row m-r:3 m-t:0 row:center m-l:0 p:1">
+                                <div class="col:2 m-l:3">
+                                    <i class="material-icons">
+                                        description
+                                    </i>
+                                </div>
+                                <div class="col">
+                                    草稿
+                                </div>
+                                <div class="col:2">
+                                    -
+                                </div>
+                            </div>
+                            <div class="row m-r:3 m-t:0 row:center m-l:0 p:1">
+                                <div class="col:2 m-l:3">
+                                    <i class="material-icons">
+                                        label
+                                    </i>
+                                </div>
+                                <div class="col">
+                                    已发邮件
+                                </div>
+                                <div class="col:2">
+                                    -
+                                </div>
+                            </div>
+                            <div class="row m-r:3 m-t:0 row:center m-l:0 p:1">
+                                <div class="col:2 m-l:3">
+                                    <i class="material-icons">
+                                        lock
+                                    </i>
+                                </div>
+                                <div class="col">
+                                    私人邮件
+                                </div>
+                                <div class="col:2">
+                                    -
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-gap">
+                        <div class="col:10 b-t:1 b-b:1 p-t:0">
+                            <div class="row row:center m-l:3 p:1">
+                                <div class="col flex:x-center">
+                                    <i class="avatar"></i>
+                                    <span>
+                                        _stan 👇
+                                    </span>
+                                </div>
+                                <div class="col:1">
+                                    <i class="material-icons">
+                                        add
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col flex:center b-b:1">
+                            <div class="content t:center">
+                                <i class="material-icons">
+                                    message
+                                </i>
+                                <br>
+                                <span>近期没有聊天</span>
+                                <br>
+                                <a href="#">发起行的聊天</a>
+                            </div>
+                        </div>
+                        <div class="col:10 m-t:1">
+                            <div class="row row-gap msger-btns p:1">
+                                <div class="col flex:center p:1">
+                                    <i class="material-icons">
+                                        perm_identity
+                                    </i>
+                                </div>
+                                <div class="col flex:center p:1">
+                                    <i class="material-icons">
+                                        mic
+                                    </i>
+                                </div>
+                                <div class="col flex:center p:1">
+                                    <i class="material-icons">
+                                        linked_camera
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-sm:10 p:0 bbox">
+                    <div class="row p-l:4 p-t:4 bbox">
+                        <div class="col">
+                            <div class="row row:center">
+                                <div class="col:1 maxw1">
+                                    <i class="material-icons">
+                                        check_box_outline_blank
+                                    </i>
+                                    <i class="material-icons">
+                                        arrow_drop_down
+                                    </i>
+                                </div>
+                                <div class="col:1 maxw1">
+                                    <i class="material-icons">
+                                        refresh
+                                    </i>
+                                </div>
+                                <div class="col:1 maxw1">
+                                    <i class="material-icons">
+                                        more_vert
+                                    </i>
+                                </div>
+                                <div class="col flex:y-center">
+                                    <span>
+                                        第 1 - 50 行，共 1024 行
+                                    </span>
+                                    <i class="material-icons">
+                                        chevron_left
+                                    </i>
+                                    <i class="material-icons">
+                                        chevron_right
+                                    </i>
+                                </div>
+                                <div class="col:1">
+                                    <i class="material-icons">
+                                        translate
+                                    </i>
+                                    <i class="material-icons">
+                                        arrow_drop_down
+                                    </i>
+                                </div>
+                                <div class="col:1">
+                                    <i class="material-icons">
+                                        settings_applications
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m:0">
+                        <div class="col:10">
+                            <div class="row mailLable bbox">
+                                <div class="col flex:x-center active">
+                                    <i class="material-icons m-r:2">
+                                        all_inbox
+                                    </i>
+                                    主要
+                                </div>
+                                <div class="col flex:x-center">
+                                    <i class="material-icons m-r:2">
+                                        people
+                                    </i>
+                                    社交&nbsp<div class="btn btn-blue label-badge r:0">3 个新会话</div>
+                                </div>
+                                <div class="col flex:x-center">
+                                    <i class="material-icons m-r:2">
+                                        turned_in
+                                    </i>
+                                    推广&nbsp<div class="btn btn-green label-badge r:0">3 个新会话</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col maillist">
+                            <div class="row">
+                                <div class="col:10 mailout">
+                                    <div class="row mail p:1 row:center hover:shadow:sm">
+                                        <div class="col:2 flex:x-center row:around maxw2">
+                                            <i class="material-icons">
+                                                check_box_outline_blank
+                                            </i>
+                                            <i class="material-icons">
+                                                star_border
+                                            </i>
+                                            <i class="material-icons">
+                                                label
+                                            </i>
+                                        </div>
+                                        <div class="col:2">
+                                            Twitch
+                                        </div>
+                                        <div class="col">
+                                            DonaldTrump 开始直播：Join me LIVE in Dallas, TX!
+                                        </div>
+                                        <div class="col:1">
+                                            10月18日
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col:10 mailout">
+                                    <div class="row mail p:1 row:center hover:shadow:sm">
+                                        <div class="col:2 flex:x-center row:around maxw2 ">
+                                            <i class="material-icons">
+                                                check_box_outline_blank
+                                            </i>
+                                            <i class="material-icons">
+                                                star_border
+                                            </i>
+                                            <i class="material-icons">
+                                                label
+                                            </i>
+                                        </div>
+                                        <div class="col:2">
+                                            淘宝网
+                                        </div>
+                                        <div class="col">
+                                            卖家同意协议，需要您退货 - 亲爱的"xxxx": 订单编号：xxxxxxx
+                                        </div>
+                                        <div class="col:1">
+                                            10月20日
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col:10 mailout">
+                                    <div class="row mail p:1 row:center hover:shadow:sm">
+                                        <div class="col:2 flex:x-center row:around maxw2">
+                                            <i class="material-icons">
+                                                check_box_outline_blank
+                                            </i>
+                                            <i class="material-icons">
+                                                star_border
+                                            </i>
+                                            <i class="material-icons">
+                                                label
+                                            </i>
+                                        </div>
+                                        <div class="col:2">
+                                            WordPress
+                                        </div>
+                                        <div class="col">
+                                            [dubulabuda] 您的站点已被更新至WordPress 5.2.4 - 嗨！您位于 https://xxx.xxx 的站点刚刚更新了
+                                        </div>
+                                        <div class="col:1">
+                                            10月20日
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col:10 mailout">
+                                    <div class="row mail p:1 row:center hover:shadow:sm">
+                                        <div class="col:2 flex:x-center row:around maxw2">
+                                            <i class="material-icons">
+                                                check_box_outline_blank
+                                            </i>
+                                            <i class="material-icons">
+                                                star_border
+                                            </i>
+                                            <i class="material-icons">
+                                                label
+                                            </i>
+                                        </div>
+                                        <div class="col:2">
+                                            YouTube Creators
+                                        </div>
+                                        <div class="col">
+                                            hahuhahuha, here’s how your channel did last month - October 2019 Creator
+                                            Monthly...
+                                        </div>
+                                        <div class="col:1">
+                                            10月20日
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col:10 mailout">
+                                    <div class="row mail p:1 row:center hover:shadow:sm">
+                                        <div class="col:2 flex:x-center row:around maxw2">
+                                            <i class="material-icons">
+                                                check_box_outline_blank
+                                            </i>
+                                            <i class="material-icons">
+                                                star_border
+                                            </i>
+                                            <i class="material-icons">
+                                                label
+                                            </i>
+                                        </div>
+                                        <div class="col:2">
+                                            Pinterest
+                                        </div>
+                                        <div class="col">
+                                            📌 我们觉得你可能会喜欢这些图板 - 与你一直...
+                                        </div>
+                                        <div class="col:1">
+                                            10月15日
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-sm:0 p:0 rightActionsOut">
+                    <div class="row:column col:around h:80% rightActions">
+                        <div class="col flex:y-center">
+                            <i class="material-icons">
+                                4k
+                            </i>
+                        </div>
+                        <div class="col flex:y-center">
+                            <i class="material-icons">
+                                cloud
+                            </i>
+                        </div>
+                        <div class="col flex:y-center">
+                            <i class="material-icons">
+                                headset_mic
+                            </i>
+                        </div>
+                        <div class="col">
+                            <hr>
+                        </div>
+                        <div class="col flex:y-center">
+                            <i class="material-icons">
+                                add
+                            </i>
+                        </div>
+                        <div class="col flex:y-center">
+                            <i class="material-icons">
+                                keyboard_arrow_right
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <footer class="footer">
+    </footer> -->
+    <script>
+        const mls = document.querySelector(".maillist");
+        mls.innerHTML += mls.innerHTML;
+        mls.innerHTML += mls.innerHTML;
+    </script>
+</body>
+
+</html>

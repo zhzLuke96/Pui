@@ -28,8 +28,9 @@
 - [ ] community
 
 # examples
-- [github](https://zhzluke96.github.io/Pui/demo/github/profile.html) 
+- [github](https://zhzluke96.github.io/Pui/demo/github/index.html) 
 - [reddit](https://zhzluke96.github.io/Pui/demo/reddit/index.html) 
+- [gmail](https://zhzluke96.github.io/Pui/demo/gmail/index.html) 
 
 # about
 have fun
