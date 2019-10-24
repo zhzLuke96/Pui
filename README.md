@@ -43,9 +43,9 @@ $ npm run build
 [zhzluke96.github.io/Pui](https://zhzluke96.github.io/Pui/)
 
 # Live Demo
-- [github-like](https://zhzluke96.github.io/Pui/demo/github/profile.html)
+- [github-like](https://zhzluke96.github.io/Pui/demo/github/index.html)
 - [reddit-like](https://zhzluke96.github.io/Pui/demo/reddit/index.html)
-- gmail-like
+- [gamil-like](https://zhzluke96.github.io/Pui/demo/gmail/index.html)
 - telegram-like
 - ~~[PuiViewer](https://zhzluke96.github.io/pViewer/)~~
 
